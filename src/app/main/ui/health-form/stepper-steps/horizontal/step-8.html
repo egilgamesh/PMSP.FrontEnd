@@ -1,0 +1,237 @@
+<div class="md-inline-form">
+  <p>IV. Interview: Project Contractor 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>5.	Do you come often for health services to this facility?</label>
+      <md-select ng-model="vm.healthForm.BSDoYouComeOftenForHealthServices" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSDoYouComeOftenForHealthServicesAnswer"
+                placeholder="5.1.  Please explain your answer?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>6. What is your level of satisfaction with the renovation work?</label>
+      <md-select ng-model="vm.healthForm.BSWhatIsYourLevelOfSatisfactionRenovation" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSWhatIsYourLevelOfSatisfactionRenovationIfWhy"
+                placeholder="6.1.  If Dissatisfied or Very Dissatisfied include please explain why?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7.	What is your level of satisfaction with the health services your received?</label>
+      <md-select ng-model="vm.healthForm.BSWhatIsYourLevelOfSatisfactionHealth" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSWhatIsYourLevelOfSatisfactionHealthWhy"
+                placeholder="7.1.  If Dissatisfied or Very Dissatisfied include please explain why?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8. Did you pay any costs, fees or demands for favors in receiving the assistance/services/goods?</label>
+      <md-select ng-model="vm.healthForm.BSDidYouPayAnyCost" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+  <md-input-container flex="100" flex-gt-xs="100">
+    <textarea ng-model="vm.healthForm.BSDidYouPayAnyCostIfYes"
+              placeholder="8.1. If yes, please explain what you paid for." required></textarea>
+  </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>9. Are you aware of any methods to share feedback, suggestions or complaints in the clinic?</label>
+      <md-select ng-model="vm.healthForm.BSAreYouAwareOfAnyMethodsToShareFeedback" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSIfYesHaveYouOrAnyoneYouKno"
+                placeholder="9.1. If yes, have you or anyone you know who used this mechanism?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSIfYesCanYouDescribeTheResult"
+                placeholder="9.2. If yes, can you describe the result?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>10. Can you rate the level of influence that the renovation of this facility has had on patients?</label>
+      <md-select ng-model="vm.healthForm.BSCanYouRateTheLevelOfInfluenceThat" required>
+        <md-option ng-repeat="item in vm.selectInfluence" value="{{item.value}}">{{item.name}}</md-option>
+
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSCanYouRateTheLevelOfInfluenceExplain"
+                placeholder="10.1.	Explain your answer?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11. Can you rate the level of influence that the renovation to this facility has had on the
+        community?</label>
+      <md-select ng-model="vm.healthForm.BSCanYouRateTheLevelOfInfluenceRenovation" required>
+        <md-option ng-repeat="item in vm.selectInfluence" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSCanYouRateTheLevelOfInfluenceRenovationAnswer"
+                placeholder="11.1.	Explain your answer?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12. If you were an IDP, can you rate the level of influence that this renovation/plan for renovation had on
+        your decision to return to the area?</label>
+      <md-select ng-model="vm.healthForm.BSIfYouWereAnIdpCanYouRateTheLevelOfInfluence" required>
+        <md-option ng-repeat="item in vm.selectInfluence" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13. Do you feel that the project was well-managed?</label>
+      <md-select ng-model="vm.healthForm.BSProjectWellManaged" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSProjectWellManagedIf"
+                placeholder="13.1. If no, please explain your answer." required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.BSDoYouHaveAnySuggestionsOnHow"
+                placeholder="14.	Do you have any suggestions on how to improve the health facility?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <table class="simple" ms-responsive-table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <td>Actions</td>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <tr ng-repeat="bs in vm.healthForm.bs" ng-if="vm.healthForm.bs.length">
+      <td class="name">{{bs.BSName}}</td>
+      <td class="position">{{bs.BSTitle}}</td>
+      <td class="age">{{bs.BSAge}}</td>
+      <td class="gender">{{bs.BSGender}}</td>
+      <td>
+        <md-button ng-if="bs.id" class="md-raised" ui-sref="app.ui_forms-health.bs({healthId:{{bs.id}}, id:{{vm.id}}, type: 'edit'})">
+          View
+        </md-button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <md-button ng-if="vm.id" class="md-raised md-accent" ui-sref="app.ui_forms-health.bs({id:{{vm.id}}, type: 'add'})">
+    Add new Beneficiaries
+  </md-button>
+
+</div>

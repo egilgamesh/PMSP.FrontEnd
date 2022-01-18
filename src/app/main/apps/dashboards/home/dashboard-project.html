@@ -1,0 +1,26 @@
+<div id="dashboard-project" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div ng-include="'app/main/apps/dashboards/home/header.html'" class="header md-accent-bg" layout="column"
+         layout-align="space-between"></div>
+
+
+    <div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 50px" ng-if="vm.isLoading">
+      <md-progress-circular  class="md-accent md-hue-1" md-diameter="60"></md-progress-circular>
+    </div>
+
+    <div class="content" ng-if="!vm.isLoading">
+      <md-tabs md-dynamic-height md-selected-nav-item="vm.selectedNavItem" nav-bar-aria-label="Maps" md-selected="vm.tabSelect">
+        <md-tab ui-sref="app.dashboards_home.home">Home</md-tab>
+      </md-tabs>
+      <md-content ui-view="tabContent" flex class="card md-whiteframe-4dp"></md-content>
+    </div>
+
+    </div>
+
+
+
+  </div>

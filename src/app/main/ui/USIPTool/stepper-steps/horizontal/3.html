@@ -1,0 +1,68 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'3.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+
+
+  <md-checkbox ng-model="vm.form.m3_active" ng-disabled="!vm.editAllow" aria-label="None">This module is to be completed by the IFM while observing
+    the field site, for renovation/infrastructure activities only
+  </md-checkbox>
+
+  <div ng-if="vm.form.m3_active">
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label ng-style="vm.form.m3_1 === 'No' && {'color':'red', 'font-weight':'bold'}">3.1 Does the renovation appear to be of reasonable quality (e.g. good materials, appropriate dimensions, good fit/finish, etc.)?</label>
+      <md-select ng-model="vm.form.m3_1" required ng-disabled="!vm.editAllow">
+        <md-option value="Yes">Yes (go to 3.3)</md-option>
+        <md-option value="No">No (ALERT)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m3_1 == 'No'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m3_2"
+                ng-disabled="!vm.editAllow"
+                placeholder="3.2 Briefly describe any negative renovation quality conditions on site." required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label ng-style="vm.form.m3_3 === 'No' && {'color':'red', 'font-weight':'bold'}">3.3 Does the work appear to be well-maintained (e.g. clean, safe, secure, etc.)?</label>
+      <md-select ng-model="vm.form.m3_3" required ng-disabled="!vm.editAllow">
+        <md-option value="Yes">Yes (go to 3.5)</md-option>
+        <md-option value="No">No (ALERT)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m3_3 == 'No'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m3_4"
+                ng-disabled="!vm.editAllow"
+                placeholder="3.4 Briefly describe any negative maintenance conditions on site." required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m3_5"
+                ng-disabled="!vm.editAllow"
+                placeholder="3.5 Briefly describe any additional noteworthy renovation quality circumstances observed while on site (if any)." required></textarea>
+    </md-input-container>
+  </div>
+
+</div>
+
+</div>

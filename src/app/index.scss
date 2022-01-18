@@ -1,0 +1,51 @@
+/**
+ *  Do not remove this comments bellow. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+/**
+ *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+
+.fixedByAli {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.logo {
+  background-color:transparent;
+}
+
+#splash-screen .logo {
+  width: 96px;
+  height: 96px;
+  line-height: 96px;
+  margin: 0 auto;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  text-align: center;
+  border-radius: 0;
+  background-color:transparent;
+  color: #FFFFFF;
+  box-shadow: none;
+}
+
+md-card :not(ui-gmap-google-map) img {
+  height: auto !important;
+}
+
+canvas {
+  background-color: transparent;
+  border: none;
+}
+
+
+.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
+  width: 20px;
+}
+

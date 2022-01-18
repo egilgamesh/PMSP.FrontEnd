@@ -1,0 +1,360 @@
+<div class="md-inline-form">
+  <p>Government Services</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_MunicipalElectricityCost"
+                placeholder="Municipal Electricity - Cost, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_MunicipalElectricityCostChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_MunicipalElectricityAvailability"
+                placeholder="Municipal Electricity - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_MunicipalElectricityAvailabilityChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_PrivateElectricityCost"
+                placeholder="Private Electricity (by generators) - Cost, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_PrivateElectricityCostChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_PrivateElectricityAvailability"
+                placeholder="Private Electricity (by generators) - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_PrivateElectricityAvailabilityChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_MunicipalDrinkingCost"
+                placeholder="Municipal Drinking Water - Cost, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_MunicipalDrinkingCostChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_MunicipalDrinkingAvailability"
+                placeholder="Municipal Drinking Water - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_MunicipalDrinkingAvailabilityChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_PrivateWaterCost"
+                placeholder="Private Water Trucking/Wells - Cost, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_PrivateWaterCostChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_PrivateWaterAvailability"
+                placeholder="Private Water Trucking/Wells - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_PrivateWaterAvailabilityChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_GarbageCollectionCost"
+                placeholder="Garbage Collection - Cost, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_GarbageCollectionCostChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_GarbageCollectionAvailability"
+                placeholder="Garbage Collection - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_GarbageCollectionAvailabilityChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_SewerageCost"
+                placeholder="Sewerage - Cost, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_SewerageCostChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_SewerageAvailability"
+                placeholder="Sewerage - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_SewerageAvailabilityChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_GS_CivilServantSalaries"
+                placeholder="Civil Servant Salaries, including teacher (are there any government employee salaries that are not being paid, due to vetting, or other reasons?) - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_GS_CivilServantSalariesChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+
+</div>
+

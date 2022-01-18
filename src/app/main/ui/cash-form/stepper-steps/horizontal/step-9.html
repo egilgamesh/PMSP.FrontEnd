@@ -1,0 +1,170 @@
+<div class="md-inline-form">
+  <p>VI.	Observations</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>1.	Rate the general appearance of the health facility on a scale of 1 to 5, with 1 being the worst and 5 being the best.</label>
+      <md-select ng-model="vm.cashForm.OBRate" required>
+        <md-option ng-repeat="item in vm.selectOneToFive" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>2. In your interactions with UNDP FFS staff, or the local point of contact, did they cooperation with your monitoring efforts? </label>
+      <md-select ng-model="vm.cashForm.OBInteractionsWithUNDP" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBInteractionsWithUNDPIfYes"
+             placeholder="2.1. If no, please explain." required>
+    </md-input-container>
+  </div>
+
+
+  <md-input-container flex="100" flex-gt-xs="100">
+    <input type="text" name="lastname" ng-model="vm.cashForm.OBWorkerDidYouObserve"
+           placeholder="3. About how many workers did you observe on the job?" required>
+  </md-input-container>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>4.  Did you observe any safety issues for beneficiary in carrying out their cash for work efforts?</label>
+      <md-select ng-model="vm.cashForm.OBobserveAnySafety" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBobserveAnySafetyIfYes"
+             placeholder="4.1. If yes, please explain." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5. Are the proper tools and equipment available for the workers?</label>
+      <md-select ng-model="vm.cashForm.OBProperToolsAndEquipment" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBProperToolsAndEquipmentIsMissing"
+             placeholder="5.1. Please list any equipment or tools needed that are missing." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>6. Did you encounter any access issues or security challenges in traveling to the site, or while at the activity site?</label>
+      <md-select ng-model="vm.cashForm.OBEncounterAnyAccessIssue" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBEncounterAnyAccessIssueIfYes"
+             placeholder="6.1.  If yes, please explain your answer and the type of challenge." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7.	During the site visit did you encounter any indications that the activity contributed to community tensions?</label>
+      <md-select ng-model="vm.cashForm.OBDuringSiteCommunityTensions" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBDuringSiteCommunityTensionsIfYes"
+             placeholder="7.1	If yes, please explain your answer and the type of challenge." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8. During the site visit did you encounter any indications that there was a negative effect on girls or women?
+      </label>
+      <md-select ng-model="vm.cashForm.OBDuringSiteNegativeWomanEffect" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBDuringSiteNegativeWomanEffectIfYes"
+             placeholder="8.1	If yes, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9.	During the site visit did you encounter any indications that there was fraud or diversion of resources at the activity site?</label>
+      <md-select ng-model="vm.cashForm.OBDuringSiteDiversionOfResources" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBDuringSiteDiversionOfResourcesIfYes"
+             placeholder="9.1.	If yes, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>10.	Did you encounter any indications that there were payments made to ghost workers? </label>
+      <md-select ng-model="vm.cashForm.OBGhost" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBGhostIfYes"
+             placeholder="10.1If yes, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.OBAnyOtherObservations"
+             placeholder="11. If you have any other observations of relevance to the site visit, particularly as it impacts the flag assignment, please describe." required>
+    </md-input-container>
+  </div>
+
+
+</div>

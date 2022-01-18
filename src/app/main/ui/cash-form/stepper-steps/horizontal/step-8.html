@@ -1,0 +1,327 @@
+<div class="md-inline-form">
+  <p>V.	Beneficiary Survey 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5. Are you a beneficiary of this cash for work activity? (If no, thank the individual and move onto the next beneficiary)</label>
+      <md-select ng-model="vm.cashForm.BSBeneficiaryOfThisCashForWorkActivity" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5. 1.  If yes, have you been paid yet for your work?</label>
+      <md-select ng-model="vm.cashForm.BSHaveYouPaid" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSHaveYouPaidIfYes"
+             placeholder="5.1. If yes, how much were you paid per day for your efforts (in US$)?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5.2. 	Was this the amount of cash you were told you would receive?</label>
+      <md-select ng-model="vm.cashForm.BSAmountYouToldReceive" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSAmountYouToldReceiveIfNo"
+             placeholder="5.2.1. If no, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+  <p>6.  How frequently are you paid? (Check only one.  If the individual hasn’t been paid yet, skip to question 7.)</p>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-checkbox ng-model="vm.cashForm.BSFrequentlyYouPaidDaily " aria-label="Daily">Daily</md-checkbox>
+    <md-checkbox ng-model="vm.cashForm.BSFrequentlyYouPaidWeekly " aria-label="Weekly">Weekly</md-checkbox>
+    <md-checkbox ng-model="vm.cashForm.BSFrequentlyYouPaidEveryOtherWeek " aria-label="Every other week">Every other week</md-checkbox>
+    <md-checkbox ng-model="vm.cashForm.BSFrequentlyYouPaidMonthly " aria-label="Monthly">Monthly</md-checkbox>
+    <md-checkbox ng-model="vm.cashForm.BSFrequentlyYouPaidHaveNotPaidYet " aria-label="Haven’t been paid yet">Haven’t been paid yet</md-checkbox>
+    <md-checkbox ng-model="vm.cashForm.BSFrequentlyYouPaidDoNotKnow " aria-label="Don’t know">Don’t know</md-checkbox>
+
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>6.1. Was the cash paid to you in a timely manner?</label>
+      <md-select ng-model="vm.cashForm.BSCashPaidInTimelyManner" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSCashPaidInTimelyMannerIfNo"
+             placeholder="6.1.1. If no, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSHowManyDaysYouWorkedSoFar"
+             placeholder="7.  How many days have you worked thus far" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8.	Has it been communicated to you how many days you can expect to work?</label>
+      <md-select ng-model="vm.cashForm.BSHasBeenCommunicatedToHowDays" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSHasBeenCommunicatedToHowDaysIfYes"
+             placeholder="8.1 If yes, how many days were you told you would be able to work?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9. How do you perceive the impact of the cash you earned on the situation of your family?</label>
+      <md-select ng-model="vm.cashForm.BSPerceiveTheImpact" required>
+        <md-option ng-repeat="item in vm.selectImpact" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSPerceiveTheImpactIfNegative"
+             placeholder="9.1. If Somewhat Negatively or Very Negatively Affected, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSThreeNeedTheMoneyHelp"
+             placeholder="10. What top three needs did the money help you meet? (Read the options once, then have the beneficiary rank them 1 to 3, with one being the most important)" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12. Did you leave the Governorate because of the conflict</label>
+      <md-select ng-model="vm.cashForm.BSDidYouLeaveGovernorate" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.1. If yes, please rate the level of influence that this cash for work opportunity had on your decision to return to the Governorate.</label>
+      <md-select ng-model="vm.cashForm.BSDidYouLeaveGovernorateIfYes" required>
+        <md-option ng-repeat="item in vm.selectImpact" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSDidYouLeaveGovernorateIfYesExplain"
+             placeholder="12.1.1. Please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.	Do you have any source of regular income, other than this cash for work activity?</label>
+      <md-select ng-model="vm.cashForm.BSSourceOfRegularIncome" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSPriorToBeginningWorking"
+             placeholder="14.	Prior to beginning working in this cash for work activity, how did you earn money to support you and your family?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>15.	Was it clearly communicated to you how you were chosen as a beneficiary of this cash for work activity?</label>
+      <md-select ng-model="vm.cashForm.BSWasItClearlyCommunicated" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>16.	 Did you pay any costs, fees or demands for favors to receive the assistance/services/goods?</label>
+      <md-select ng-model="vm.cashForm.BSDidUouPayAnyCosts" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSDidUouPayAnyCostsIfYes"
+             placeholder="16.1. If yes, please explain what you paid for." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17. Did you hear of anyone who was paid, but who did not join in the actual work?</label>
+      <md-select ng-model="vm.cashForm.BSDidYouHearOfAnyoneWhoWasPaid" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSDidYouHearOfAnyoneWhoWasPaidIfYes"
+             placeholder="17.1. If yes, please explain what you paid for." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>18.	Are you aware of any methods to share feedback, suggestions or complaints concerning the project?</label>
+      <md-select ng-model="vm.cashForm.BSAreYouAwareOfAnyMethods" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>18.1. If yes, have you or anyone you know used this mechanism?</label>
+      <md-select ng-model="vm.cashForm.BSAreYouAwareOfAnyMethodsIfYes" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSAreYouAwareOfAnyMethodsIfYesDescribe"
+             placeholder="18.1.1. If yes, please describe the result." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>19. Do you feel that the project was well-managed?</label>
+      <md-select ng-model="vm.cashForm.BSDoYouFeelTheProjectWasWellManaged" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSDoYouFeelTheProjectWasWellManagedIfYes"
+             placeholder="19.1. If no, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>20.  What is your level of satisfaction with this cash for work activity?</label>
+      <md-select ng-model="vm.cashForm.BSYourLevelOfSatisfaction" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSYourLevelOfSatisfactionIfDissatisfied"
+             placeholder="20.1. If Somewhat Dissatisfied or Very Dissatisfied please explain why." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.BSDoYouHaveSuggestions"
+             placeholder="21.	Do you have any suggestions on how to improve the impact of the project activity on beneficiaries? " required>
+    </md-input-container>
+  </div>
+
+
+
+  <table class="simple" ms-responsive-table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <td>Actions</td>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <tr ng-repeat="bs in vm.cashForm.bs" ng-if="vm.cashForm.bs.length">
+      <td class="name">{{bs.BSName}}</td>
+      <td class="position">{{bs.BSTitle}}</td>
+      <td class="age">{{bs.BSAge}}</td>
+      <td class="gender">{{bs.BSGender}}</td>
+      <td>
+        <md-button ng-if="bs.id" class="md-raised" ui-sref="app.ui_forms-cash.bs({cashId:{{bs.id}}, id:{{vm.id}}, type: 'edit'})">
+          View
+        </md-button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <md-button ng-if="vm.id" class="md-raised md-accent" ui-sref="app.ui_forms-cash.bs({id:{{vm.id}}, type: 'add'})">
+    Add new Beneficiaries
+  </md-button>
+
+</div>

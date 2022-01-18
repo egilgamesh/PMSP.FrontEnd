@@ -1,0 +1,212 @@
+<div class="md-inline-form">
+  <p>IV. Beneficiary Survey 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5. Did you leave the Governorate because of the conflict?</label>
+      <md-select ng-model="vm.municipalityForm.BS_leave_conflict" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5.1. If yes, please rate the level of influence that this activity had on your decision to return to the Governorate.</label>
+      <md-select ng-model="vm.municipalityForm.BS_leave_conflict_if_yes" required>
+        <md-option ng-repeat="item in vm.selectLevelsAffected" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_leave_conflict_if_yes_explain"
+             placeholder="5.1.1. Please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>6.	Do you have any source of regular income, other than this cash for work activity?</label>
+      <md-select ng-model="vm.municipalityForm.BS_source_regular" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_source_prior_beginning"
+             placeholder="7. Prior to beginning working on this activity, how did you earn money to support you and your family?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8. Was it clearly communicated to you how you were chosen as a beneficiary of this cash for work activity?</label>
+      <md-select ng-model="vm.municipalityForm.BS_source_clearly_communicated" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9. Did you pay any costs, fees or demands for favors to receive the assistance/services/goods? </label>
+      <md-select ng-model="vm.municipalityForm.BS_pay_any_cost" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_pay_any_cost_if_yes"
+             placeholder="10.1. If yes, please explain what you paid for." required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11. Did you hear of anyone who was paid, but who did not join in the actual work?</label>
+      <md-select ng-model="vm.municipalityForm.BS_did_you_hear_pay" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_did_you_hear_pay_if_yes"
+             placeholder="11.1. If yes, please explain what you paid for." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.	Are you aware of any methods to share feedback, suggestions or complaints concerning the project?</label>
+      <md-select ng-model="vm.municipalityForm.BS_did_you_method_share_feedback" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.1. If yes, have you or anyone you know used this mechanism?</label>
+      <md-select ng-model="vm.municipalityForm.BS_did_you_method_share_feedback_if_yes" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_did_you_method_share_feedback_if_yes_describe"
+             placeholder="12.1.1. If yes, please describe the result." required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13. Do you feel that the project was well-managed?</label>
+      <md-select ng-model="vm.municipalityForm.BS_feel_well_managed" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_feel_well_managed_explain"
+             placeholder="13.1. If no, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14. What is your level of satisfaction with the activity?</label>
+      <md-select ng-model="vm.municipalityForm.BS_level_satisfaction" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_level_satisfaction_if"
+             placeholder="14.1. If Somewhat Dissatisfied or Very Dissatisfied please explain why." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BS_could_have_done"
+             placeholder="15.	What could have been done to improve this project activity?" required>
+    </md-input-container>
+
+
+  </div>
+
+
+  <table class="simple" ms-responsive-table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <td>Actions</td>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <tr ng-repeat="bs in vm.municipalityForm.bs" ng-if="vm.municipalityForm.bs.length">
+      <td class="name">{{bs.BSName}}</td>
+      <td class="position">{{bs.BSTitle}}</td>
+      <td class="age">{{bs.BSAge}}</td>
+      <td class="gender">{{bs.BSGender}}</td>
+      <td>
+        <md-button ng-if="bs.id" class="md-raised" ui-sref="app.ui_forms-municipality.bs({municipalityId:{{bs.id}}, id:{{vm.id}}, type: 'edit'})">
+          View
+        </md-button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <md-button ng-if="vm.id" class="md-raised md-accent" ui-sref="app.ui_forms-municipality.bs({id:{{vm.id}}, type: 'add'})">
+    Add new Beneficiaries
+  </md-button>
+
+</div>

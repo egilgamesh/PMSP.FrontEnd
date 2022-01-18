@@ -1,0 +1,142 @@
+<div class="md-inline-form">
+  <p style="font-weight: bold; color: #0b58a2">Compliance Monitoring</p>
+
+  <div ng-if="vm.form.cm_active !== 'no' && vm.form.m12_active">
+
+    <br/>
+    <p>Environmental Compliance</p>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>1. During your site visit, did you observe any environmental concerns, such as hazardous materials or
+          pollution effects related to a FFS activity? </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.e_1" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.e_1_1"
+                placeholder="1.1. If yes, please explain your answer"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <p>C-TIP Compliance</p>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>1.During your site visit, did you notice any indicators of human trafficking? Please check below, where
+          applicable.</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c1" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2. Laborers appear to be foreigners or from another part of the country</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c2" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>3. Laborers do not speak local language </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c3" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>4. Laborers are living in poor conditions </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c4" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>5. Laborers appear to be under 18</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c5" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>6. Multiple people living or working in a cramped space </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c6" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>7. People are unable to speak to monitor alone </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c7" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>8. Signs of physical abuse or Sexual or Gender-based Violence (SGBV)</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.c8" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="NA">NA</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.c9"
+                placeholder="9. If you check one of the above, please explain your answer"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+  </div>
+
+</div>
+

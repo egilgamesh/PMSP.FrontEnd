@@ -1,0 +1,115 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'6.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m6_active" aria-label="None">Respondent: Contractor POC, for renovation/infrastructure
+    activities only
+  </md-checkbox>
+
+  <div ng-if="vm.form.m6_active">
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <p>6.1 Which of the following have been provided for this renovation effort through the program?</p>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m6_1_equipment " aria-label="Equipment">Equipment</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m6_1_supplies " aria-label="Supplies">Supplies</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m6_1_none " aria-label="None">None</md-checkbox>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m6_1_none">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m6_2"
+                ng-disabled="!vm.editAllow"
+                placeholder="6.2 If provided, briefly describe this equipment" required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m6_3"
+                ng-disabled="!vm.editAllow"
+                placeholder="6.3 If provided, briefly describe these supplies" required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>6.4 Is a Bill of Quantity (BOQ) available for review?</label>
+        <md-select ng-model="vm.form.m6_4" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No (go to 6.7)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m6_4 == 'Yes'">
+      <md-input-container flex="100">
+        <label ng-style="vm.form.m6_5 === 'No' && {'color':'red', 'font-weight':'bold'}">6.5 Does the BOQ match the types of equipment or supplies that you received?</label>
+        <md-select ng-model="vm.form.m6_5" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes (go to 6.7)</md-option>
+          <md-option value="No">No (ALERT)</md-option>
+          <md-option value="N/A">N/A</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m6_4 == 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m6_6"
+                ng-disabled="!vm.editAllow"
+                placeholder="6.6 Briefly describe any deviations from the BOQ. " required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>6.7 Were the equipment/supplies received on time?</label>
+        <md-select ng-model="vm.form.m6_7" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label ng-style="vm.form.m6_8 === 'No' && {'color':'red', 'font-weight':'bold'}">6.8 Were the equipment/supplies received of sufficient quality?</label>
+        <md-select ng-model="vm.form.m6_8" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes (go to 6.12)</md-option>
+          <md-option value="No">No (ALERT)</md-option>
+          <md-option value="Don't Know">Don't Know</md-option>
+          <md-option value="N/A">N/A</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m6_8 == 'No'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m6_9"
+                ng-disabled="!vm.editAllow"
+                placeholder="6.9 Briefly describe any problems with the quality of the equipment or supplies"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m6_1_none">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m6_10"
+                ng-disabled="!vm.editAllow"
+                placeholder="6.10 Briefly describe any additional equipment or supply quality, quantity or use issues of concern (if any)."
+                required></textarea>
+      </md-input-container>
+    </div>
+  </div>
+
+</div>
+

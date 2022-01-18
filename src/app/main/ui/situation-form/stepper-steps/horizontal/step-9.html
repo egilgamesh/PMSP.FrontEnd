@@ -1,0 +1,114 @@
+<div class="md-inline-form">
+  <p>Social Safety Net</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_SSN_SocialSecurityPayments"
+                placeholder="Social Security Payments (widows, disabled, elderly, retirees) - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_SSN_SocialSecurityPaymentsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_SSN_RationCard"
+                placeholder="Ration Card - List items available during the reporting period, Impact on Citizens (when less than the standard) " required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_SSN_RationCardChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_SSN_CharitablePayments"
+                placeholder="Charitable Payments/Food/Non Food Items Distributed to the Poor or IDPs (by Mosques, churches, or religious organizations) - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_SSN_CharitablePaymentsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.ES_SSN_SupportForIDPs"
+                placeholder="Support for IDPs, returnees or residents by international organizations (UN and NGOs) - Availability, Impact on Citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.ES_SSN_SupportForIDPsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+</div>
+

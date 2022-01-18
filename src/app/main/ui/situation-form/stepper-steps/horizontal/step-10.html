@@ -1,0 +1,137 @@
+<div class="md-inline-form">
+  <p>Condition of Physical Infrastructure</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_COPI_Transportation"
+                placeholder="Transportation Infrastructure (roads, highways, overpasses, tunnels, bridges) - Specify damage from the conflict and its overall condition" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_COPI_TransportationChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_COPI_Dams"
+                placeholder="Dams - Specify damage from the conflict and its overall condition" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_COPI_DamsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_COPI_Roads"
+                placeholder="Roads, Highways, Bridges, Dams, Overpasses/ Tunnels, Airports, Petroleum Sector (exploration, extraction, refinement) - Specify damage from the conflict and its overall condition" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_COPI_RoadsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_COPI_Airport"
+                placeholder="Airport(s) in the area - Specify damage from the conflict and its overall condition" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_COPI_AirportChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_COPI_Petroleum"
+                placeholder="Petroleum Sector Infrastructure in the area (if relevant - exploration, extraction, refinement) - Specify damage from the conflict and its overall condition" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_COPI_PetroleumChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+</div>
+

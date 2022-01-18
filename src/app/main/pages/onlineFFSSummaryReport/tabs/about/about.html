@@ -1,0 +1,588 @@
+<div layout="row" layout-wrap>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="100">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+
+      <header class="md-accent-bg">
+
+        <div class="title">{{vm.ffs.m1_5}} - ID: {{vm.ffs.id}}
+
+          <a style="margin-left: 10px;" class="add-event-button md-fab md-info" href="{{vm.url}}print/newFFSGeneralForm/{{vm.ffs.id}}"
+                     target="_blank" aria-label="Print">
+            <md-icon md-font-icon="icon-printer" style="color: white"></md-icon>
+          </a>
+
+        </div>
+      </header>
+
+
+      <div layout="row" layout-wrap>
+
+        <div class="content" flex="100" flex-gt-sm="50" flex-gt-md="20">
+
+          <div class="info-line">
+
+            <div class="content" ng-if="vm.summary.map">
+
+              <div ng-if="vm.summary.map.id" class="media">
+                <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.map.id}}">
+              </div>
+
+              <div ng-if="vm.summary.map.file_name" class="message" style="margin-top: 8px">
+                {{vm.summary.map.file_name.replace(".jpg", "").replace(".JPG", "")}}
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <div class="content" flex="100" flex-gt-sm="50" flex-gt-md="80">
+
+          <div class="info-line">
+            <table class="alimohammed" style="border-collapse: collapse;">
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Activity:</td>
+                <td class="date">{{vm.ffs.m1_5}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Date Visited:</td>
+                <td class="date">{{vm.ffs.m1_8}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Date Summary Report Complete:</td>
+                <td class="date">{{vm.summary.completed_at}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Monitoring Event Code:</td>
+                <td class="date">{{vm.summary.code}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Activity Monitoring Type</td>
+                <td class="date">Activity Monitoring</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Description:</td>
+                <td class="date">{{vm.summary.description}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Beneficiaries:</td>
+                <td class="date">{{vm.summary.beneficiaries}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Field Monitor:</td>
+                <td class="date">{{vm.ffs.PI_IFMName}}</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Reporter:</td>
+                <td class="date">Ammar Ali Hasan</td>
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Point of Contact:</td>
+                <td class="date">{{vm.summary.point_of_contact}}</td>
+              </tr>
+
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold">Location:</td>
+                <td class="date"><span style="font-weight: bold">Location:</span> {{vm.ffs.m1_4}} <span
+                  style="font-weight: bold">Area:</span> {{vm.summary.area}} <span style="font-weight: bold">District:</span> {{vm.ffs.m1_3_district}} <span style="font-weight: bold">Sub-District:</span>
+                  {{vm.summary.sub_district}}
+                  <span style="font-weight: bold">Province:</span> {{vm.ffs.m1_3_province}}
+                </td>
+
+              </tr>
+
+              <tr class="job">
+                <td class="company" style="font-weight: bold; color: green">Informational Awareness:</td>
+                <td class="date" style="font-weight: bold; color: green">{{vm.summary.info}}</td>
+              </tr>
+
+            </table>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div layout="row" layout-wrap>
+
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">COMPLETION</div>
+      </header>
+
+      <div style="min-height: 400px" class="content">
+        <div class="info-line" ng-if="vm.summary.completion_alert">
+          <div class="title businesspre" style="color: red">ALERT</div>
+          <div class="info businesspre">{{vm.summary.completion_alert}}</div>
+        </div>
+
+        <div class="info-line">
+          <div class="title businesspre"></div>
+          <div class="info businesspre">{{vm.summary.completion}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo1">
+
+          <div ng-if="vm.summary.photo1.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo1.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo1.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo1.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">SECURITY</div>
+      </header>
+
+      <div class="content"  style="min-height: 400px" >
+        <div class="info-line" ng-if="vm.summary.security_alert">
+          <div class="title" style="color: red">ALERT</div>
+          <div class="info businesspre">{{vm.summary.security_alert}}</div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <div class="info businesspre">{{vm.summary.security}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo2">
+
+          <div ng-if="vm.summary.photo2.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo2.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo2.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo2.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">QUALITY</div>
+      </header>
+
+      <div class="content"  style="min-height: 400px" >
+        <div class="info-line" ng-if="vm.summary.quality_alert">
+          <div class="title" style="color: red">ALERT</div>
+          <div class="info businesspre">{{vm.summary.quality_alert}}</div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <div class="info businesspre">{{vm.summary.quality}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo3">
+
+          <div ng-if="vm.summary.photo3.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo3.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo3.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo3.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div layout="row" layout-wrap>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">EQUIPMENT AND SUPPLIES</div>
+      </header>
+
+      <div class="content"  style="min-height: 500px" >
+        <div class="info-line" ng-if="vm.summary.equipment_and_supplies_alert">
+          <div class="title" style="color: red">ALERT</div>
+          <div class="info businesspre">{{vm.summary.equipment_and_supplies_alert}}</div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <div class="info businesspre">{{vm.summary.equipment_and_supplies}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo4">
+
+          <div ng-if="vm.summary.photo4.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo4.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo4.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo4.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+        <div class="content" ng-if="vm.summary.photo5">
+
+          <div ng-if="vm.summary.photo5.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo5.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo5.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo5.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+        <div class="content" ng-if="vm.summary.photo6">
+
+          <div ng-if="vm.summary.photo6.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo6.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo6.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo6.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">UTILIZATION</div>
+      </header>
+
+      <div class="content"  style="min-height: 344px" >
+        <div class="info-line" ng-if="vm.summary.utilization_alert">
+          <div class="title" style="color: red">ALERT</div>
+          <div class="info businesspre">{{vm.summary.utilization_alert}}</div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <div class="info businesspre">{{vm.summary.utilization}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo7">
+
+          <div ng-if="vm.summary.photo7" class="media">
+            <img ng-src="{{vm.url}}getChart/{{vm.summary.ffs_id}}">
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <header class="md-accent-bg">
+        <div class="title">ACCESS</div>
+      </header>
+
+      <div class="content"  style="min-height: 100px" >
+        <div class="info-line" ng-if="vm.summary.access_alert">
+          <div class="title" style="color: red">ALERT</div>
+          <div class="info businesspre">{{vm.summary.access_alert}}</div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <div class="info businesspre">{{vm.summary.access}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo_access" >
+
+          <div ng-if="vm.summary.photo_access.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo_access.id}}">
+          </div>
+
+          <div ng-if="vm.summary.photo_access.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo_access.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">OUTCOMES</div>
+      </header>
+
+      <div class="content"  style="min-height: 500px" >
+
+        <div class="info-line">
+          <div class="title"></div>
+          <p>Positive outcomes:</p>
+          <div class="info businesspre">{{vm.summary.outcomes_positive}}</div>
+        </div>
+
+        <div class="content" ng-if="vm.summary.photo8 && vm.summary.photo8.file_name.startsWith('.');">
+          <div ng-if="vm.summary.photo8.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo8.id}}">
+          </div>
+          <div ng-if="vm.summary.photo8.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo8.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <p>Negative outcomes:</p>
+          <div class="info businesspre">{{vm.summary.outcomes_negative}}</div>
+        </div>
+
+        <div class="content" ng-if="vm.summary.photo8 && vm.summary.photo8.file_name.startsWith('..');">
+          <div ng-if="vm.summary.photo8.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo8.id}}">
+          </div>
+          <div ng-if="vm.summary.photo8.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo8.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div class="title"></div>
+          <p>Returnees:</p>
+          <div class="info businesspre">{{vm.summary.outcomes_returnees}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo8 && !vm.summary.photo8.file_name.startsWith('.');">
+          <div ng-if="vm.summary.photo8.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo8.id}}">
+          </div>
+          <div ng-if="vm.summary.photo8.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo8.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo9">
+          <div ng-if="vm.summary.photo9.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo9.id}}">
+          </div>
+          <div ng-if="vm.summary.photo9.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo9.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div layout="row" layout-wrap>
+
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">PHOTOS</div>
+      </header>
+
+      <div class="content"  style="min-height: 800px" >
+
+        <div class="content" ng-if="vm.summary.pg1">
+
+          <div ng-if="vm.summary.pg1.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.pg1.id}}">
+          </div>
+
+          <div ng-if="vm.summary.pg1.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.pg1.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+        <div class="content" ng-if="vm.summary.pg2">
+
+          <div ng-if="vm.summary.pg2.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.pg2.id}}">
+          </div>
+
+          <div ng-if="vm.summary.pg2.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.pg2.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+        <div class="content" ng-if="vm.summary.pg3">
+
+          <div ng-if="vm.summary.pg3.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.pg3.id}}">
+          </div>
+
+          <div ng-if="vm.summary.pg3.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.pg3.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">SUMMARY</div>
+      </header>
+
+      <div class="content summary_alert_ali"  style="min-height: 270px" >
+        <table>
+          <tr>
+            <td>COMPLETION:</td>
+            <td class="businesspre">{{vm.summary.summary_completion}}</td>
+          </tr>
+          <tr>
+            <td>SECURITY:</td>
+            <td class="businesspre">{{vm.summary.summary_security}}</td>
+          </tr>
+          <tr>
+            <td>QUALITY:</td>
+            <td class="businesspre">{{vm.summary.summary_quality}}</td>
+          </tr>
+          <tr>
+            <td>EQUIPMENT/SUPPLIES:</td>
+            <td class="businesspre">{{vm.summary.summary_equipment_and_supplies}}</td>
+          </tr>
+          <tr>
+            <td>UTILIZATION:</td>
+            <td class="businesspre">{{vm.summary.summary_utilization}}</td>
+          </tr>
+          <tr>
+            <td>ACCESS:</td>
+            <td class="businesspre">{{vm.summary.summary_access}}</td>
+          </tr>
+        </table>
+
+        <div class="info-line" ng-if="vm.summary.summary_action_needed">
+          <div class="title" style="color: red">ACTION NEEDED:</div>
+          <div class="info businesspre">{{vm.summary.summary_action_needed}}</div>
+        </div>
+
+
+      </div>
+
+      <header class="md-accent-bg">
+        <div class="title">PHOTOS</div>
+      </header>
+
+      <div class="content"  style="min-height: 475px" >
+
+
+        <div class="content" ng-if="vm.summary.pg4">
+          <div ng-if="vm.summary.pg4.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.pg4.id}}">
+          </div>
+          <div ng-if="vm.summary.pg4.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.pg4.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.pg5">
+          <div ng-if="vm.summary.pg5.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.pg5.id}}">
+          </div>
+          <div ng-if="vm.summary.pg5.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.pg5.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="about" layout="column" flex="100" flex-gt-sm="50" flex-gt-md="33">
+    <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+      <header class="md-accent-bg">
+        <div class="title">MONITOR NOTES</div>
+      </header>
+
+      <div class="content"  style="min-height: 800px" >
+
+        <div class="info-line">
+          <div class="info businesspre">{{vm.summary.monitor_notes}}</div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo_note">
+          <div ng-if="vm.summary.photo_note.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo_note.id}}">
+          </div>
+          <div ng-if="vm.summary.photo_note.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo_note.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+
+        <div class="content" ng-if="vm.summary.photo9">
+          <div ng-if="vm.summary.photo9.id" class="media">
+            <img ng-src="{{vm.url}}PreviewFile/{{vm.summary.photo9.id}}">
+          </div>
+          <div ng-if="vm.summary.photo9.file_name" class="message" style="margin-top: 8px">
+            {{vm.summary.photo9.file_name.replace(".jpg", "").replace(".JPG", "")}}
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

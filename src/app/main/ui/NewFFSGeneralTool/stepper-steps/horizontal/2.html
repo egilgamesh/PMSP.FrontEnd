@@ -1,0 +1,90 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'2.'"></ali-show-photos>
+</div>
+<div class="md-inline-form">
+
+  <md-checkbox ng-model="vm.form.m2_active" ng-disabled="!vm.editAllow" aria-label="None">This module is to be completed by the IFM while observing
+    the field site
+  </md-checkbox>
+
+  <div ng-if="vm.form.m2_active">
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label>2.1 Is the activity site protected against unauthorized entry/access (e.g. fencing, guards, other
+          barriers)?</label>
+        <md-select ng-model="vm.form.m2_1" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes (go to 2.3)</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="No [ALERT]">No [ALERT]</md-option>
+        </md-select>
+      </md-input-container>
+
+
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m2_1 == 'No' || vm.form.m2_1 == 'No [ALERT]'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m2_2"
+                placeholder="2.2 Briefly describe any negative entry/access conditions on site." required ng-disabled="!vm.editAllow"></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label>2.3 Are potentially hazardous materials or equipment protected against unauthorized access?</label>
+        <md-select ng-model="vm.form.m2_3" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes (go to 2.5)</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="No [ALERT]">No [ALERT]</md-option>
+        </md-select>
+      </md-input-container>
+
+
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m2_3 == 'No' || vm.form.m2_3 == 'No [ALERT]'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m2_4"
+                placeholder="2.4 Briefly describe any negative hazardous material or equipment conditions on site."
+                required ng-disabled="!vm.editAllow"></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label ng-style="vm.form.m2_5 === 'Yes' && {'color':'red', 'font-weight':'bold'}">2.5 Is there evidence of an unauthorized presence of children, outside persons, vermin or animals on the
+          activity site?</label>
+        <md-select ng-model="vm.form.m2_5" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes (ALERT)</md-option>
+          <md-option value="No">No (go to 2.7)</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+
+      </md-input-container>
+
+
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m2_5 == 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m2_6"
+                placeholder="2.6 Briefly describe any unauthorized site access/entry conditions (if any)."
+                required ng-disabled="!vm.editAllow"></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m2_7"
+                placeholder="2.7 Briefly describe any additional safety, security or hazardous concerns observed while on site (if any)."
+                required ng-disabled="!vm.editAllow"></textarea>
+      </md-input-container>
+    </div>
+
+  </div>
+</div>

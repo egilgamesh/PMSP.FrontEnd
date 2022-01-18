@@ -1,0 +1,54 @@
+<div id="maps" class="page-layout simple tabbed doc-page" layout="column">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Data Visualization</span>
+            </div>
+
+
+          <div class="title">New UNDP/FFS Visualization Maps
+            <md-button class="add-event-button md-fab md-info" href="https://ifmapp.online/printMap/{{getMap}}" target="_blank" aria-label="Print">
+              <md-icon md-font-icon="icon-printer"></md-icon>
+            </md-button>
+          </div>
+
+
+
+        </div>
+
+        <!--<div layout="row" layout-align="start center">-->
+            <!--<md-button class="md-raised reference-button" href="http://angular-ui.github.io/angular-google-maps/"-->
+                       <!--target="_blank">-->
+                <!--<md-icon md-font-icon="icon-link"></md-icon>-->
+                <!--<span>Reference</span>-->
+            <!--</md-button>-->
+        <!--</div>-->
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+
+  <div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 50px" ng-if="vm.isLoading">
+    <md-progress-circular  class="md-accent md-hue-1" md-diameter="60"></md-progress-circular>
+  </div>
+
+    <div class="content" ng-if="!vm.isLoading" >
+        <md-tabs md-dynamic-height md-selected-nav-item="vm.selectedNavItem" nav-bar-aria-label="Maps" md-selected='0'>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-all" name="allWindowMap" ng-click="saveMap('all')">UNDP/FFS (All)</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-small" name="healthWindowMap" ng-click="saveMap('small')">UNDP/FFS Small Grants</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-house_repair" name="healthWindowMap" ng-click="saveMap('house')">UNDP/FFS House Repair</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-health" name="healthWindowMap" ng-click="saveMap('health')">UNDP/FFS Health</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-education" name="educationWindowMap" ng-click="saveMap('education')">UNDP/FFS Education</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-municipality" name="municipalityWindowMap" ng-click="saveMap('municipality')">UNDP/FFS Municipality</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-cash" name="cashWindowMap" ng-click="saveMap('cash')">UNDP/FFS Cash 4 Work</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-water" name="waterWindowMap" ng-click="saveMap('waterWindowMap')">UNDP/FFS Water</md-tab>
+          <md-tab ui-sref="app.new_ffs_maps.ffs-electricity" name="electricityWindowMap" ng-click="saveMap('electricity')">UNDP/FFS Electricity</md-tab>
+        </md-tabs>
+        <md-content ui-view="tabContent" flex class="card md-whiteframe-4dp"></md-content>
+    </div>
+    <!-- / CONTENT -->
+</div>

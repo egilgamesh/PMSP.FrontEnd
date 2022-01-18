@@ -1,0 +1,39 @@
+<div class="md-inline-form">
+  V.	Beneficiary Survey
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BSName"
+             placeholder="1. Name of Beneficiary:" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.BSTitle"
+             placeholder="2. Job Title:" required>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>3. Gender (observe):</label>
+      <md-select ng-model="vm.municipalityForm.BSGender" required>
+        <md-option value="Male">Male</md-option>
+        <md-option value="Female">Female</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="50">
+      <label>4. Age of Interviewee (ask, don’t read out options)</label>
+      <md-select ng-model="vm.municipalityForm.BSAge" required>
+        <md-option ng-repeat="item in vm.selectAge" value="{{item.value}}">{{item.name}}</md-option>
+
+      </md-select>
+    </md-input-container>
+
+  </div>
+</div>

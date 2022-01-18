@@ -1,0 +1,12 @@
+<ms-widget ng-show="vm.canReview">
+  <ms-widget-front class="padding-16 md-white-bg">
+    <div class="label">A/COR Report Review Options</div>
+    <div class="label">{{vm.reviewComment}}</div>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button ng-show="vm.canReviewApprove" ng-click="vm.COROptions($event, 'accepted')" class="md-raised">I Review this report</md-button>
+      <md-button ng-show="vm.canReviewComment" ng-click="vm.COROptions($event, 'commented')" style="margin-left: 20px" class="md-raised md-primary">I Have Comments</md-button>
+      <!--<md-button ng-click="vm.COROptions($event, 'duplicated')" style="margin-left: 20px" class="md-raised md-warn">Duplicate</md-button>-->
+      <md-button ng-show="vm.canReviewRequire" ng-click="vm.COROptions($event, 'infoReq')" style="margin-left: 20px" class="md-raised md-warn">I Need More Information</md-button>
+    </section>
+  </ms-widget-front>
+</ms-widget>

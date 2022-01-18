@@ -1,0 +1,61 @@
+<div class="md-inline-form">
+  <p>Damage to Housing Infrastructure</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTHI_ApartmentBuildings"
+                placeholder="Apartment Buildings - Specify damage from the conflict and the impact of the damage on citizen housing" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTHI_ApartmentBuildingsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTHI_SmallVillas"
+                placeholder="Small Villas - Specify damage from the conflict and the impact of the damage on citizen housing" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTHI_SmallVillasChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+
+</div>
+

@@ -1,0 +1,45 @@
+<div id="maps" class="page-layout simple tabbed doc-page" layout="column">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Data Visualization</span>
+            </div>
+            <div class="title">Maps</div>
+        </div>
+
+        <!--<div layout="row" layout-align="start center">-->
+            <!--<md-button class="md-raised reference-button" href="http://angular-ui.github.io/angular-google-maps/"-->
+                       <!--target="_blank">-->
+                <!--<md-icon md-font-icon="icon-link"></md-icon>-->
+                <!--<span>Reference</span>-->
+            <!--</md-button>-->
+        <!--</div>-->
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+
+
+z
+    <div class="content">
+
+        <md-tabs md-dynamic-height md-selected-nav-item="vm.selectedNavItem" nav-bar-aria-label="Maps" md-selected='0'>
+          <md-tab ui-sref="app.components_maps.sitrep" name="infoWindowMap">SitRep</md-tab>
+          <md-tab ui-sref="app.components_maps.ffs-health" name="healthWindowMap">UNDP/FFS Health</md-tab>
+          <md-tab ui-sref="app.components_maps.ffs-education" name="educationWindowMap">UNDP/FFS Education</md-tab>
+          <md-tab ui-sref="app.components_maps.ffs-municipality" name="municipalityWindowMap">UNDP/FFS Municipality</md-tab>
+          <md-tab ui-sref="app.components_maps.ffs-cash" name="cashWindowMap">UNDP/FFS Cash 4 Work</md-tab>
+          <md-tab ui-sref="app.components_maps.ffs-water" name="waterWindowMap">UNDP/FFS Water</md-tab>
+          <md-tab ui-sref="app.components_maps.ffs-electricity" name="electricityWindowMap">UNDP/FFS Electricity</md-tab>
+        </md-tabs>
+
+        <md-content ui-view="tabContent" flex class="card md-whiteframe-4dp"></md-content>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>

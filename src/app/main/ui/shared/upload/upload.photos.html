@@ -1,0 +1,289 @@
+<div>
+
+  <div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 50px" ng-if="isLoading">
+    <md-progress-circular  class="md-accent md-hue-1" md-diameter="40"></md-progress-circular>
+  </div>
+
+  <table class="simple" ms-responsive-table ng-show="photosPage">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Date</th>
+      <th>Sections</th>
+      <th>Size</th>
+      <th>GEOTag</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    {{photos}}
+    <tr ng-repeat="photo in photosPage">
+      <td class="name"><textarea ng-model="photo.file_name" ng-change="photoChange(photo.id, photo.file_name, photo)"></textarea>
+        <span ng-show="photo.isLoading">{{photo.saveMSG}}</span></td>
+      <td>{{photo.user.name}}</td>
+      <td>{{photo.created_at}}</td>
+      <td>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'NewFFSGeneral-form'">
+
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+          <md-option value="2.1">FFS 2.1</md-option>
+          <md-option value="2.3">FFS 2.3</md-option>
+          <md-option value="2.5">FFS 2.5</md-option>
+          <md-option value="2.7">FFS 2.7</md-option>
+          <md-option value="3.1">FFS 3.1</md-option>
+          <md-option value="3.3">FFS 3.3</md-option>
+          <md-option value="3.5">FFS 3.5</md-option>
+          <md-option value="5.2f">FFS 5.2f</md-option>
+          <md-option value="5.3d">FFS 5.3d</md-option>
+          <md-option value="5.3j">FFS 5.3j</md-option>
+          <md-option value="6.1">FFS 6.1</md-option>
+          <md-option value="6.5">FFS 6.5</md-option>
+          <md-option value="6.10">FFS 6.10</md-option>
+          <md-option value="7.3">FFS 7.3</md-option>
+          <md-option value="7.4">FFS 7.4</md-option>
+          <md-option value="9.2">FFS 9.2</md-option>
+          <md-option value="9.4">FFS 9.4</md-option>
+          <md-option value="9.11">FFS 9.11</md-option>
+          <md-option value="9.18">FFS 9.18</md-option>
+          <md-option value="9.19">FFS 9.19</md-option>
+          <md-option value="9.20">FFS 9.20</md-option>
+          <md-option value="10.1">FFS 10.1</md-option>
+          <md-option value="10.6">10.6</md-option>
+          <md-option value="10.12">FFS 10.12</md-option>
+          <md-option value="11.5">FFS 11.5</md-option>
+          <md-option value="11.6">FFS 11.6</md-option>
+          <md-option value="12.11">FFS 12.11</md-option>
+          <md-option value="12.13">FFS 12.13</md-option>
+
+
+          <md-option value="c4w_12.11">C4W 12.11</md-option>
+          <md-option value="c4w_12.13">C4W 12.13</md-option>
+          <md-option value="c4w_11.5">C4W 11.5</md-option>
+          <md-option value="c4w_11.6">C4W 11.6</md-option>
+          <md-option value="c4w_14.7">C4W 14.7</md-option>
+          <md-option value="c4w_14.8">C4W 14.8</md-option>
+          <md-option value="c4w_3.8">C4W 13.8</md-option>
+          <md-option value="c4w_13.9">C4W 13.9</md-option>
+          <md-option value="c4w_13.10">C4W 13.10</md-option>
+
+
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'IGPATool-form'">
+
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+
+          <md-option value="IGPA_2A.2">IGPA [2A.2]</md-option>
+          <md-option value="IGPA_2A.3">IGPA [2A.3]</md-option>
+          <md-option value="IGPA_2A.5">IGPA [2A.5]</md-option>
+          <md-option value="IGPA_2A.14">IGPA [2A.14]</md-option>
+          <md-option value="IGPA_3A.1">IGPA [3A.1]</md-option>
+          <md-option value="IGPA_3A.8">IGPA [3A.8]</md-option>
+          <md-option value="IGPA_3B.2">IGPA [3B.2]</md-option>
+          <md-option value="IGPA_4A.2">IGPA [4A.2]</md-option>
+          <md-option value="IGPA_4A.7">IGPA [4A.7]</md-option>
+          <md-option value="IGPA_4A.9">IGPA [4A.9]</md-option>
+          <md-option value="IGPA_5A.1">IGPA [5A.1]</md-option>
+          <md-option value="IGPA_5A.5">IGPA [5A.5]</md-option>
+          <md-option value="IGPA_5A.9">IGPA [5A.9]</md-option>
+          <md-option value="IGPA_5A.13">IGPA [5A.13]</md-option>
+          <md-option value="IGPA_6A.2">IGPA [6A.2]</md-option>
+          <md-option value="IGPA_7.7">IGPA [7.7]</md-option>
+          <md-option value="IGPA_7.15">IGPA [7.15]</md-option>
+
+
+
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'IMC'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'CRS'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'HAI'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'MENA'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'IOM'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'USIP'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+        <md-select ng-model="photo.section" ng-change="photoChangeSection(photo.id, photo.section, photo)" ng-if="pId === 'TopMountain'">
+          <md-option value="firstDraft">First Draft: Word</md-option>
+          <md-option value="finalReport">Final Report: Word</md-option>
+          <md-option value="map">Google Map</md-option>
+          <md-option value="g">General</md-option>
+          <md-option value="i">Important</md-option>
+          <md-option value="General">General</md-option>
+          <md-option value="Important">Important</md-option>
+        </md-select>
+      </td>
+      <td class="Size">Size: {{ photo.size/1024/1024|number:2 }} Mb</td>
+
+      <td class="Size" ng-if="photo.exif == 'NONE'">{{photo.exif}}</td>
+      <td class="Size" ng-if="photo.exif.longitude">
+
+        <md-button class="md-primary md-raised" ng-click="showTabDialog($event, photo)" >
+          View GEOTag
+        </md-button>
+      </td>
+
+
+      <td class="age text-right">
+        <a href="{{am.url}}DownloadFile/{{photo.id}}" target="_blank" class="btn btn-default btn-xs">Download</a> ||
+        <a href="{{am.url}}PreviewFile/{{photo.id}}" target="_blank" class="btn btn-default btn-xs">View</a> ||
+        <button ng-click="DeleteFiles(photo.id, item.name)" class="btn btn-danger btn-xs">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <div nv-file-drop="" uploader="uploader" ng-show="isEdit">
+
+
+    <h1>Upload your photos here!</h1>
+
+
+    <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
+    <input type="file" nv-file-select="" uploader="uploader" multiple />
+
+    <h2>Total Photos: {{ uploader.queue.length }}</h2>
+
+
+
+
+
+
+    <table class="simple" ms-responsive-table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Progress</th>
+        <th>Thumb</th>
+        <th>Actions</th>
+
+      </tr>
+      </thead>
+
+      <tfoot>
+      <tr>
+        <td></td>
+      </tr>
+      </tfoot>
+
+      <tbody>
+      <tr ng-repeat="item in uploader.queue">
+        <td class="name"><textarea ng-model="item.file.name"></textarea></td>
+        <td class="Size">Size: {{ item.file.size/1024/1024|number:2 }} Mb</td>
+        <td class="office">
+          <div ng-show="uploader.isHTML5">
+            Progress: {{ item.progress }}
+            <div class="item-progress-box">
+              <div class="item-progress" ng-style="{ 'width': item.progress + '%' }"></div>
+            </div>
+          </div>
+        </td>
+        <td class="age text-right">
+          <div ng-if="controller.isImage(item._file)">
+            Thumbnail (only images):
+            <!-- Image preview -->
+            <!--auto height-->
+            <!--<div ng-thumb="{ file: item.file, width: 100 }"></div>-->
+            <!--auto width-->
+
+            <div ng-thumb="{ file: item._file, height: 50 }"></div>
+            <!--fixed width and height -->
+            <!--<div ng-thumb="{ file: item.file, width: 100, height: 100 }"></div>-->
+          </div>
+        </td>
+        <td class="start-date text-right">
+          <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button class="md-raised md-primary" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">Upload</md-button>
+            <md-button class="md-raised" ng-click="item.cancel()" ng-disabled="!item.isUploading">Cancel</md-button>
+            <md-button class="md-raised md-warn" ng-click="item.remove()">Remove</md-button>
+          </section>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+
+    <div>
+      <div>
+        Total progress: {{ uploader.progress }}
+        <div class="total-progress-box">
+          <div class="total-progress" ng-style="{ 'width': uploader.progress + '%' }"></div>
+        </div>
+      </div>
+      <md-button class="md-raised md-primary" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">Upload all</md-button>
+      <md-button class="md-raised" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">Cancel all</md-button>
+      <md-button class="md-raised md-warn" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">Remove all</md-button>
+    </div>
+  </div>
+
+  <div ng-show="!isEdit">
+    Save the report and return here to upload the photos...
+  </div>
+</div>

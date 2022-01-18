@@ -1,0 +1,78 @@
+<div>
+  <table class="simple" ms-responsive-table>
+    <thead>
+    <th>#</th>
+    <!--<th>Section</th>-->
+    <!--<th>Level</th>-->
+    <th>Informational Awareness</th>
+    <!--<th>Options</th>-->
+    </thead>
+    <tbody>
+    <tr ng-repeat="contact in m_2c_participants.contacts" ng-include="getTemplate_2c(contact)">
+    </tr>
+    </tbody>
+  </table>
+
+  <md-button class="md-raised" ng-click="add_2c()">Add</md-button>
+
+
+  <script type="text/ng-template" id="display">
+    <td>{{contact.id}}</td>
+    <!--<td>{{contact.section}}</td>-->
+    <!--<td>{{contact.level}}</td>-->
+    <td>{{contact.concern}}</td>
+    <td>
+      <md-button class="md-raised" ng-click="editContact_2c(contact)">Edit</md-button>
+    </td>
+  </script>
+  <script type="text/ng-template" id="edit">
+    <td>{{m_2c_participants.selected.id}}</td>
+
+    <!--<td>-->
+      <!--<div layout="column" layout-gt-xs="row" flex>-->
+        <!--<md-input-container flex="100" flex-gt-xs="100">-->
+          <!--<md-select  ng-model="m_2c_participants.selected.section" required>-->
+            <!--<md-option value="COMPLETION">COMPLETION</md-option>-->
+            <!--<md-option value="SECURITY">SECURITY</md-option>-->
+            <!--<md-option value="QUALITY">QUALITY</md-option>-->
+            <!--<md-option value="EQUIPMENT AND SUPPLIES">EQUIPMENT AND SUPPLIES</md-option>-->
+            <!--<md-option value="UTILIZATION">UTILIZATION</md-option>-->
+            <!--<md-option value="OUTCOMES">OUTCOMES</md-option>-->
+            <!--<md-option value="OTHER">OTHER</md-option>-->
+          <!--</md-select>-->
+
+        <!--</md-input-container>-->
+      <!--</div>-->
+    <!--</td>-->
+    <!--<td>-->
+      <!--<div layout="column" layout-gt-xs="row" flex>-->
+        <!--<md-input-container flex="100" flex-gt-xs="100">-->
+          <!--<md-select  ng-model="m_2c_participants.selected.level" required>-->
+            <!--<md-option value="High">High</md-option>-->
+            <!--<md-option value="Medium">Medium</md-option>-->
+            <!--<md-option value="Low">Low</md-option>-->
+          <!--</md-select>-->
+        <!--</md-input-container>-->
+      <!--</div>-->
+    <!--</td>-->
+    <td>
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="m_2c_participants.selected.concern"
+                placeholder="Concern"
+                required></textarea>
+        </md-input-container>
+      </div>
+    </td>
+
+    <td>
+      <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button class="md-raised" ng-click="saveContact_2c($index)">Save</md-button>
+        <md-button class="md-raised" ng-click="reset_2c()">Cancel</md-button>
+        <md-button class="md-raised md-warn" ng-click="delete_2c($index)">Delete</md-button>
+
+      </section>
+    </td>
+  </script>
+
+</div>

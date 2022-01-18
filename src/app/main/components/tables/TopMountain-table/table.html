@@ -1,0 +1,263 @@
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Management</span>
+            </div>
+            <div class="title">USAID/TopMountain
+              <md-button class="add-event-button md-fab md-info" href="{{vm.baseLocation}}TopMountain" target="_blank"
+                         aria-label="Print" translate translate-attr-aria-label="CALENDAR.ADD_EVENT">
+                <md-icon md-font-icon="icon-printer"></md-icon>
+              </md-button>
+            </div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <!--<div class="content">-->
+  <div  class="page-layout simple fullwidth doc-page fixedByAli" layout="column" flex="100">
+
+        <div class="simple-table-container md-whiteframe-4dp">
+           <div>
+              <md-toolbar class="md-table-toolbar md-default" ng-hide="vm.selected.length || vm.filter.show">
+                <div class="md-toolbar-tools">
+                  <h2 class="md-title">USAID/TopMountain Primary Tools</h2>
+                  <div flex></div>
+                  <md-button class="md-icon-button" ng-click="vm.filter.show = true">
+                    <md-icon>filter_list</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" ng-click="vm.addItem($event)">
+                    <md-icon>local_dining</md-icon>
+                  </md-button>
+                </div>
+              </md-toolbar>
+
+              <div  ng-show="vm.filter.show && !vm.selected.length" style="padding: 20px">
+                <div>
+                  <md-icon>search</md-icon>
+                  <md-button class="md-icon-button" ng-click="vm.removeFilter()">
+                    <md-icon>close</md-icon>
+                  </md-button>
+                  <form flex name="vm.filter.form">
+
+                    <div layout="column" layout-gt-xs="row" flex>
+                    <md-input-container flex="100" flex-gt-xs="33">
+                    <md-select ng-model="vm.ifmFilter" placeholder="Filter By IFM"  ng-change="vm.changeValue()">
+                      <md-option ng-repeat="ifm in vm.ifms" value="{{ifm}}">{{ifm}}</md-option>
+                    </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex="100" flex-gt-xs="33">
+                    <md-select ng-model="vm.provinceFilter" placeholder="Filter By Province"  ng-change="vm.changeValue()">
+                      <md-option ng-repeat="province in vm.province" value="{{province}}">{{province}}</md-option>
+                    </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex="100" flex-gt-xs="33">
+                      <md-select ng-model="vm.activityFilter" placeholder="Filter By Activity"  ng-change="vm.changeValue()">
+                        <md-option ng-repeat="activity in vm.activity" value="{{activity}}">{{activity}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                    </div>
+
+                    <md-input-container flex="100" flex-gt-xs="33">
+                      <md-datepicker ng-model="vm.startDateFilter" md-placeholder="From Date"
+                                     md-min-date="minDate" md-max-date="maxDate" ng-change="vm.changeValue()"></md-datepicker>
+                    </md-input-container>
+
+                    <md-input-container flex="100" flex-gt-xs="33">
+
+                      <md-datepicker ng-model="vm.endDateFilter" md-placeholder="To Date"
+                                     md-min-date="minDate" md-max-date="maxDate" ng-change="vm.changeValue()"></md-datepicker>
+
+                    </md-input-container>
+
+                    <md-input-container flex="100" flex-gt-xs="33">
+                      <md-button  class="md-primary" ng-click="vm.clear()">Clear</md-button>
+                    </md-input-container>
+
+                    <div layout="column" layout-gt-xs="row" flex>
+                    <md-input-container flex="100" flex-gt-xs="100">
+                    <md-autocomplete
+                      ng-disabled="vm.isDisabled"
+                      md-no-cache="vm.noCache"
+                      md-selected-item="vm.selectedItem"
+                      md-search-text-change="vm.searchTextChange(vm.searchText)"
+                      md-search-text="vm.searchText"
+                      md-selected-item-change="vm.selectedItemChange(item)"
+                      md-items="item in vm.querySearch(vm.searchText)"
+                      md-item-text="item.display"
+                      md-min-length="0"
+                      placeholder="Search By Title">
+                      <md-item-template>
+                        <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                      </md-item-template>
+                      <md-not-found>
+                        No results matching "{{vm.searchText}}" were found.
+                      </md-not-found>
+                    </md-autocomplete>
+                    </md-input-container>
+                    </div>
+                    <!--<input type="text" ng-model="vm.query.filter" ng-model-options="vm.filter.options" placeholder="search">-->
+                  </form>
+                  <div>
+                    <p style="align-content: center; text-align: center; margin-bottom: 40px; font-weight: bold">Advance Search</p>
+                    <md-table-container>
+                      <table md-table multiple>
+                        <thead>
+                        <tr  md-row md-head>
+                          <td  md-column style="width:35%">Item</td>
+                          <td  md-column style="width:20%">Search</td>
+                          <td  md-column style="width:25%">Actions</td>
+                        </tr>
+                        </thead>
+                        <tr md-row ng-repeat="item in dataSearch">
+
+                          <td md-cell>
+                            <!-- editable group (select-remote) -->
+                            <span editable-select="item.group" e-name="group" e-ng-model="item.business" e-ng-change="changeItem($data, item.id, $index)" onshow="loadGroups()" e-form="rowform" e-ng-options="g as g.name.substring(0, 40) for g in searchItems">
+          {{ item.type.name }}
+        </span>
+                          </td>
+                          <td md-cell ng-if="item.type.type == 'option'">
+                            <!-- editable status (select-local) -->
+                            <span editable-select="item.name" e-name="status" e-form="rowform" e-ng-options="s.value as s.text for s in item.type.options">
+          {{ item.name }}
+        </span>
+                          </td>
+
+                          <td md-cell ng-if="item.type.type == 'text'">
+                            <!-- editable username (text with validation) -->
+                            <span editable-textarea="item.name" e-name="name" e-form="rowform" onbeforesave="checkName($data, item.id)">
+          {{ item.name || 'empty' }}
+        </span>
+                          </td>
+
+                          <td style="white-space: nowrap" md-cell>
+                            <!-- form -->
+                            <form editable-form name="rowform" onbeforesave="saveUser($data, item.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == item">
+                              <md-button type="submit" ng-disabled="rowform.$waiting" class="md-raised md-primary">
+                                save
+                              </md-button>
+                              <md-button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="md-raised md-warn">
+                                cancel
+                              </md-button>
+                            </form>
+                            <div class="buttons" ng-show="!rowform.$visible">
+                              <md-button type="button" class="md-raised md-accent"  ng-click="rowform.$show()">edit</md-button>
+                              <md-button type="button" class="md-raised md-warn" ng-click="removeUser($index)">del</md-button>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </md-table-container>
+
+                    <md-button  type="button" class="md-raised md-primary" ng-click="addUser()">Add row</md-button>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="md-table-toolbar md-default" ng-show="vm.selected.length">
+                <div class="md-toolbar-tools">
+                  <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'items' : 'item'}} selected</div>
+                  <md-button ng-show="vm.selected.length == 1 " class="md-icon-button" ng-click="vm.addItem($event)">
+                    <md-icon>edit</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" ng-click="vm.delete($event)">
+                    <md-icon>delete</md-icon>
+                  </md-button>
+
+                </div>
+              </div>
+
+              <md-table-container>
+                <table md-table md-row-select multiple ng-model="vm.selected" md-progress="vm.promise">
+                  <thead md-head md-order="vm.query.order" md-on-reorder="vm.getItems">
+                  <tr md-row>
+                    <th md-column md-order-by="id"><span>ID</span></th>
+                    <th md-column><span>Summary Report</span></th>
+                    <th md-column><span>USAID Review Status</span></th>
+                    <th md-column><span>Alerts</span></th>
+                    <th md-column><span>Informational Awareness</span></th>
+                    <th md-column><span>Activity</span></th>
+                    <th md-column md-order-by="title"><span>Title</span></th>
+                    <th md-column md-order-by="date_of_visit"><span>Date of Visit</span></th>
+                    <th md-column ><span>Date of Submission</span></th>
+                    <th md-column md-order-by="province"><span>Province</span></th>
+                    <th md-column md-order-by="district"><span>District</span></th>
+                    <th md-column md-order-by="user_id"><span>IFM Name</span></th>
+                    <th md-column md-order-by="created_at"><span>Uploaded At</span></th>
+                    <th md-column md-order-by="updated_at"><span>Updated At</span></th>
+                    <th md-column ><span>Stage</span></th>
+                  </tr>
+                  </thead>
+                  <tbody md-body>
+
+                  <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in vm.items.data">
+
+                    <td md-cell>
+                      <a ui-sref="app.ui_forms-TopMountain.details({id:{{item.id}}})">
+                        <span class="ml-16 text-boxed blue-bg white-fg">{{item.id}}   [ VIEW ]</span>
+                      </a>
+                      </td>
+                    <td md-cell>
+                      <md-button  ng-if="item.stage.name === 'Final Report'" class="add-event-button md-fab md-info" href="https://ifmapp.online/PDFViewerTopMountain?reportId={{item.id}}&file=https://ifmapp.online/getOnlineSummaryReportTopMountain/{{item.id}}" target="_blank"
+                                  aria-label="Checked" translate translate-attr-aria-label="CALENDAR.ADD_EVENT">
+                        <md-icon md-font-icon="icon-file-pdf"></md-icon>
+                      </md-button>
+                    </td>
+                    <td md-cell>
+                      <span class="ml-16 text-boxed green-bg white-fg" ng-if="item.reviewForTable === 'approved'">Reviewed</span>
+                      <span class="ml-16 text-boxed green-bg white-fg" ng-if="item.reviewForTable === 'commented'">Commented</span>
+                      <span class="ml-16 text-boxed red-bg white-fg" ng-if="item.reviewForTable === 'pending'">Pending</span>
+                      <span class="ml-16 text-boxed orange-bg white-fg" ng-if="item.reviewForTable === 'Not Reviewed'">{{item.reviewForTable}}</span>
+                    </td>
+                    <td md-cell>
+                      <span class="ml-16 text-boxed green-bg white-fg" ng-if="item.alerts === 0">No Alerts Found</span>
+                      <span class="ml-16 text-boxed red-bg white-fg" ng-if="item.alerts === 1"><b>{{item.alerts}}</b> Alert Found</span>
+                      <span class="ml-16 text-boxed red-bg white-fg" ng-if="item.alerts > 1"><b>{{item.alerts}}</b> Alerts Found</span>
+                    </td>
+                    <td md-cell>
+                      <span ng-if="item.concerns.active === true">
+                    <span class="ml-16 text-boxed red-bg white-fg"><b>{{item.concerns.total}}</b></span>
+
+                      </span>
+                      <span ng-if="item.concerns.active === false">
+                        <span class="ml-16 text-boxed green-bg white-fg">None</span>
+                      </span>
+                    </td>
+                    <td md-cell>TopMountain</td>
+                    <td md-cell>{{item.title}}</td>
+                    <td md-cell>{{item.date_of_visit}}</td>
+                    <td md-cell>{{item.stage.date}}</td>
+                    <td md-cell>{{item.province}}</td>
+                    <td md-cell>{{item.district}}</td>
+                    <td md-cell>{{item.user.name}}</td>
+                    <td md-cell>{{item.created_at}}</td>
+                    <td md-cell>{{item.updated_at}}</td>
+                    <td md-cell>
+                      <span class="ml-16 text-boxed green-bg white-fg" ng-if="item.stage.name === 'Final Report'">{{item.stage.name}}</span>
+                      <span class="ml-16 text-boxed yellow-bg white-fg" ng-if="item.stage.name === 'First Draft'"><b>{{item.stage.name}}</b></span>
+                      <span class="ml-16 text-boxed red-bg white-fg" ng-if="item.stage.name === 'Fresh Report'"><b>{{item.stage.name}}</b></span>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </md-table-container>
+
+              <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15, 30, 50, 100, 200, 500]" md-page="vm.query.page" md-total="{{vm.items.count}}" md-on-paginate="vm.getItems" md-page-select></md-table-pagination>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>

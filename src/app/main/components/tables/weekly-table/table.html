@@ -1,0 +1,151 @@
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Management</span>
+            </div>
+            <div class="title">IFM Weekly Report Management</div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <!--<div class="content">-->
+  <div  class="page-layout simple fullwidth doc-page fixedByAli" layout="column" flex="100">
+        <div class="simple-table-container md-whiteframe-4dp">
+           <div>
+              <md-toolbar class="md-table-toolbar md-default" ng-hide="vm.selected.length || vm.filter.show">
+                <div class="md-toolbar-tools">
+                  <h2 class="md-title">IFM Weekly Plans</h2>
+                  <div flex></div>
+                  <md-button class="md-icon-button" ng-click="vm.filter.show = true">
+                    <md-icon>filter_list</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" ng-click="vm.addItem($event)">
+                    <md-icon>local_dining</md-icon>
+                  </md-button>
+                </div>
+              </md-toolbar>
+
+              <md-toolbar class="md-table-toolbar md-default" ng-show="vm.filter.show && !vm.selected.length">
+                <div class="md-toolbar-tools">
+                  <md-icon>search</md-icon>
+                  <form flex name="vm.filter.form">
+                    <md-input-container flex>
+                      <md-select ng-model="vm.ifm" placeholder="Select Project"  ng-change="vm.changeValue()">
+                        <md-option ng-repeat="ifm in vm.ifms" value="{{ifm.id}}">{{ifm.name}}</md-option>
+                      </md-select>
+                    </md-input-container>
+                    <md-input-container flex>
+                      <md-select ng-model="vm.project" placeholder="Select Project" ng-change="vm.changeValue()" >
+                        <md-option ng-repeat="project in vm.projects" value="{{project.value}}">{{project.name}}</md-option>
+                      </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                      <md-select ng-model="vm.province" placeholder="Select Province" ng-change="vm.changeValue()" >
+                        <md-option ng-repeat="province in vm.provinces" value="{{province}}">{{province}}</md-option>
+                      </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                      <md-select ng-model="vm.status" placeholder="Select Status" ng-change="vm.changeValue()" >
+                        <md-option ng-repeat="status in vm.statuses" value="{{status.value}}">{{status.name}}</md-option>
+                      </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                      <md-button  class="md-primary" ng-click="vm.clear()">Clear</md-button>
+                    </md-input-container>
+
+
+                    <input type="text" ng-model="vm.query.filter" ng-model-options="vm.filter.options" placeholder="search">
+                  </form>
+                  <md-button class="md-icon-button" ng-click="vm.removeFilter()">
+                    <md-icon>close</md-icon>
+                  </md-button>
+                </div>
+              </md-toolbar>
+
+
+
+              <div class="md-table-toolbar md-default" ng-show="vm.selected.length">
+                <div class="md-toolbar-tools">
+                  <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'items' : 'item'}} selected</div>
+                  <md-button ng-show="vm.selected.length == 1 " class="md-icon-button" ng-click="vm.addItem($event)">
+                    <md-icon>edit</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" ng-click="vm.delete($event)">
+                    <md-icon>delete</md-icon>
+                  </md-button>
+
+                  <md-button class="md-icon-button" ng-click="vm.approve($event)" ng-if="vm.user.type === 'admin' || vm.user.type === 'M&E'">
+                    <md-icon>repeat</md-icon>
+                  </md-button>
+
+                </div>
+              </div>
+
+              <md-table-container>
+                <table md-table md-row-select multiple ng-model="vm.selected" md-progress="vm.promise">
+                  <thead md-head md-order="vm.query.order" md-on-reorder="vm.getItems">
+                  <tr md-row>
+                    <th md-column md-order-by="id"><span>ID</span></th>
+                    <th md-column md-order-by="approval_status"><span>Status</span></th>
+                    <th md-column md-order-by="start_date"><span>Date</span></th>
+                    <th md-column md-order-by="ifm"><span>Name</span></th>
+                    <th md-column md-order-by="title"><span>Title</span></th>
+                    <th md-column md-order-by="project_type"><span>Type</span></th>
+                    <th md-column md-order-by="Location"><span>Location</span></th>
+                    <th md-column md-order-by="created_at"><span>Created At</span></th>
+                    <th md-column md-order-by="updated_at"><span>Updated At</span></th>
+                  </tr>
+                  </thead>
+                  <tbody md-body>
+
+                  <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in vm.items.data">
+                    <td md-cell>{{item.id}}</td>
+                    <td md-cell>
+
+                      <span class="text-boxed m-0 indigo-bg white-fg" ng-if="item.approval_status == 'waiting'">
+                        {{item.approval_status}}
+                      </span>
+                      <span class="text-boxed m-0 green-bg white-fg" ng-if="item.approval_status == 'approved'">
+                        {{item.approval_status}}
+                      </span>
+                      <span class="text-boxed m-0 red-bg white-fg" ng-if="item.approval_status == 'rejected'">
+                        {{item.approval_status}}
+                      </span>
+                      <span class="text-boxed m-0 yellow-bg white-fg" ng-if="item.approval_status == 'postponed'">
+                        {{item.approval_status}}
+                      </span>
+
+                    </td>
+
+
+                    <td md-cell>{{item.start_date}}</td>
+                    <td md-cell>{{item.ifm}}</td>
+                    <td md-cell>{{item.title}}</td>
+                    <td md-cell>{{item.project_type}}</td>
+                    <td md-cell>{{item.location}}</td>
+                    <td md-cell>{{item.created_at}}</td>
+                    <td md-cell>{{item.updated_at}}</td>
+
+                  </tr>
+                  </tbody>
+                </table>
+              </md-table-container>
+
+              <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15, 25, 50, 100]" md-page="vm.query.page" md-total="{{vm.items.count}}" md-on-paginate="vm.getItems" md-page-select></md-table-pagination>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>

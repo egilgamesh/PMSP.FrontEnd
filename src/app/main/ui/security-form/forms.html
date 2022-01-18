@@ -1,0 +1,359 @@
+<div id="forms" class="page-layout simple fullwidth doc-page" layout="column">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="space-between">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Security Forum</span>
+            </div>
+
+            <div class="title">Forms</div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <div  class="page-layout simple fullwidth doc-page fixedByAli" layout="column" flex="100">
+
+
+        <div class="md-title mt-32">Security Tracker</div>
+        <div class="pb-16">Please fill the information.
+        </div>
+        <div layout="row">
+
+            <!-- BASIC FORM -->
+            <div class="form-wrapper md-whiteframe-1dp" flex="100">
+
+                <form name="basicForm" class="md-inline-form" novalidate>
+
+
+                  <div layout="column" layout-gt-xs="row">
+                    <md-input-container flex>
+                      <label>From</label>
+                      <md-select ng-model="vm.basicForm.travelingFrom" required>
+                        <md-option ng-repeat="state in vm.states" value="{{state}}">
+                          {{state}}
+                        </md-option>
+                      </md-select>
+                    </md-input-container>
+
+                    <md-input-container flex>
+                      <label>To</label>
+                      <md-select ng-model="vm.basicForm.travelingTo" required>
+                        <md-option ng-repeat="state in vm.states" value="{{state}}">
+                          {{state}}
+                        </md-option>
+                      </md-select>
+                    </md-input-container>
+
+                  </div>
+
+
+
+                  <div layout="column" layout-gt-sm="row">
+                        <md-input-container flex>
+                          <md-datepicker ng-model="vm.basicForm.departedDate" md-placeholder="Departed Date"
+                                         md-min-date="minDate" md-max-date="maxDate" required></md-datepicker>
+                        </md-input-container>
+
+                        <md-input-container flex>
+                          <label>Time Left Home</label>
+                          <md-select ng-model="vm.basicForm.departedTime" required>
+                            <md-option value="00:00">12.00 AM</md-option>
+                            <md-option value="00:30">12.30 AM</md-option>
+                            <md-option value="01:00">01.00 AM</md-option>
+                            <md-option value="01:30">01.30 AM</md-option>
+                            <md-option value="02:00">02.00 AM</md-option>
+                            <md-option value="02:30">02.30 AM</md-option>
+                            <md-option value="03:00">03.00 AM</md-option>
+                            <md-option value="03:30">03.30 AM</md-option>
+                            <md-option value="04:00">04.00 AM</md-option>
+                            <md-option value="04:30">04.30 AM</md-option>
+                            <md-option value="05:00">05.00 AM</md-option>
+                            <md-option value="05:30">05.30 AM</md-option>
+                            <md-option value="06:00">06.00 AM</md-option>
+                            <md-option value="06:30">06.30 AM</md-option>
+                            <md-option value="07:00">07.00 AM</md-option>
+                            <md-option value="07:30">07.30 AM</md-option>
+                            <md-option value="08:00">08.00 AM</md-option>
+                            <md-option value="08:30">08.30 AM</md-option>
+                            <md-option value="09:00">09.00 AM</md-option>
+                            <md-option value="09:30">09.30 AM</md-option>
+                            <md-option value="10:00">10.00 AM</md-option>
+                            <md-option value="10:30">10.30 AM</md-option>
+                            <md-option value="11:00">11.00 AM</md-option>
+                            <md-option value="11:30">11.30 AM</md-option>
+                            <md-option value="12:00">12.00 PM</md-option>
+                            <md-option value="12:30">12.30 PM</md-option>
+                            <md-option value="13:00">01.00 PM</md-option>
+                            <md-option value="13:30">01.30 PM</md-option>
+                            <md-option value="14:00">02.00 PM</md-option>
+                            <md-option value="14:30">02.30 PM</md-option>
+                            <md-option value="15:00">03.00 PM</md-option>
+                            <md-option value="15:30">03.30 PM</md-option>
+                            <md-option value="16:00">04.00 PM</md-option>
+                            <md-option value="16:30">04.30 PM</md-option>
+                            <md-option value="17:00">05.00 PM</md-option>
+                            <md-option value="17:30">05.30 PM</md-option>
+                            <md-option value="18:00">06.00 PM</md-option>
+                            <md-option value="18:30">06.30 PM</md-option>
+                            <md-option value="19:00">07.00 PM</md-option>
+                            <md-option value="19:30">07.30 PM</md-option>
+                            <md-option value="20:00">08.00 PM</md-option>
+                            <md-option value="20:30">08.30 PM</md-option>
+                            <md-option value="21:00">09.00 PM</md-option>
+                            <md-option value="21:30">09.30 PM</md-option>
+                            <md-option value="22:00">10.00 PM</md-option>
+                            <md-option value="22:30">10.30 PM</md-option>
+                            <md-option value="23:00">11.00 PM</md-option>
+                            <md-option value="23:30">11.30 PM</md-option>
+                          </md-select>
+
+                        </md-input-container>
+                    </div>
+
+
+                  <div layout="column" layout-gt-sm="row">
+                    <md-input-container flex>
+
+                      <label>Time Arrived Site</label>
+                      <md-select ng-model="vm.basicForm.timeArrivedSite">
+                        <md-option value="00:00">12.00 AM</md-option>
+                        <md-option value="00:30">12.30 AM</md-option>
+                        <md-option value="01:00">01.00 AM</md-option>
+                        <md-option value="01:30">01.30 AM</md-option>
+                        <md-option value="02:00">02.00 AM</md-option>
+                        <md-option value="02:30">02.30 AM</md-option>
+                        <md-option value="03:00">03.00 AM</md-option>
+                        <md-option value="03:30">03.30 AM</md-option>
+                        <md-option value="04:00">04.00 AM</md-option>
+                        <md-option value="04:30">04.30 AM</md-option>
+                        <md-option value="05:00">05.00 AM</md-option>
+                        <md-option value="05:30">05.30 AM</md-option>
+                        <md-option value="06:00">06.00 AM</md-option>
+                        <md-option value="06:30">06.30 AM</md-option>
+                        <md-option value="07:00">07.00 AM</md-option>
+                        <md-option value="07:30">07.30 AM</md-option>
+                        <md-option value="08:00">08.00 AM</md-option>
+                        <md-option value="08:30">08.30 AM</md-option>
+                        <md-option value="09:00">09.00 AM</md-option>
+                        <md-option value="09:30">09.30 AM</md-option>
+                        <md-option value="10:00">10.00 AM</md-option>
+                        <md-option value="10:30">10.30 AM</md-option>
+                        <md-option value="11:00">11.00 AM</md-option>
+                        <md-option value="11:30">11.30 AM</md-option>
+                        <md-option value="12:00">12.00 PM</md-option>
+                        <md-option value="12:30">12.30 PM</md-option>
+                        <md-option value="13:00">01.00 PM</md-option>
+                        <md-option value="13:30">01.30 PM</md-option>
+                        <md-option value="14:00">02.00 PM</md-option>
+                        <md-option value="14:30">02.30 PM</md-option>
+                        <md-option value="15:00">03.00 PM</md-option>
+                        <md-option value="15:30">03.30 PM</md-option>
+                        <md-option value="16:00">04.00 PM</md-option>
+                        <md-option value="16:30">04.30 PM</md-option>
+                        <md-option value="17:00">05.00 PM</md-option>
+                        <md-option value="17:30">05.30 PM</md-option>
+                        <md-option value="18:00">06.00 PM</md-option>
+                        <md-option value="18:30">06.30 PM</md-option>
+                        <md-option value="19:00">07.00 PM</md-option>
+                        <md-option value="19:30">07.30 PM</md-option>
+                        <md-option value="20:00">08.00 PM</md-option>
+                        <md-option value="20:30">08.30 PM</md-option>
+                        <md-option value="21:00">09.00 PM</md-option>
+                        <md-option value="21:30">09.30 PM</md-option>
+                        <md-option value="22:00">10.00 PM</md-option>
+                        <md-option value="22:30">10.30 PM</md-option>
+                        <md-option value="23:00">11.00 PM</md-option>
+                        <md-option value="23:30">11.30 PM</md-option>
+                      </md-select>
+
+
+                    </md-input-container>
+
+                    <md-input-container flex>
+
+                      <label>Time Left Site</label>
+                      <md-select ng-model="vm.basicForm.timeLeftSite">
+                        <md-option value="00:00">12.00 AM</md-option>
+                        <md-option value="00:30">12.30 AM</md-option>
+                        <md-option value="01:00">01.00 AM</md-option>
+                        <md-option value="01:30">01.30 AM</md-option>
+                        <md-option value="02:00">02.00 AM</md-option>
+                        <md-option value="02:30">02.30 AM</md-option>
+                        <md-option value="03:00">03.00 AM</md-option>
+                        <md-option value="03:30">03.30 AM</md-option>
+                        <md-option value="04:00">04.00 AM</md-option>
+                        <md-option value="04:30">04.30 AM</md-option>
+                        <md-option value="05:00">05.00 AM</md-option>
+                        <md-option value="05:30">05.30 AM</md-option>
+                        <md-option value="06:00">06.00 AM</md-option>
+                        <md-option value="06:30">06.30 AM</md-option>
+                        <md-option value="07:00">07.00 AM</md-option>
+                        <md-option value="07:30">07.30 AM</md-option>
+                        <md-option value="08:00">08.00 AM</md-option>
+                        <md-option value="08:30">08.30 AM</md-option>
+                        <md-option value="09:00">09.00 AM</md-option>
+                        <md-option value="09:30">09.30 AM</md-option>
+                        <md-option value="10:00">10.00 AM</md-option>
+                        <md-option value="10:30">10.30 AM</md-option>
+                        <md-option value="11:00">11.00 AM</md-option>
+                        <md-option value="11:30">11.30 AM</md-option>
+                        <md-option value="12:00">12.00 PM</md-option>
+                        <md-option value="12:30">12.30 PM</md-option>
+                        <md-option value="13:00">01.00 PM</md-option>
+                        <md-option value="13:30">01.30 PM</md-option>
+                        <md-option value="14:00">02.00 PM</md-option>
+                        <md-option value="14:30">02.30 PM</md-option>
+                        <md-option value="15:00">03.00 PM</md-option>
+                        <md-option value="15:30">03.30 PM</md-option>
+                        <md-option value="16:00">04.00 PM</md-option>
+                        <md-option value="16:30">04.30 PM</md-option>
+                        <md-option value="17:00">05.00 PM</md-option>
+                        <md-option value="17:30">05.30 PM</md-option>
+                        <md-option value="18:00">06.00 PM</md-option>
+                        <md-option value="18:30">06.30 PM</md-option>
+                        <md-option value="19:00">07.00 PM</md-option>
+                        <md-option value="19:30">07.30 PM</md-option>
+                        <md-option value="20:00">08.00 PM</md-option>
+                        <md-option value="20:30">08.30 PM</md-option>
+                        <md-option value="21:00">09.00 PM</md-option>
+                        <md-option value="21:30">09.30 PM</md-option>
+                        <md-option value="22:00">10.00 PM</md-option>
+                        <md-option value="22:30">10.30 PM</md-option>
+                        <md-option value="23:00">11.00 PM</md-option>
+                        <md-option value="23:30">11.30 PM</md-option>
+                      </md-select>
+
+
+                    </md-input-container>
+                  </div>
+
+
+                  <div layout="column" layout-gt-sm="row">
+                    <md-input-container flex>
+                      <md-datepicker ng-model="vm.basicForm.returnDate" md-placeholder="Return Date"
+                                     md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+                    </md-input-container>
+
+                    <md-input-container flex>
+
+                      <label>Time Arrived Home</label>
+                      <md-select ng-model="vm.basicForm.arrivedTime">
+                        <md-option value="00:00">12.00 AM</md-option>
+                        <md-option value="00:30">12.30 AM</md-option>
+                        <md-option value="01:00">01.00 AM</md-option>
+                        <md-option value="01:30">01.30 AM</md-option>
+                        <md-option value="02:00">02.00 AM</md-option>
+                        <md-option value="02:30">02.30 AM</md-option>
+                        <md-option value="03:00">03.00 AM</md-option>
+                        <md-option value="03:30">03.30 AM</md-option>
+                        <md-option value="04:00">04.00 AM</md-option>
+                        <md-option value="04:30">04.30 AM</md-option>
+                        <md-option value="05:00">05.00 AM</md-option>
+                        <md-option value="05:30">05.30 AM</md-option>
+                        <md-option value="06:00">06.00 AM</md-option>
+                        <md-option value="06:30">06.30 AM</md-option>
+                        <md-option value="07:00">07.00 AM</md-option>
+                        <md-option value="07:30">07.30 AM</md-option>
+                        <md-option value="08:00">08.00 AM</md-option>
+                        <md-option value="08:30">08.30 AM</md-option>
+                        <md-option value="09:00">09.00 AM</md-option>
+                        <md-option value="09:30">09.30 AM</md-option>
+                        <md-option value="10:00">10.00 AM</md-option>
+                        <md-option value="10:30">10.30 AM</md-option>
+                        <md-option value="11:00">11.00 AM</md-option>
+                        <md-option value="11:30">11.30 AM</md-option>
+                        <md-option value="12:00">12.00 PM</md-option>
+                        <md-option value="12:30">12.30 PM</md-option>
+                        <md-option value="13:00">01.00 PM</md-option>
+                        <md-option value="13:30">01.30 PM</md-option>
+                        <md-option value="14:00">02.00 PM</md-option>
+                        <md-option value="14:30">02.30 PM</md-option>
+                        <md-option value="15:00">03.00 PM</md-option>
+                        <md-option value="15:30">03.30 PM</md-option>
+                        <md-option value="16:00">04.00 PM</md-option>
+                        <md-option value="16:30">04.30 PM</md-option>
+                        <md-option value="17:00">05.00 PM</md-option>
+                        <md-option value="17:30">05.30 PM</md-option>
+                        <md-option value="18:00">06.00 PM</md-option>
+                        <md-option value="18:30">06.30 PM</md-option>
+                        <md-option value="19:00">07.00 PM</md-option>
+                        <md-option value="19:30">07.30 PM</md-option>
+                        <md-option value="20:00">08.00 PM</md-option>
+                        <md-option value="20:30">08.30 PM</md-option>
+                        <md-option value="21:00">09.00 PM</md-option>
+                        <md-option value="21:30">09.30 PM</md-option>
+                        <md-option value="22:00">10.00 PM</md-option>
+                        <md-option value="22:30">10.30 PM</md-option>
+                        <md-option value="23:00">11.00 PM</md-option>
+                        <md-option value="23:30">11.30 PM</md-option>
+                      </md-select>
+
+
+                    </md-input-container>
+                  </div>
+
+
+                  <div layout="column" layout-gt-sm="row">
+                    <md-input-container flex>
+
+                      <input type="text" name="Dates Checked in" ng-model="vm.basicForm.datesCheckedIn" placeholder="Dates Checked in"
+                      >
+
+                    </md-input-container>
+
+                    <md-input-container flex>
+                      <input type="text" name="Destination" ng-model="vm.basicForm.destination" placeholder="Destination(s)"
+                      >
+
+                    </md-input-container>
+                  </div>
+
+
+                  <div layout="column" layout-gt-sm="row">
+                    <md-input-container flex>
+
+                      <input type="text" name="Room Number" ng-model="vm.basicForm.roomNumber" placeholder="Room Number"
+                      >
+
+                    </md-input-container>
+
+                    <md-input-container flex>
+                      <input type="text" name="Other Details/Comments" ng-model="vm.basicForm.note" placeholder="Other Details/Comments"
+                      >
+
+                    </md-input-container>
+                  </div>
+
+
+                    <md-button ng-show="!vm.isLoading" type="submit" class="md-raised md-accent" aria-label="Submit"
+                               ng-disabled="basicForm.$invalid || basicForm.$pristine" ng-click="vm.submit($event)">
+                        Submit
+                    </md-button>
+
+                  {{vm.message}}
+
+                  <md-progress-circular ng-disabled="!vm.isLoading" class="md-hue-2" md-diameter="20px"></md-progress-circular>
+
+                </form>
+
+            </div>
+            <!-- / BASIC FORM -->
+
+            <!-- BASIC FORM DATA -->
+            <!--<div class="form-wrapper form-data-wrapper md-whiteframe-1dp" flex="30">-->
+                <!--<div class="form-title">Form ng-model data</div>-->
+                <!--<div class="json-data-wrapper">-->
+                    <!--<pre>{{vm.basicForm | json}}</pre>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!-- / BASIC FORM DATA -->
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>

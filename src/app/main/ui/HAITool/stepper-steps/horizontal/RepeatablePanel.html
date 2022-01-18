@@ -1,0 +1,12 @@
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab ng-repeat="itemR in fields['RepeatChildern']" label="Item {{$index + 1}}">
+        <md-content class="md-padding">
+          <h3>{{fields.Title}} - {{$index + 1}}</h3>
+          <div ng-include="'app/main/ui/IMCTool/stepper-steps/horizontal/base2.html'"></div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>

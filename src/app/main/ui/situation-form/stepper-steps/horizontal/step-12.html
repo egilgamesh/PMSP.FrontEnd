@@ -1,0 +1,170 @@
+<div class="md-inline-form">
+  <p>Damage to Commercial Infrastructure</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTCI_PublicMarket"
+                placeholder="Public Markets - Specify damage from the conflict and the impact of the damage on citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTCI_PublicMarketChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTCI_Shops"
+                placeholder="Shops - Specify damage from the conflict and the impact of the damage on citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTCI_ShopsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTCI_Banks"
+                placeholder="Banks - Specify damage from the conflict and the impact of the damage on citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTCI_BanksChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTCI_GovernmentStores"
+                placeholder="Government Stores (for redeeming ration cards) - Specify damage from the conflict and the impact of the damage on citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTCI_GovernmentStoresChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTCI_Factories"
+                placeholder="Factories - Specify damage from the conflict and the impact of the damage on citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTCI_FactoriesChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="80">
+      <textarea ng-model="vm.sr.I_DTCI_OfficeBuildings"
+                placeholder="Office Buildings - Specify damage from the conflict and the impact of the damage on citizens" required></textarea>
+      <div ng-messages="horizontalStep2.step.$error"
+           ng-show="horizontalStep2.step.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="2">
+      <label>CHANGE</label>
+      <md-select ng-model="vm.sr.I_DTCI_OfficeBuildingsChange" required>
+        <md-option ng-repeat="changeValue in vm.changeValues" value="{{changeValue.value}}">
+          {{changeValue.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+
+
+</div>
+

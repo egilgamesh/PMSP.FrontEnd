@@ -1,0 +1,62 @@
+<div class="md-inline-form">
+  <p>Site Visit Assessment</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>Site Visit Assessment</label>
+      <md-select ng-model="vm.cashForm.siteVisitAssessment" required>
+        <md-option value="Green Flag">Green Flag</md-option>
+        <md-option value="Red Flag">Red Flag</md-option>
+        <md-option value="Orange Flag">Orange Flag</md-option>
+        <md-option value="Grey Flag">Grey Flag</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea type="text" name="lastname" ng-model="vm.cashForm.siteVisitAssessmentJustification"
+                placeholder="Site Visit Assessment Justifications?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="number" name="lastname" ng-model="vm.cashForm.dataSourcesTableCashFacilityStaffNumberMeal"
+             placeholder="Cash Facility Staff: Male #" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="number" name="lastname" ng-model="vm.cashForm.dataSourcesTableCashFacilityStaffNumberFemale"
+             placeholder="Cash Facility Staff: Female #" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="number" name="lastname" ng-model="vm.cashForm.dataSourcesTableContractorInterviewNumberMeal"
+             placeholder="Contractor Interview: Male #" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="number" name="lastname" ng-model="vm.cashForm.dataSourcesTableContractorInterviewNumberFemale"
+             placeholder="Contractor Interview: Female #" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="number" name="lastname" ng-model="vm.cashForm.dataSourcesTableBeneficiarySurveysNumberMeal"
+             placeholder="Beneficiary Surveys: Male #" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="number" name="lastname" ng-model="vm.cashForm.dataSourcesTableBeneficiarySurveysNumberFemale"
+             placeholder="Beneficiary Surveys: Female #" required>
+    </md-input-container>
+  </div>
+
+
+</div>
+

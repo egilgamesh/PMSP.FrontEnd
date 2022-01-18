@@ -1,0 +1,346 @@
+<!--<div ng-include="'app/main/ui/shared/show.photos.html'" ng-init="filterBy = 'G';"></div>-->
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'G'"></ali-show-photos>
+</div>
+
+
+<div class="md-inline-form">
+
+
+  <p>{{fields.Title}}</p>
+
+  <div ng-if="vm.form.id" layout="row" layout-wrap>
+    <div class="about" layout="column" flex="100" flex-gt-sm="100" flex-gt-md="100">
+  <div class="profile-box info-box general md-whiteframe-1dp" layout="column">
+
+    <header class="md-accent-bg">
+      <div style="padding: 10px" class="title">General Information
+      </div>
+    </header>
+
+
+
+
+    <div layout="row" layout-wrap>
+
+
+      <div class="content" flex="100" flex-gt-sm="100" flex-gt-md="100">
+
+        <div class="info-line">
+          <table class="alimohammed" style="border-collapse: collapse; width: 100%">
+
+            <tr class="job" style="width: 100%">
+              <td class="company" style="font-weight: bold">Report ID:</td>
+              <td class="date">{{vm.form.id}}</td>
+            </tr>
+
+            <tr class="job">
+              <td class="company" style="font-weight: bold">Report Code:</td>
+              <td class="date">{{vm.reportCode}}</td>
+            </tr>
+
+            <tr class="job">
+              <td class="company" style="font-weight: bold">Total Beneficiaries</td>
+              <td class="date">{{vm.form.totalBS}}</td>
+            </tr>
+
+            <tr class="job">
+              <td class="company" style="font-weight: bold">IFM Name:</td>
+              <td class="date">{{vm.form.PI_IFMName}}</td>
+            </tr>
+
+            <tr class="job">
+              <td class="company" style="font-weight: bold">Total Alerts</td>
+              <td class="date">{{vm.form.alerts}}</td>
+            </tr>
+
+
+            <tr class="job">
+              <td class="company" style="font-weight: bold">GEOTag Photo</td>
+              <td class="date">{{vm.form.geoTage}}</td>
+            </tr>
+
+
+
+          </table>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <header class="md-accent-bg" style="margin-top: 20px">
+      <div style="padding: 10px" class="title">Informational Awareness
+      </div>
+    </header>
+
+    <div layout="row" layout-wrap>
+
+
+      <div class="content" flex="100" flex-gt-sm="100" flex-gt-md="100">
+
+        <div class="info-line">
+          <table class="alimohammed" style="border-collapse: collapse; width: 100%">
+
+            <tr class="job" style="width: 100%" ng-if="vm.form.concerns.active === false">
+              <td class="#" style="font-weight: bold">No Informational Awareness Found</td>
+            </tr>
+
+            <tr class="job" style="width: 100%" ng-if="vm.form.concerns.active === true">
+              <td class="#" style="font-weight: bold">#</td>
+              <!--<td class="date">Section</td>-->
+              <!--<td class="date">Level</td>-->
+              <td class="date">Informational Awareness</td>
+            </tr>
+
+            <tr class="job" ng-repeat="concern in vm.form.concerns.items" style="width: 100%" ng-if="vm.form.concerns.active === true">
+              <td class="#" style="font-weight: bold">{{concern.id}}</td>
+              <!--<td class="date">{{concern.section}}</td>-->
+              <!--<td class="date">{{concern.level}}</td>-->
+              <td class="date" style="color: green">{{concern.concern}}</td>
+            </tr>
+
+
+          </table>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+    </div>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex style="margin-top: 20px">
+
+
+    <md-input-container flex="100">
+      <label>1.3 Province</label>
+      <md-select ng-model="vm.form.m1_3_province" required ng-change="vm.districtUpdate()" ng-disabled="!vm.editAllow">
+        <md-option ng-repeat="item in vm.provinces" value="{{item.name}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <label>1.3 District</label>
+      <md-select ng-model="vm.form.m1_3_district" required ng-disabled="!vm.editAllow">
+        <md-option ng-repeat="item in vm.districts" value="{{item}}">{{item}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="35">
+      <label>1.4 Latitude/Longitude </label>
+      <input type="text" name="lastname" ng-model="vm.form.m1_4"
+             placeholder="1.4 Latitude/Longitude" required ng-disabled="!vm.editAllow">
+
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="15">
+      <a ng-click="vm.viewOnMap(vm.form.m1_4)" href>
+        View on Map
+      </a>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <textarea type="text" name="lastname" ng-model="vm.form.m1_5"
+                placeholder="1.5 Activity Name" required ng-disabled="!vm.editAllow"></textarea>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex-gt-md="50">
+      <label>1.6 Activity Type</label>
+
+      <md-select ng-model="vm.form.m1_6" required ng-disabled="!vm.editAllow">
+        <md-option value="Health Facility">Health Facility</md-option>
+        <md-option value="Municipal Infrastructure">Municipal Infrastructure</md-option>
+        <md-option value="Electricity Infrastructure">Electricity Infrastructure</md-option>
+        <md-option value="Water Infrastructure">Water Infrastructure</md-option>
+        <md-option value="Education Facility">Education Facility</md-option>
+        <md-option value="Micro/Small Business Grants">Micro/Small Business Grants</md-option>
+        <md-option value="House Repair">House Repair</md-option>
+      </md-select>
+
+    </md-input-container>
+
+
+    <md-input-container flex-gt-md="50">
+      <label>1.8 Date of monitoring event</label>
+      <md-datepicker ng-model="vm.form.m1_8" md-placeholder="Date(s) of site visit"
+                     md-min-date="minDate" md-max-date="maxDate" ng-disabled="!vm.editAllow"></md-datepicker>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-sm="row">
+    <md-input-container flex>
+
+      <label>1.9 Start Time</label>
+      <md-select ng-model="vm.form.m1_9" ng-disabled="!vm.editAllow">
+        <md-option value="00:00">12.00 AM</md-option>
+        <md-option value="00:30">12.30 AM</md-option>
+        <md-option value="01:00">01.00 AM</md-option>
+        <md-option value="01:30">01.30 AM</md-option>
+        <md-option value="02:00">02.00 AM</md-option>
+        <md-option value="02:30">02.30 AM</md-option>
+        <md-option value="03:00">03.00 AM</md-option>
+        <md-option value="03:30">03.30 AM</md-option>
+        <md-option value="04:00">04.00 AM</md-option>
+        <md-option value="04:30">04.30 AM</md-option>
+        <md-option value="05:00">05.00 AM</md-option>
+        <md-option value="05:30">05.30 AM</md-option>
+        <md-option value="06:00">06.00 AM</md-option>
+        <md-option value="06:30">06.30 AM</md-option>
+        <md-option value="07:00">07.00 AM</md-option>
+        <md-option value="07:30">07.30 AM</md-option>
+        <md-option value="08:00">08.00 AM</md-option>
+        <md-option value="08:30">08.30 AM</md-option>
+        <md-option value="09:00">09.00 AM</md-option>
+        <md-option value="09:30">09.30 AM</md-option>
+        <md-option value="10:00">10.00 AM</md-option>
+        <md-option value="10:30">10.30 AM</md-option>
+        <md-option value="11:00">11.00 AM</md-option>
+        <md-option value="11:30">11.30 AM</md-option>
+        <md-option value="12:00">12.00 PM</md-option>
+        <md-option value="12:30">12.30 PM</md-option>
+        <md-option value="13:00">01.00 PM</md-option>
+        <md-option value="13:30">01.30 PM</md-option>
+        <md-option value="14:00">02.00 PM</md-option>
+        <md-option value="14:30">02.30 PM</md-option>
+        <md-option value="15:00">03.00 PM</md-option>
+        <md-option value="15:30">03.30 PM</md-option>
+        <md-option value="16:00">04.00 PM</md-option>
+        <md-option value="16:30">04.30 PM</md-option>
+        <md-option value="17:00">05.00 PM</md-option>
+        <md-option value="17:30">05.30 PM</md-option>
+        <md-option value="18:00">06.00 PM</md-option>
+        <md-option value="18:30">06.30 PM</md-option>
+        <md-option value="19:00">07.00 PM</md-option>
+        <md-option value="19:30">07.30 PM</md-option>
+        <md-option value="20:00">08.00 PM</md-option>
+        <md-option value="20:30">08.30 PM</md-option>
+        <md-option value="21:00">09.00 PM</md-option>
+        <md-option value="21:30">09.30 PM</md-option>
+        <md-option value="22:00">10.00 PM</md-option>
+        <md-option value="22:30">10.30 PM</md-option>
+        <md-option value="23:00">11.00 PM</md-option>
+        <md-option value="23:30">11.30 PM</md-option>
+      </md-select>
+
+
+    </md-input-container>
+
+    <md-input-container flex>
+
+      <label>1.10 End Time</label>
+      <md-select ng-model="vm.form.m1_10" ng-disabled="!vm.editAllow">
+        <md-option value="00:00">12.00 AM</md-option>
+        <md-option value="00:30">12.30 AM</md-option>
+        <md-option value="01:00">01.00 AM</md-option>
+        <md-option value="01:30">01.30 AM</md-option>
+        <md-option value="02:00">02.00 AM</md-option>
+        <md-option value="02:30">02.30 AM</md-option>
+        <md-option value="03:00">03.00 AM</md-option>
+        <md-option value="03:30">03.30 AM</md-option>
+        <md-option value="04:00">04.00 AM</md-option>
+        <md-option value="04:30">04.30 AM</md-option>
+        <md-option value="05:00">05.00 AM</md-option>
+        <md-option value="05:30">05.30 AM</md-option>
+        <md-option value="06:00">06.00 AM</md-option>
+        <md-option value="06:30">06.30 AM</md-option>
+        <md-option value="07:00">07.00 AM</md-option>
+        <md-option value="07:30">07.30 AM</md-option>
+        <md-option value="08:00">08.00 AM</md-option>
+        <md-option value="08:30">08.30 AM</md-option>
+        <md-option value="09:00">09.00 AM</md-option>
+        <md-option value="09:30">09.30 AM</md-option>
+        <md-option value="10:00">10.00 AM</md-option>
+        <md-option value="10:30">10.30 AM</md-option>
+        <md-option value="11:00">11.00 AM</md-option>
+        <md-option value="11:30">11.30 AM</md-option>
+        <md-option value="12:00">12.00 PM</md-option>
+        <md-option value="12:30">12.30 PM</md-option>
+        <md-option value="13:00">01.00 PM</md-option>
+        <md-option value="13:30">01.30 PM</md-option>
+        <md-option value="14:00">02.00 PM</md-option>
+        <md-option value="14:30">02.30 PM</md-option>
+        <md-option value="15:00">03.00 PM</md-option>
+        <md-option value="15:30">03.30 PM</md-option>
+        <md-option value="16:00">04.00 PM</md-option>
+        <md-option value="16:30">04.30 PM</md-option>
+        <md-option value="17:00">05.00 PM</md-option>
+        <md-option value="17:30">05.30 PM</md-option>
+        <md-option value="18:00">06.00 PM</md-option>
+        <md-option value="18:30">06.30 PM</md-option>
+        <md-option value="19:00">07.00 PM</md-option>
+        <md-option value="19:30">07.30 PM</md-option>
+        <md-option value="20:00">08.00 PM</md-option>
+        <md-option value="20:30">08.30 PM</md-option>
+        <md-option value="21:00">09.00 PM</md-option>
+        <md-option value="21:30">09.30 PM</md-option>
+        <md-option value="22:00">10.00 PM</md-option>
+        <md-option value="22:30">10.30 PM</md-option>
+        <md-option value="23:00">11.00 PM</md-option>
+        <md-option value="23:30">11.30 PM</md-option>
+      </md-select>
+
+
+    </md-input-container>
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex-gt-md="50">
+            <textarea ng-model="vm.form.vilage"
+                      placeholder="Vilage" ng-disabled="!vm.editAllow"></textarea>
+    </md-input-container>
+
+
+
+    <md-input-container flex-gt-md="50">
+          <textarea ng-model="vm.form.neigborhood"
+                    placeholder="Neigborhood" ng-disabled="!vm.editAllow"></textarea>
+    </md-input-container>
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m1_notes"
+                placeholder="Notes" ng-disabled="!vm.editAllow"></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.isUSAID === 'YES' && vm.id">
+    <md-input-container flex="100" flex-gt-xs="80">
+      <textarea ng-model="vm.form.usaid_record_history"
+                placeholder="USAID Record History"></textarea>
+    </md-input-container>
+
+
+
+    <md-input-container flex="100" flex-gt-xs="20">
+      <md-button class="md-raised md-accent" ng-click="vm.saveUSAIDInformation(vm.form.usaid_record_history)" style="width: 100%">
+        Save Information
+      </md-button>
+    </md-input-container>
+
+  </div>
+
+
+
+</div>

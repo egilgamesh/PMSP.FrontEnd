@@ -1,0 +1,125 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Health Facility Staff (Part 2)</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>7.	What year was this health facility established? (Mark an X in the box below the correct response and write in the precise date)</label>
+      <md-select ng-model="vm.healthForm.KIIWhatYearWasThisHealthFacilityEstablished" required>
+        <md-option ng-repeat="item in vm.selectDateNewDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.healthForm.KIIWhatYearWasThisHealthFacilityEstablishedAnswer"
+             placeholder="Record Answer" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>8. When was the last time it cease to function</label>
+      <md-select ng-model="vm.healthForm.KIIWhenWasTheLastTimeItCeaseToFunction" required>
+        <md-option ng-repeat="item in vm.selectDateAfterDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.healthForm.KIIWhenWasTheLastTimeItCeaseToFunctionAnswer"
+             placeholder="Record Answer" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>9. If it is currently functioning, when did services resume</label>
+      <md-select ng-model="vm.healthForm.KIIIfItIsCurrentlyFunctioningWhenDidServices" required>
+        <md-option ng-repeat="item in vm.selectDateJanJunDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.healthForm.KIIIfItIsCurrentlyFunctioningWhenDidServicesAnswer"
+             placeholder="Record Answer" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>10. Was the health facility used prior to the renovation?</label>
+      <md-select ng-model="vm.healthForm.KIIWasTheHealthFacilityUsedPriorToTheRenovation" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIHowWasThisHealthFacilitySelectedForRenovations"
+                placeholder="11. How was this health facility selected for renovations?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>12. Did the responsible General Directorate consult with you, or senior management in the health facility, prior to beginning the work?
+      </label>
+      <md-select ng-model="vm.healthForm.KIIDidTheResponsibleGeneralDirectorateConsultWithYou" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>13. Did the responsible General Directorate approve the scope of work prior to the start of the renovations?</label>
+      <md-select ng-model="vm.healthForm.KIIDidTheResponsibleGeneralDirectorateApprove" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatIsTheNameOfTheCompanyThatDidTheWork"
+                placeholder="14. What is the name of the company that did the work?" required></textarea>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIHowWasTheCompanySelected"
+                placeholder="15. How was the company selected?" required></textarea>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatIsTheMajorScopeOfTheRenovations"
+                placeholder="16. What is the major scope of the renovations?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+</div>
+

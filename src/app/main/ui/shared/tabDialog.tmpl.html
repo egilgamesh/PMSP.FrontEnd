@@ -1,0 +1,160 @@
+<md-dialog aria-label="ID: {{photo.id}} - {{photo.file_name}}" style="max-width: 90%;max-height: 90%;width: 90%;height: 90%;border-radius: 0;">
+  <form >
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>ID: {{photo.id}} - {{photo.file_name}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="assets/angular-material-assets/img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <md-tabs md-dynamic-height md-border-bottom md-center-tabs>
+        <md-tab label="Photo">
+          <md-content class="md-padding">
+            <img ng-src="{{url}}PreviewFile/{{photo.id}}" style="height: 600px"/>
+          </md-content>
+        </md-tab>
+        <md-tab label="GeoTag Info">
+          <md-content class="md-padding">
+
+
+
+            <div layout="row" layout-wrap>
+
+
+              <div class="content" flex="100" flex-gt-sm="100" flex-gt-md="100">
+
+                <div class="info-line">
+                  <table class="alimohammed" style="border-collapse: collapse; width: 100%">
+
+                    <tr class="job" style="width: 100%">
+                      <td class="company" style="font-weight: bold">FileDateTime</td>
+                      <td class="date">{{photo.exif.FileDateTime}}</td>
+                    </tr>
+
+
+
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">YResolution</td>
+                      <td class="date">{{photo.exif.YResolution}}</td>
+                    </tr>
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">Software</td>
+                      <td class="date">{{photo.exif.Software}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">Orientation</td>
+                      <td class="date">{{photo.exif.Orientation}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">Model</td>
+                      <td class="date">{{photo.exif.Model}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">SectionsFound</td>
+                      <td class="date">{{photo.exif.SectionsFound}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">MimeType</td>
+                      <td class="date">{{photo.exif.MimeType}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">FileType</td>
+                      <td class="date">{{photo.exif.FileType}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">FileSize</td>
+                      <td class="date">{{photo.exif.FileSize}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">MeteringMode</td>
+                      <td class="date">{{photo.exif.MeteringMode}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">Flash</td>
+                      <td class="date">{{photo.exif.Flash}}</td>
+                    </tr>
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">BrightnessValue</td>
+                      <td class="date">{{photo.exif.BrightnessValue}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">ShutterSpeedValue</td>
+                      <td class="date">{{photo.exif.ShutterSpeedValue}}</td>
+                    </tr>
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">GPS_IFD_Pointer</td>
+                      <td class="date">{{photo.exif.GPS_IFD_Pointer}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">DateTime</td>
+                      <td class="date">{{photo.exif.DateTime}}</td>
+                    </tr>
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">XResolution</td>
+                      <td class="date">{{photo.exif.XResolution}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">GPSVersion</td>
+                      <td class="date">{{photo.exif.GPSVersion}}</td>
+                    </tr>
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">latitude</td>
+                      <td class="date">{{photo.exif.latitude}}</td>
+                    </tr>
+
+                    <tr class="job">
+                      <td class="company" style="font-weight: bold">longitude</td>
+                      <td class="date">{{photo.exif.longitude}}</td>
+                    </tr>
+
+
+
+
+                  </table>
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </md-content>
+        </md-tab>
+        <md-tab label="Google Map">
+          <md-content class="md-padding">
+            <ui-gmap-google-map ng-if="map.show" center="map.center" zoom="map.zoom" control="map.control">
+              <ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icons'" hover="onClick" dorebuildall="true">
+              </ui-gmap-markers>
+            </ui-gmap-google-map>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button ng-click="move('back')" ng-hide="images.length == 1">
+        Back
+      </md-button>
+      <md-button ng-click="move('next')" ng-hide="images.length == 1">
+        Next
+      </md-button>
+      <md-button ng-click="answer('useful')" style="margin-right:20px;" >
+        Done
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

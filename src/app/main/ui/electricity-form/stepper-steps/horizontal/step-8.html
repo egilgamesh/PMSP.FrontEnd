@@ -1,0 +1,216 @@
+<div class="md-inline-form">
+  <p>IV. Beneficiary Survey 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>5.	When did the facility stop providing electricity to the community?</label>
+      <md-select ng-model="vm.electricityForm.BSWhenStopProvidingElectricity" required>
+        <md-option ng-repeat="item in vm.selectDateAfterDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSWhenStopProvidingElectricityAnswer"
+             placeholder="5.1.  Please explain your answer?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>6.	Does the facility currently provide electricity to community?</label>
+      <md-select ng-model="vm.electricityForm.BSDoseProvidingElectricity" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7. Did you leave the Governorate because of the conflict?</label>
+      <md-select ng-model="vm.electricityForm.BSLeaveBecauseConflict" required>
+        <md-option ng-repeat="item in vm.selectYesNoNoComments" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7.1. If yes, please rate the level of influence that this renovation/plan for renovation had on your decision to return to the Governorate.</label>
+      <md-select ng-model="vm.electricityForm.BSLeaveBecauseConflictIfYes" required>
+        <md-option ng-repeat="item in vm.selectInfluence" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSLeaveBecauseConflictIfYesExplain"
+             placeholder="7.1.1. Please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8. What is your level of satisfaction with the renovation work?</label>
+      <md-select ng-model="vm.electricityForm.BSWhatIsYourLevelOfSatisfactionRenovation" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSWhatIsYourLevelOfSatisfactionRenovationIfWhy"
+             placeholder="8.1.  If Dissatisfied or Very Dissatisfied include please explain why?" required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9.  Did you pay any costs, fees or demands for favors in receiving the assistance/services/goods?</label>
+      <md-select ng-model="vm.electricityForm.BSDidYouPay" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSDidYouPayIfYes"
+             placeholder="9.1. If yes, please explain what you paid for." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>10. How would you rate the impact on your community of the renovation work or improved service?</label>
+      <md-select ng-model="vm.electricityForm.BSRateTheImpact" required>
+        <md-option ng-repeat="item in vm.selectInfluence" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSBSRateTheImpactExplain"
+             placeholder="10.1.	Explain your answer?" required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11.	Are you aware of any methods to share feedback, suggestions or complaints concerning the project activity?</label>
+      <md-select ng-model="vm.electricityForm.BSAreYouAwareOfMethodsShareFeedback" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11.1. If yes, have you or anyone you know used this mechanism?</label>
+      <md-select ng-model="vm.electricityForm.BSAreYouAwareOfMethodsShareFeedbackIfYes" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSAreYouAwareOfMethodsShareFeedbackIfYesResult"
+             placeholder="11.1.1. If yes, please describe the result." required>
+    </md-input-container>
+  </div>
+
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12. Do you feel that the project was well-managed?</label>
+      <md-select ng-model="vm.electricityForm.BSProjectWellManaged" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSProjectWellManagedIf"
+             placeholder="12.1. If no, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.BSDoYouHaveAnySuggestionsOnHow"
+             placeholder="13.	Do you have any suggestions on how to improve the electricity facility?" required>
+    </md-input-container>
+
+
+  </div>
+
+
+  <table class="simple" ms-responsive-table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <td>Actions</td>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td></td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <tr ng-repeat="bs in vm.electricityForm.bs" ng-if="vm.electricityForm.bs.length">
+      <td class="name">{{bs.BSName}}</td>
+      <td class="position">{{bs.BSTitle}}</td>
+      <td class="age">{{bs.BSAge}}</td>
+      <td class="gender">{{bs.BSGender}}</td>
+      <td>
+        <md-button ng-if="bs.id" class="md-raised" ui-sref="app.ui_forms-electricity.bs({electricityId:{{bs.id}}, id:{{vm.id}}, type: 'edit'})">
+          View
+        </md-button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <md-button ng-if="vm.id" class="md-raised md-accent" ui-sref="app.ui_forms-electricity.bs({id:{{vm.id}}, type: 'add'})">
+    Add new Beneficiaries
+  </md-button>
+
+</div>

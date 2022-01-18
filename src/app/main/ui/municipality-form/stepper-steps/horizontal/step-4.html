@@ -1,0 +1,139 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Municipality Facility Staff (Part 2)</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_major_scope"
+             placeholder="7. What is the major scope of the project activity?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8. Did the Municipality Directorate approve the scope of work before starting the work?</label>
+      <md-select ng-model="vm.municipalityForm.KII_major_approve_scope" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9. Did the Municipality Directorate provide any consultation prior to the work?</label>
+      <md-select ng-model="vm.municipalityForm.KII_provide_consultation" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>10. Was there any contribution from the local authorities or Municipality Directorate to the project activity?</label>
+      <md-select ng-model="vm.municipalityForm.KII_local_authorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_local_authorities_if_yes"
+             placeholder="10.1. If yes, please describe." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_name_company"
+             placeholder="11. What is the name of the company that was hired to do the work?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_company_work_selected"
+             placeholder="12.  How was the company that did the work selected?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13. What percentage of the work has been completed? (If 100%, skip to question 13.)</label>
+      <md-select ng-model="vm.municipalityForm.KII_work_complete" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_work_complete_if_less_100"
+             placeholder="13.1. If less than 100% complete, what remains to be done on the original scope of the work?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_work_complete_if_less_100_entity"
+             placeholder="13.2. If less than 100% complete, what entity is responsible for completing the work?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.3. If less than 100% complete, how long do you estimate the remaining work will take?</label>
+      <md-select ng-model="vm.municipalityForm.KII_work_complete_if_less_100_estimate" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14. Is there still clean-up work remaining in the area to be done that was not part of the original scope of work?</label>
+      <md-select ng-model="vm.municipalityForm.KII_clean_up" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_clean_up_if_yes"
+             placeholder="14.1. If yes, please explain." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>15. What is your level of satisfaction with the project activity?</label>
+      <md-select ng-model="vm.municipalityForm.KII_level_satisfaction" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_level_satisfaction_if_dis"
+             placeholder="15.1.	If Somewhat Dissatisfied or Very Dissatisfied please explain why?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.KII_estimated_number"
+             placeholder="16. What is the estimated number of beneficiaries who are being served by, or will be served, by this project activity once completed?" required>
+    </md-input-container>
+  </div>
+
+</div>
+

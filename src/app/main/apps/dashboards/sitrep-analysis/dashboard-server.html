@@ -1,0 +1,20 @@
+<div id="dashboard-project" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+      <md-tabs md-dynamic-height md-selected-nav-item="vm.selectedNavItem" nav-bar-aria-label="Maps" md-selected='0'>
+        <md-tab ui-sref="app.dashboards_sitrepAnalysis.thisWeek">This Week</md-tab>
+        <md-tab ui-sref="app.dashboards_sitrepAnalysis.lastWeek">Last Week</md-tab>
+        <md-tab ui-sref="app.dashboards_sitrepAnalysis.twoWeekAgo">Two Weeks Ago</md-tab>
+        <md-tab ui-sref="app.dashboards_sitrepAnalysis.oneMonthAgo">Last Month</md-tab>
+      </md-tabs>
+      <md-content ui-view="tabContent" flex class="card md-whiteframe-4dp"></md-content>
+    </div>
+  </div>
+</div>
+

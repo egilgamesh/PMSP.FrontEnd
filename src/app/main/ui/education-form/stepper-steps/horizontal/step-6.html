@@ -1,0 +1,194 @@
+<div class="md-inline-form">
+  <p>IV.		Interview: Project Contractor 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7. Can you provide a copy of the bill of quantities and/or the contract between UNDP and yourself</label>
+      <md-select ng-model="vm.educationForm.PCCanYouProvideACopyOfTheBillOfQuantities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCCanYouProvideACopyOfTheBillOfQuantitiesIfNo"
+             placeholder="7.1. If no, please explain why not?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8.  Did the Electricity Directorate provide any consultation prior to the renovations/procurement of supplies?</label>
+      <md-select ng-model="vm.educationForm.PCProvideAnyConsultation" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9.	Did the Education Directorate approve the scope of work prior to the start of the renovations/ procurement of supplies?</label>
+      <md-select ng-model="vm.educationForm.PCApproveTheScopeOfWork" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCHowDidYouFindOutAboutTheBidForThisWork"
+             placeholder="10. How did you find out about the bid for this work?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCWhatIsTheScopeOfTheMajorRenovations"
+             placeholder="11. What is the scope of the major renovations?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCWhenDidYouStartTheRenovations"
+             placeholder="12.	When did you start the renovations? (Insert the date only.)" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13. What percentage of renovations have been completed?</label>
+      <md-select ng-model="vm.educationForm.PCWhatPercentageOfRenovationsHaveBeenCompleted" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.1. If 100%, how long did the renovations take?</label>
+      <md-select ng-model="vm.educationForm.PCIf100HowLongDidTheRenovationsTake" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.1.1.	If 100% complete, how long did it take for all the equipment to arrive?</label>
+      <md-select ng-model="vm.educationForm.PCIf100HowLongDidTheEquipmentToArrive" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.1.2.  If 100% complete, how long did it take for all the equipment to be installed?</label>
+      <md-select ng-model="vm.educationForm.PCIf100HowLongDidTheEquipmentToInstall" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.1.3.	If 100% complete, is the facility currently providing education to beneficiaries? (If yes, skip to question 14.)</label>
+      <md-select ng-model="vm.educationForm.PCIf100ISFacilityCurrentlyProvidingEducation" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCIfLessThan100CompleteWhatRemainsToBeDone"
+             placeholder="13.2.	 If no, what remains to be done for the facility to provide education to beneficiaries?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCIfLessThan100WhoIsResponsible"
+             placeholder="13.2.1.	If no, who is responsible for making sure the facility provides education to beneficiaries?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCIfLessThan100WhatRemains"
+             placeholder="13.2.2.	If less than 100% complete, what remains to be done?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.2.3.	If less than 100% complete, when do you estimate that you will finish the remaining work?</label>
+      <md-select ng-model="vm.educationForm.PCIfLessThan100EstimateFinishTheRemainingWork" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCIfLessThan100WhatObstacles"
+             placeholder="13.2.4. If less than 100% complete, what obstacles are you facing to finish the work?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14. Was there any contribution from the local authorities or responsible General Directorate to the project?</label>
+      <md-select ng-model="vm.educationForm.PCWasThereAnyContributionFromTheLocalAuthorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCWasThereAnyContributionFromTheLocalAuthoritiesIfYes"
+             placeholder="14.1. If yes, please describe?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCWhatWereTheAchievementSuccessesYouObservedInThisProject"
+             placeholder="15. What were the achievement/successes you observed in this project?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCWhatAreTheMostSignificantChallenges"
+             placeholder="16. What are the most significant challenges that the project has encountered and what has been done to address such issues?  " required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.PCDoYouHaveAnySuggestionsOnHow"
+             placeholder="17. Do you have any suggestions on how to improve the project impact on the targeted beneficiaries? " required>
+    </md-input-container>
+  </div>
+
+</div>
+

@@ -1,0 +1,139 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Al-BAGHDAD MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP ",
+      "date": "May 4, 2017",
+      "location": "Al-Baghdad – Al-Salhiya",
+      "gps": "33° 19.567' N, 44° 23.759' E",
+      "ifm": "Rana Sadeq Ali",
+      "interview": "Adil Kadhum Katei, Director of Financial and Administrative Affairs in Al-Baghdad"
+    },
+    {
+      "id": 2,
+      "name": "Al-BASRAH MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP",
+      "date": "May 11, 2017",
+      "location": "Al-Basrah Center, Al-Basrah District, Basrah-Province",
+      "gps": "47 83’0344 N, 30 50’8287 E",
+      "ifm": "Arkan Hasan Frayyeh Duraye",
+      "interview": "Essa Hamid Hasan,  Manager of AFAD"
+    },
+    {
+      "id": 3,
+      "name": "Al-NAJAF MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP ",
+      "date": "May 17, 2017",
+      "location": "A Najaf Provincial Council, AFAD Office",
+      "gps": "44° 21.321' E, 32° 00.726' N",
+      "ifm": "Rana Sadeq Ali",
+      "interview": "Hussain Allawi Jasim, Director of Accounting Department"
+    },
+    {
+      "id": 4,
+      "name": "Al-QADISSIYAH MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP",
+      "date": "April 26, 2017",
+      "location": "Qadissiyah – Diwaniyah – Governorate Office",
+      "gps": "31 98’66 N, 44 91’22 E",
+      "ifm": "Mohammed Al-Quraishi",
+      "interview": "Mohammed Abass Muslim, AFAD Manager / Governor Assistant for Financial Affairs"
+    },
+    {
+      "id": 5,
+      "name": "ANBAR MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD. JUNE 2017",
+      "date": "April 1, 2017",
+      "location": "Ramadi, Anbar",
+      "gps": "33 42’5132 N, 43 29’8586 E",
+      "ifm": "Ayman Hamdy",
+      "interview": "Dr. Mohammed Gharqan Hais,  Manager of AFAD"
+    },
+    {
+      "id": 6,
+      "name": "BABIL MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP ",
+      "date": "May 29, 2017",
+      "location": "Taqadum’s Office in Babil",
+      "gps": "44° 25.410' E, 32° 28.794' N",
+      "ifm": "Rana Sadeq Ali",
+      "interview": "Ahmed Mohsin Ali, Assistant of the Governor for Financial Affairs- Head of Administrative and Financial Department."
+    },
+    {
+      "id": 7,
+      "name": "DHI QAR MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP",
+      "date": "April 2, 2017",
+      "location": "Nassiryah, Dhi Qar Province   ",
+      "gps": "31 03’30 N, 46 23’34 E",
+      "ifm": "Mohammed Al-Quraishi",
+      "interview": "Razaq Gsheish Ady ,  AFAD Manager"
+    },
+    {
+      "id": 8,
+      "name": "DIYALA MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP ",
+      "date": "April 25, 2017",
+      "location": "Hay Al Mohandiseen, Baqubah, Diyala Province",
+      "gps": "33 74’65 N, 44 64’77 E",
+      "ifm": "Arkan Hasan Frayyeh Duraye",
+      "interview": "Ali Hazim Muhee, Director of AFAD"
+    },
+    {
+      "id": 9,
+      "name": "KARBALA MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP",
+      "date": "June 4, 2017",
+      "location": "Karbala Provincial Council",
+      "gps": "44 04’1943 E, 32 62’7881 N",
+      "ifm": "Rana Sadeq Ali",
+      "interview": "Ghayath Muqdad Jawad, the Director of Accounting Department."
+    },
+    {
+      "id": 10,
+      "name": "KIRKUK MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP ",
+      "date": "April 20, 2017",
+      "location": "Kirkuk Governorate Office, Kirkuk City, Kirkuk Governorate",
+      "gps": "35 27'31 N  35 27'31 N",
+      "ifm": "Hayman Awrahim & Sarbast Missouri",
+      "interview": "Suhailah Sabir Hamawandi,  Head Financial Planning Department"
+    },
+    {
+      "id":11,
+      "name": "MAYSAN MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP",
+      "date": "May 25, 2017",
+      "location": "Maysan – Governorate Office",
+      "gps": "47 14’3777 E, 31 85’1472 N",
+      "ifm": "Mohammed Al-Quraishi",
+      "interview": "Abd Ali Mosa Kashkool, AFAD Manager"
+    },
+    {
+      "id": 12,
+      "name": "AL-MUTHANNA MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD, PROCESS MAPPING & SDIP ",
+      "date": "April 4, 2017",
+      "location": "Al-Muhafadha Street, Al-Samawah District, Al-Muthanna Governorate",
+      "gps": "45 28’26 N, 3130’66 E",
+      "ifm": "Arkan Hasan Frayyeh Duraye",
+      "interview": "Mustafa Dakhil Abbas,  Manager of Finance Division"
+    },
+    {
+      "id": 13,
+      "name": "NINEWA MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD. JUNE 2017",
+      "date": "May 2, 2017",
+      "location": "GSP Office, Erbil",
+      "gps": "36 10’6N, 44 0’54 E",
+      "ifm": "Sarbast Jalal Missouri",
+      "interview": "Rasha Daham JarJees,  The Head of Accounting and Budgeting Department of Ninewa Governorate and the Acting Director of Ninewa AFAD"
+    },
+    {
+      "id": 14,
+      "name": "SALAH AL-DEEN MONITORING RESULTS OF TAQADUM ACTIVITIES – AFAD.",
+      "date": "April 26, 2017",
+      "location": "Tikrit’s main street, near Tikrit’s cemetery, Tikrit, Salah Al-Deen Province",
+      "gps": "34°35'45.74 N , 43°40'53.47 E",
+      "ifm": "Ahmed M. Ahmed",
+      "interview": "Marwan Meteib Abdullah,  Director of AFAD"
+    },
+    {
+      "id": 15,
+      "name": "Mohammed Al-Quraishi",
+      "date": "April 23, 2017",
+      "location": "Wasit - Kut – Al-Haideriyah   ",
+      "gps": "45 82’2326 E, 32 50’2752 N",
+      "ifm": "Mohammed Al-Quraishi",
+      "interview": "Mahdi Wadi Najim,  AFAD Manager"
+    }
+  ]
+}

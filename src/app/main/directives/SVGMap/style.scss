@@ -1,0 +1,32 @@
+svg .state {
+  stroke-width: 2;
+  stroke: #fff;
+
+  -webkit-transition: stroke 0.5s, stroke-width 0.5s;
+  -o-transition: stroke 0.5s, stroke-width 0.5s;
+  transition: stroke 0.5s, stroke-width 0.5s;
+}
+svg .state:hover , .state.active {
+  cursor: pointer;
+  stroke-width: 5;
+  stroke: #1E3467;
+}
+
+svg path:hover , path.active { /* Amend this */
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+/*...*/
+.scale {
+  position: relative;
+}
+.scale div {
+  width: 9.07%;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 0;
+}

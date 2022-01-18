@@ -1,0 +1,117 @@
+<div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 50px" ng-if="vm.pageInitLoading">
+  <md-progress-circular  class="md-accent md-hue-1" md-diameter="40"></md-progress-circular>
+</div>
+
+<div id="forms" class="page-layout simple fullwidth doc-page" layout="column" ng-show="!vm.pageInitLoading">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="space-between">
+    <div layout="column" layout-align="space-between">
+      <div class="breadcrumb" layout="row" layout-align="start center">
+        <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+        <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+        <span class="parent">USER INTERFACE</span>
+      </div>
+      <div class="title">MENA Form
+        <md-button class="add-event-button md-fab md-info" href="{{vm.baseLocation}}print/MENA/{{vm.id}}" target="_blank"
+                   aria-label="Print" translate translate-attr-aria-label="CALENDAR.ADD_EVENT">
+          <md-icon md-font-icon="icon-printer"></md-icon>
+        </md-button>
+        <md-button class="add-event-button md-fab md-info" href="{{vm.baseLocation}}exportMENAOneReport/{{vm.id}}" target="_blank"
+                   aria-label="Print Report">
+          <md-icon md-font-icon="icon-file-word"></md-icon>
+        </md-button>
+
+      </div>
+    </div>
+  </div>
+
+  <div ng-include="'app/main/ui/shared/cor.options.html'"></div>
+  <!-- / HEADER -->
+  <ms-widget ng-show="vm.formAll.alertSummary.length">
+    <ms-widget-front class="padding-2 md-white-bg">
+        <p style="text-align: center; font-weight: bold">Report Alert Summary</p>
+        <ul>
+          <li ng-repeat="item in ::vm.formAll.alertSummary">{{item.section}} : {{item.title}} => {{item.value}}</li>
+        </ul>
+
+    </ms-widget-front>
+  </ms-widget>
+
+  <!-- CONTENT -->
+  <!--<div class="content" layout="column">-->
+  <div  class="page-layout simple fullwidth doc-page fixedByAli" layout="column" flex="100">
+
+    <div layout="row">
+
+      <!-- FORM WIZARD -->
+      <ms-form-wizard flex>
+        <md-tabs md-dynamic-height md-selected="msWizard.selectedIndex" md-center-tabs="true">
+
+          <md-tab ng-repeat="fields in vm.form[0]['Fields']">
+            <md-tab-label>
+              <span class="ms-form-wizard-step-label">
+                  <span class="ms-form-wizard-step-number md-accent-bg">{{$index + 1}}</span>
+                  <span class="ms-form-wizard-step-text">{{fields.Title}}</span>
+              </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="{$index}" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-if="fields.Type === 'Panel'" ng-include="'app/main/ui/MENATool/stepper-steps/horizontal/base.html'"></div>
+                <div ng-if="fields.Type === 'RepeatablePanel'" ng-include="'app/main/ui/MENATool/stepper-steps/horizontal/RepeatablePanel.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+              <span class="ms-form-wizard-step-label">
+                  <span class="ms-form-wizard-step-number md-accent-bg">U</span>
+                  <span class="ms-form-wizard-step-text">Upload Files</span>
+              </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardUpload" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/MENATool/stepper-steps/horizontal/upload.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+
+
+        </md-tabs>
+
+        <div class="navigation" flex layout="row" layout-align="center center">
+          <md-button class="md-raised md-accent" ng-click="msWizard.previousStep()"
+                     ng-disabled="msWizard.isFirstStep()">
+            Previous
+          </md-button>
+          <div class="steps">
+                        <span ng-repeat="form in msWizard.forms"
+                              ng-class="{'selected md-accent-bg':msWizard.selectedIndex === $index}"></span>
+          </div>
+          <md-button class="md-raised md-accent" ng-click="msWizard.nextStep()"
+                     ng-hide="msWizard.isLastStep()">
+            <!--ng-disabled="msWizard.currentStepInvalid()"-->
+            Next
+          </md-button>
+
+          <md-progress-circular ng-disabled="!vm.isLoading" class="md-hue-2" md-diameter="20px"></md-progress-circular>
+
+          <md-button ng-disabled="!vm.editAllow" class="md-raised md-warn" ng-click="vm.sendForm()"
+          ng-show="msWizard.isLastStep() && !vm.isLoading"
+          ng-disabled="msWizard.formsIncomplete()">
+            {{vm.sendName}}
+          </md-button>
+        </div>
+
+      {{vm.message}}
+      </ms-form-wizard>
+      <!-- / FORM WIZARD -->
+
+    </div>
+
+
+  </div>
+  <!-- / CONTENT -->
+</div>

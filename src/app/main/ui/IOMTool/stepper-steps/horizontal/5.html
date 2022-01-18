@@ -1,0 +1,206 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'5.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+
+
+  <md-checkbox ng-model="vm.form.m5_active" ng-disabled="!vm.editAllow" aria-label="None">Respondent: Contractor POC, for renovation/infrastructure
+    activities only
+  </md-checkbox>
+
+  <div ng-if="vm.form.m5_active">
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>5.1 Has renovation work been completed?</label>
+        <md-select ng-model="vm.form.m5_1" required ng-disabled="!vm.editAllow">
+          <md-option value="Yes">Yes (go to 5.2)</md-option>
+          <md-option value="No">No (go to 5.3)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div ng-if="vm.form.m5_1 === 'Yes'">
+      <p>5.2: Work has been completed</p>
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex-gt-md="100">
+          <label>5.2a. When was the work started?</label>
+          <md-datepicker ng-model="vm.form.m5_2a" md-placeholder="When was the work started?"
+                         ng-disabled="!vm.editAllow"
+                         md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex-gt-md="100">
+          <label>5.2b. When was the work completed?</label>
+          <md-datepicker ng-model="vm.form.m5_2b" md-placeholder="When was the work started?"
+                         ng-disabled="!vm.editAllow"
+                         md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+          <label>5.2c Was the work completed on time?</label>
+          <md-select ng-model="vm.form.m5_2c" required ng-disabled="!vm.editAllow">
+            <md-option value="Yes">Yes (go to 5.2d)</md-option>
+            <md-option value="No">No</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m5_2c == 'No'">
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m5_2d"
+                ng-disabled="!vm.editAllow"
+                placeholder="5.2d. What is/was the reason for the work delay?" required></textarea>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+          <label ng-style="vm.form.m5_2e === 'No' && {'color':'red', 'font-weight':'bold'}">5.2e Does the actual renovation work match the project description?</label>
+          <md-select ng-model="vm.form.m5_2e" required ng-disabled="!vm.editAllow">
+            <md-option value="Yes">Yes (go to 5.2f)</md-option>
+            <md-option value="No">No (ALERT)</md-option>
+            <md-option value="N/A">N/A, description unavailable</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m5_2e == 'Yes'">
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m5_2f"
+                ng-disabled="!vm.editAllow"
+                placeholder="5.2f. What deviations/differences exist between the actual renovation work and the project description?"
+                required></textarea>
+        </md-input-container>
+      </div>
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m5_2g"
+                ng-disabled="!vm.editAllow"
+                placeholder="5.2g. What are the most significant challenges the project has encountered and what has been done to address them?"
+                required></textarea>
+        </md-input-container>
+      </div>
+    </div>
+
+    <div ng-if="vm.form.m5_1 === 'No'">
+      <p>5.3: Work has not been completed</p>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+          <label>5.3a Has renovation work started?</label>
+          <md-select ng-model="vm.form.m5_3a" required ng-disabled="!vm.editAllow">
+            <md-option value="Yes">Yes</md-option>
+            <md-option value="No">No</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m5_3a == 'No'">
+        <md-input-container flex="100">
+          <label>5.3b Should renovation work have started already, according to the schedule?</label>
+          <md-select ng-model="vm.form.m5_3b" required ng-disabled="!vm.editAllow">
+            <md-option value="Yes">Yes</md-option>
+            <md-option value="No">No</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m5_3a == 'No'">
+        <md-input-container flex-gt-md="100">
+          <label>5.3c When is the estimated start date?</label>
+          <md-datepicker ng-model="vm.form.m5_3c" ng-disabled="!vm.editAllow" md-placeholder="5.3c When is the estimated start date?"
+                         md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+        <textarea ng-model="vm.form.m5_3d"
+                  ng-disabled="!vm.editAllow"
+                  placeholder="5.3d. How complete is the work to-date?" required></textarea>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex-gt-md="100">
+          <label>5.3e. When was the work started?</label>
+          <md-datepicker ng-model="vm.form.m5_3e" ng-disabled="!vm.editAllow" md-placeholder="5.3e. When was the work started?"
+                         md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex-gt-md="100">
+          <label>5.3f When is the estimated completion date?</label>
+          <md-datepicker ng-model="vm.form.m5_3f" ng-disabled="!vm.editAllow" md-placeholder="5.3f When is the estimated completion date?"
+                         md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+          <label ng-style="vm.form.m5_3g === 'No[ALERT]' && {'color':'red', 'font-weight':'bold'}">5.3g Will the work be completed on time, according to the renovation schedule?</label>
+          <md-select ng-model="vm.form.m5_3g" required ng-disabled="!vm.editAllow">
+            <md-option value="Yes">Yes</md-option>
+            <md-option value="No">No</md-option>
+            <md-option value="No[ALERT]">No [Monitoring visit indicates that work is significantly delayed]</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m5_3g == 'No'">
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m5_3h"
+                ng-disabled="!vm.editAllow"
+                placeholder="5.3h What is/was the reason for the work delay?" required></textarea>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100">
+          <label ng-style="vm.form.m5_3i === 'No' && {'color':'red', 'font-weight':'bold'}">5.3i Does the actual renovation work match the project description? </label>
+          <md-select ng-model="vm.form.m5_3i" required ng-disabled="!vm.editAllow">
+            <md-option value="Yes">Yes (go to 5.3k)</md-option>
+            <md-option value="No">No (ALERT)</md-option>
+            <md-option value="N/A">N/A</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m5_3i == 'No'">
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m5_3j"
+                ng-disabled="!vm.editAllow"
+                placeholder="5.3j. What deviations/differences exist between the actual work and the project description?"
+                required></textarea>
+        </md-input-container>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row" flex>
+        <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m5_3k"
+                ng-disabled="!vm.editAllow"
+                placeholder="5.3k. What were the most significant challenges the project encountered and what was done to address them?"
+                required></textarea>
+        </md-input-container>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</div>

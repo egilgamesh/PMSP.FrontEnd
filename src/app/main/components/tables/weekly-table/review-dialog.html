@@ -1,0 +1,35 @@
+
+<md-dialog delete-dialog>
+  <md-dialog-content class="md-dialog-content">
+    <h2 class="md-title">Review Weekly</h2>
+    <p>Please select the action for the selected IFM weekly plane</p>
+    <p class="md-warn" ng-if="error" layout="row" layout-align="start center">
+      <md-icon>error_outline</md-icon>
+      <span>&nbsp; {{error}}</span>
+    </p>
+    <form name="authorize.form" ng-submit="ctrl.authorizeUser()">
+
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>Review Action</label>
+          <md-select ng-model="objectItem.type" placeholder="Select actions" required>
+            <md-option ng-repeat="type in reviewTypes" value="{{type.value}}">{{type.name}}</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>Comments</label>
+          <textarea name="comment" type="text" ng-model="objectItem.comment" required></textarea>
+        </md-input-container>
+      </div>
+
+
+    </form>
+  </md-dialog-content>
+  <div class="md-dialog-actions">
+    <md-button class="md-primary" ng-click="ctrl.authorizeUser()" ng-disabled="authorize.form.$invalid">Submit</md-button>
+    <md-button class="md-primary" ng-click="ctrl.cancel()">Close</md-button>
+  </div>
+</md-dialog>

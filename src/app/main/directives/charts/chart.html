@@ -1,0 +1,56 @@
+<div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 50px" ng-if="vm.isLoading">
+  <md-progress-circular  class="md-accent md-hue-1" md-diameter="60"></md-progress-circular>
+</div>
+<div class="widget-group" layout="row" flex="100" layout-wrap ng-if="vm.widget5.title && !vm.isLoading">
+
+  <!-- WIDGET 5 -->
+  <ms-widget layout="row" flex="100">
+
+    <!-- Front -->
+    <ms-widget-front class="white-bg">
+      <div class="ph-16 pv-8 border-bottom" layout="row" layout-align="space-between center"
+           layout-wrap>
+        <div class="pv-8 h3">{{vm.widget5.title}}</div>
+
+        <div class="pv-8" layout="row" layout-align="start center" layout-align-sm="end"
+             flex-sm="100">
+          <md-button class="ph-16"
+                     ng-repeat="(key, range) in vm.widget5.ranges"
+                     ng-click="vm.widget5.changeRange(key)"
+                     ng-disabled="vm.widget5.currentRange == key">
+            {{range}}
+          </md-button>
+        </div>
+      </div>
+
+      <div layout="row" layout-align="start center" layout-wrap>
+        <div class="p-16" layout="row" flex="100" flex-gt-sm="100">
+          <nvd3 class="h-320 remove-x-lines"
+                config="vm.widget5.mainChart.config"
+                options="vm.widget5.mainChart.options"
+                data="vm.widget5.mainChart.data"></nvd3>
+        </div>
+      </div>
+      <div ng-if="extra != 'no'" layout="row" layout-align="start center" layout-wrap>
+        <div class="p-16" layout="row" flex="100" flex-gt-sm="100" layout-wrap>
+          <div class="p-16" layout="column" flex="100" flex-gt-xs="100"
+               layout-align="center"
+               ng-repeat="(name, widget) in vm.widget5.supporting.widgets">
+            <div class="h4 secondary-text">{{widget.data.label}}</div>
+            <div class="md-display-1">
+              {{widget.data.count[vm.widget5.currentRange]}}
+            </div>
+            <nvd3 class="h-50"
+                  config="vm.widget5.supporting.chart.config"
+                  options="vm.widget5.supporting.chart.options"
+                  data="widget.chart.data"></nvd3>
+          </div>
+        </div>
+      </div>
+    </ms-widget-front>
+    <!-- / Front -->
+
+  </ms-widget>
+  <!-- / WIDGET 5 -->
+
+</div>

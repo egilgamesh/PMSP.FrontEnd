@@ -1,0 +1,210 @@
+<div class="md-inline-form">
+
+
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_active" aria-label="None">Respondent: Beneficiary
+  </md-checkbox>
+
+  <div ng-if="vm.form.m11_active">
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <p>11.1 Relationship of the respondent to the activity</p>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_GeneralConsumer " aria-label="General Consumer">General Consumer
+        </md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_LocalResident " aria-label="Local resident">Local resident</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_Parent" aria-label="Parent">Parent</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_Student" aria-label="Student">Student</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_Patient" aria-label="Patient">Patient</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_Staff" aria-label="Staff">Staff</md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_Other" aria-label="Other">Other</md-checkbox>
+      </md-input-container>
+
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="text" ng-disabled="!vm.editAllow" ng-model="vm.form.m11_1_Other_text"
+               placeholder="Other (free text)" required/>
+      </md-input-container>
+
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>11.2 Gender of the respondent</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m11_2" required>
+          <md-option value="Male">Male</md-option>
+          <md-option value="Female">Female</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m11_3"
+               placeholder="11.3 Respondent's age"
+               required/>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>11.4 Respondent's attained education level</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m11_4" required>
+          <md-option value="None">None</md-option>
+          <md-option value="Primary">Primary</md-option>
+          <md-option value="Secondary">Secondary</md-option>
+          <md-option value="Higher">Higher</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_5"
+                placeholder="11.5 Briefly describe the most significant positive outcomes resulting from this activity."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_6"
+                placeholder="11.6 Briefly describe any negative outcomes resulting from this activity."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_7"
+                placeholder="11.7 Briefly describe any significant features, functions or elements that could be added to this activity to improve its usefulness."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>11.8 Did conflict in Iraq force you (or your family) to evacuate or relocate from this area?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m11_8" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No (go to 11.11)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m11_8 != 'No'">
+      <md-input-container flex="100">
+        <label>11.9 Did this renovation activity affect your (or your family’s) decision to return to this area?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m11_9" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No (go to 11.11)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m11_9 != 'No'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_10"
+                placeholder="11.10 Briefly describe how this activity affected your (or your family’s) decision to return to this area."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex >
+      <md-input-container flex="100">
+        <label>11.11 Have you (or persons you are aware of) had difficulty in accessing services resulting from this
+          activity?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m11_11" required>
+          <md-option value="Yes">Yes Alert</md-option>
+          <md-option value="No">No (go to 11.13)</md-option>
+          <md-option value="N/A">N/A</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m11_11 != 'No'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_12"
+                placeholder="11.12 Briefly describe any difficulties that you (or persons you are aware of) have had in accessing services resulting from this activity."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>11.13 Have you (or persons you are aware of) ever been asked to pay a suspicious fee or provide certain
+          favors in order to use services resulting from this activity?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m11_13" required>
+          <md-option value="Yes">Yes (ALERT)</md-option>
+          <md-option value="No">No (go to 11.15)</md-option>
+          <md-option value="N/A">N/A</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m11_13 != 'No'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_14"
+                placeholder="11.14 Briefly describe the circumstances in which a suspicious fee or favor was demanded. "
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m11_15"
+                placeholder="11.15 Please share any final thoughts or concerns about your experiences with or impressions of this activity?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <table class="simple" ms-responsive-table ng-if="vm.id">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Created At</th>
+      </tr>
+      </thead>
+
+      <tfoot>
+      <tr>
+        <td></td>
+      </tr>
+      </tfoot>
+
+      <tbody>
+      <tr ng-repeat="bs in vm.form.bs" ng-if="vm.form.bs.length">
+        <td class="name">{{bs.id}}</td>
+        <td class="position">{{bs.created_at}}</td>
+        <td>
+          <md-button ng-if="bs.id" class="md-raised"
+                     ui-sref="app.ui_forms-NewCashOfWork.bs({formId:{{bs.id}}, id:{{vm.id}}, type: 'edit'})">
+            View
+          </md-button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+    <md-button ng-if="vm.id" class="md-raised md-accent"
+               ui-sref="app.ui_forms-NewCashOfWork.bs({id:{{vm.id}}, type: 'add'})">
+      Add New Beneficiary
+    </md-button>
+
+
+  </div>
+
+</div>

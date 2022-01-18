@@ -1,0 +1,160 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'10.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+
+
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m10_active" aria-label="None">Respondent: Directorate POC, for supply of equipment
+    activities
+  </md-checkbox>
+
+  <div ng-if="vm.form.m10_active">
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m10_1"
+                ng-disabled="!vm.editAllow"
+                placeholder="10.1 Please describe the equipment provided to your office/directorate as part of this activity"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>10.2 Is the equipment new?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m10_2" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="No[ALERT]">No [ALERT]</md-option>
+          <md-option value="Don't Know">Don't Know</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m10_2 == 'No[ALERT]'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m10_2_description"
+                ng-disabled="!vm.editAllow"
+                placeholder="10.2.B If No[ALERT], Why?" required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m10_3"
+                placeholder="10.3 Who is responsible for maintaining the equipment?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m10_4"
+               placeholder="10.4 For how many hours per day is the equipment run or used?"
+               required/>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>10.5 Has the installation of this equipment increased the number of beneficiaries you are able to reach
+          with services?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m10_5" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No (go to 10.7)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m10_5 === 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m10_6"
+                placeholder="10.6 By approximately how much has the number of beneficiaries reached increased?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>10.7 Does your facility collect any fees for the services it provides?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m10_7" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No (go to 10.9)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex flex ng-if="vm.form.m10_7 === 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m10_8"
+                placeholder="10.8 Can you describe the nature and amount of the fees?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label ng-style="vm.form.m10_9 === 'Yes' && {'color':'red', 'font-weight':'bold'}">10.9 Do you know of any restrictions on who can receive services from your facility?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m10_9" required>
+          <md-option value="Yes">Yes (ALERT)</md-option>
+          <md-option value="No">No (go to 10.11)</md-option>
+          <md-option value="Don't know">Don't know (go to 10.11)</md-option>
+          <md-option value="N/A">N/A</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex flex ng-if="vm.form.m10_9 === 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m10_10"
+                placeholder="10.10 Please describe those potential users of this service who are not receiving it?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>10.11 To what extent do you think the rehabilitation has improved the services you are providing?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m10_11" required>
+          <md-option value="Improved a lot">Improved a lot</md-option>
+          <md-option value="Improved a little">Improved a little</md-option>
+          <md-option value="Not improved at all">Not improved at all (go to 10.13)</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex flex ng-if="vm.form.m10_11 != 'Not improved at all'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m10_12"
+                placeholder="10.12 Please describe improvements to services"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>10.13 To what extent do you think the services being provided help to improve the quality of life for
+          residents? </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m10_13" required>
+          <md-option value="Improved a lot">Improved a lot</md-option>
+          <md-option value="Improved a little">Improved a little</md-option>
+          <md-option value="Not improved at all">Not improved at all</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+  </div>
+
+</div>

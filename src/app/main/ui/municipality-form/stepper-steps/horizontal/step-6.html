@@ -1,0 +1,237 @@
+<div class="md-inline-form">
+  <p>IV. Interview: Project Contractor 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7.	Can you provide a copy of the bill of quantities and/or the contract between UNDP and yourself? (If provided please take a photo and include below or attach a copy with this report. If not provided by the interviewee seek to get it from someone else in the project.)</label>
+      <md-select ng-model="vm.municipalityForm.PC_quantities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_quantities_id_no"
+             placeholder="7.1. If no, please explain why not." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8.	Did the Municipality Directorate provide any consultation prior to the work?</label>
+      <md-select ng-model="vm.municipalityForm.PC_provide_consultation" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9.	Did the Municipality Directorate approve the scope of work prior to the start of the work?</label>
+      <md-select ng-model="vm.municipalityForm.PC_approve_scope" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_how_find_this_work"
+             placeholder="10. How did you find out about the bid for this work?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_major_scope"
+             placeholder="11. What is the scope of the major renovations?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12. What percentage of work has been completed? If 100%, skip to question 13.)</label>
+      <md-select ng-model="vm.municipalityForm.PC_percentage_been_completed" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.1. If 100%, how long did the renovations take?</label>
+      <md-select ng-model="vm.municipalityForm.PC_percentage_been_completed_if_100" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_percentage_been_completed_if_less_100"
+             placeholder="12.2. If less than 100% complete, what remains to be done on the original scope of the work?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.2.1. If less than 100% complete, how long do you estimate the remaining work will take?</label>
+      <md-select ng-model="vm.municipalityForm.PC_percentage_been_completed_if_less_100_long" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_percentage_been_completed_what_obstacles"
+             placeholder="12.2.2. What obstacles are you facing to finish the work?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_worker_male"
+             placeholder="13.A.	How many workers/beneficiaries have you employed (Male)" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_worker_female"
+             placeholder="13.B.	How many workers/beneficiaries have you employed (Female)" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_worker_criteria"
+             placeholder="13.1.	What were the criteria used to select the project beneficiaries/workers?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.2. Approximately what percentage of beneficiary/workers who you’ve hired are from the area?</label>
+      <md-select ng-model="vm.municipalityForm.PC_worker_approximately_percentage" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.3.A. Approximately what percentage of beneficiary/workers who you’ve hired are in the following categories?: Women</label>
+      <md-select ng-model="vm.municipalityForm.PC_worker_approximately_percentage_beneficiary_women" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.3.B. Approximately what percentage of beneficiary/workers who you’ve hired are in the following categories?: Youth (15-29)</label>
+      <md-select ng-model="vm.municipalityForm.PC_worker_approximately_percentage_beneficiary_youth" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.3.C. Approximately what percentage of beneficiary/workers who you’ve hired are in the following categories?: (IDPs)</label>
+      <md-select ng-model="vm.municipalityForm.PC_worker_approximately_percentage_beneficiary_IDPs" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.3.D. Approximately what percentage of beneficiary/workers who you’ve hired are in the following categories?: (Disabled/Elderly)</label>
+      <md-select ng-model="vm.municipalityForm.PC_worker_approximately_percentage_beneficiary_disabled" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.3.E. Approximately what percentage of beneficiary/workers who you’ve hired are in the following categories?: (Religious or Ethnic Minority)</label>
+      <md-select ng-model="vm.municipalityForm.PC_worker_approximately_percentage_beneficiary_religiousEthnic" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_daily_amount"
+             placeholder="14. What was the daily amount (in dollars) paid in cash to each worker/beneficiary? (Ask to see and then photograph the documentation for beneficiary payment receipt.)" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>15. Was there any contribution from the local authorities or Municipality Directorate to the project activity?</label>
+      <md-select ng-model="vm.municipalityForm.PC_contribution_authorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_contribution_authorities_if_yes"
+             placeholder="15.1. If yes, please describe." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_achievement_observed"
+             placeholder="16. What were the achievement/successes you observed in this project activity?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_significant_challenges"
+             placeholder="17.	What are the most significant challenges that the project activity has encountered and what has been done to address such issues?  (If multiple challenges are shared clearly record each response)" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.municipalityForm.PC_any_suggestions"
+             placeholder="18.	If you have any suggestions on how to improve the project activity impact on the targeted beneficiaries, please share. (Clarify that this is not asking if all basic needs of beneficiaries were met, but if there are ways that this specific activity could be improved)." required>
+    </md-input-container>
+  </div>
+
+</div>
+

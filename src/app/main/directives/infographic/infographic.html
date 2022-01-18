@@ -1,0 +1,38 @@
+<div layout="row" layout-sm="column" layout-align="space-around"  ng-if="isLoading">
+  <md-progress-circular  class="md-accent md-hue-1" md-diameter="40"></md-progress-circular>
+</div>
+
+<div ng-cloak class="gridListdemoBasicUsage" ng-show="show">
+
+  <md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2" md-gutter="12px" md-gutter-gt-sm="8px" >
+
+    <p class="gray" md-rowspan="1" md-colspan="6" md-colspan-sm="1" md-colspan-xs="1" style="height: 50px; text-align: center">
+      <md-content  layout-padding ng-cloak>
+        <div layout-gt-xs="row">
+          <div flex-gt-xs>
+            <div class="h3 secondary-text font-weight-500 ng-binding align-center" style="text-align: center">Infographic</div>
+            <md-progress-circular class="md-accent md-hue-1" md-diameter="30" ng-show="loadingForUpdate"></md-progress-circular>
+          </div>
+        </div>
+      </md-content>
+    </p>
+    <md-grid-tile class="gray" md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+      <div class="scaling-svg-container">
+
+        <svg class="scaling-svg" ng-bind-html="infoGraphic.ffsMap | trust"  viewBox="-5 0 140 140" width="100%" height="100%">
+          <!-- SVG content -->
+        </svg>
+      </div>
+
+    </md-grid-tile>
+    <md-grid-tile class="gray" md-rowspan="2" md-colspan="4" md-colspan-sm="1" md-colspan-xs="1">
+      <div class="scaling-svg-container">
+        <svg class="scaling-svg" ng-bind-html="infoGraphic.allg | trust" viewBox="0 0 390 200" width="100%" height="100%" style="margin-top: 20px; margin-left: 20px">
+          <!-- SVG content -->
+        </svg>
+      </div>
+    </md-grid-tile>
+
+  </md-grid-list>
+
+</div>

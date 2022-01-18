@@ -1,0 +1,22 @@
+
+<md-dialog delete-dialog>
+  <md-dialog-content class="md-dialog-content">
+    <h2 class="md-title">{{cationInfo}}</h2>
+    <p>{{titleOfMSG}}</p>
+    <p class="md-warn" ng-if="error"  layout-align="start center">
+      <md-icon>error_outline</md-icon>
+      <span>&nbsp; {{error}}</span>
+    </p>
+    <form ng-show="isComment">
+      <md-input-container style="width: 100%">
+        <label>Comments</label>
+        <textarea ng-model="comments" required></textarea>
+      </md-input-container>
+    </form>
+  </md-dialog-content>
+  <div class="md-dialog-actions">
+    <P ng-show="isLoading" style="margin-left: 25px">Loading....</P>
+    <md-button ng-show="!isLoading" class="md-primary" ng-click="submit(comments)">{{cation}}</md-button>
+    <md-button ng-show="!isLoading" class="md-primary" ng-click="ctrl.cancel()">Close</md-button>
+  </div>
+</md-dialog>

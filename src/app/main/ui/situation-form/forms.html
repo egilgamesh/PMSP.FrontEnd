@@ -1,0 +1,464 @@
+<div id="forms" class="page-layout simple fullwidth doc-page" layout="column">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="space-between">
+    <div layout="column" layout-align="space-between">
+      <div class="breadcrumb" layout="row" layout-align="start center">
+        <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+        <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+        <span class="parent">USER INTERFACE</span>
+
+        <md-button class="md-raised md-warn" ng-click="vm.clearCache($event)"itgul>
+          Clear Cache
+        </md-button>
+      </div>
+
+      <div class="title">Situation Form
+        <md-button class="add-event-button md-fab md-info" href="{{vm.baseLocation}}export/sitRep/{{vm.id}}" target="_blank"
+                   aria-label="Print" translate translate-attr-aria-label="CALENDAR.ADD_EVENT">
+          <md-icon md-font-icon="icon-printer"></md-icon>
+        </md-button>
+        <md-button class="add-event-button md-fab md-info" href="https://pmspifm.live/" target="_blank"
+                   aria-label="Checked" translate translate-attr-aria-label="CALENDAR.ADD_EVENT">
+          <md-icon md-font-icon="icon-check"></md-icon>
+        </md-button>
+      </div>
+    </div>
+  </div>
+
+
+  <div ng-include="'app/main/ui/shared/cor.options.html'"></div>
+
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div  class="page-layout simple fullwidth doc-page fixedByAli" layout="column" flex="100">
+  <!--<div class="content" layout="column">-->
+
+    <div layout="row">
+
+      <!-- FORM WIZARD -->
+      <ms-form-wizard flex>
+        <md-tabs md-dynamic-height md-selected="msWizard.selectedIndex" md-center-tabs="true">
+
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">1</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">A. Preliminary Information</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-1.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">2</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">B. CIVILIAN SECTOR SERVICES</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-2.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">3</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Fuel/Electricity</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-3.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">4</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Local Transportation</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-4.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">5</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Housing/Accommodations</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-5.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">6</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Health Services</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-6.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">7</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Education</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-7.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">8</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Government Services</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-8.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">9</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Social Safety Net</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-9.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">10</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Condition of Physical Infrastructure</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-10.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">11</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Damage to Public Service Infrastructure</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-11.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">12</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Damage to Commercial Infrastructure</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-12.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">13</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Damage to Agricultural Infrastructure (if relevant)</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-13.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">14</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Damage to Housing Infrastructure</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-14.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">15</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">ECONOMIC SECTOR SERVICES</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-15.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">16</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Family or National Celebrations</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-16.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">17</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Religious Practices</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-17.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">18</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">Youth Events</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-18.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">19</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">A. Governance Context</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-19.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">20</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">B. Humanitarian Context</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-20.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+          <md-tab>
+            <md-tab-label>
+                            <span class="ms-form-wizard-step-label">
+                                <span class="ms-form-wizard-step-number md-accent-bg"
+                                      ng-if="wizardStep1.$invalid">21</span>
+                                <span class="ms-form-wizard-step-number md-accent-bg" ng-if="wizardStep1.$valid">
+                                    <i class="icon-check s16"></i>
+                                </span>
+                                <span class="ms-form-wizard-step-text">C. Security Context</span>
+                            </span>
+            </md-tab-label>
+
+            <md-tab-body>
+              <form name="wizardStep1" class="md-inline-form" ms-form-wizard-form novalidate>
+                <div ng-include="'app/main/ui/situation-form/stepper-steps/horizontal/step-21.html'"></div>
+              </form>
+            </md-tab-body>
+          </md-tab>
+
+
+        </md-tabs>
+
+        <div class="navigation" flex layout="row" layout-align="center center">
+          <div class="steps">
+                        <span ng-repeat="form in msWizard.forms"
+                              ng-class="{'selected md-accent-bg':msWizard.selectedIndex === $index}"></span>
+          </div>
+        </div>
+        <div class="navigation" flex layout="row" layout-align="center center">
+
+          <md-button class="md-raised md-accent" ng-click="msWizard.previousStep()"
+                     ng-disabled="msWizard.isFirstStep()">
+            Previous
+          </md-button>
+
+          <md-button class="md-raised md-accent" ng-click="msWizard.nextStep()"
+                     ng-hide="msWizard.isLastStep()"
+                     ng-disabled="msWizard.currentStepInvalid()">
+            Next
+          </md-button>
+
+          <md-progress-circular ng-disabled="!vm.isLoading" class="md-hue-2" md-diameter="20px"></md-progress-circular>
+
+          <md-button class="md-raised md-warn" ng-click="vm.sendForm()"
+          ng-show="msWizard.isLastStep() && !vm.isLoading"
+          ng-disabled="msWizard.formsIncomplete()">
+            {{vm.sendName}}
+          </md-button>
+        </div>
+
+      {{vm.message}}
+      </ms-form-wizard>
+      <!-- / FORM WIZARD -->
+
+    </div>
+
+
+  </div>
+  <!-- / CONTENT -->
+
+</div>

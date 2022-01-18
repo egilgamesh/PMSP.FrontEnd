@@ -1,0 +1,85 @@
+<div id="dashboard-project" class="page-layout simple right-sidenav" layout="row">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div ng-include="'app/main/apps/dashboards/sitrep/header.html'" class="header md-accent-bg" layout="column"
+         layout-align="space-between"></div>
+
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+
+    <div class="content">
+      <md-tabs md-dynamic-height md-selected-nav-item="vm.selectedNavItem" nav-bar-aria-label="Maps" md-selected='0'>
+        <md-tab ui-sref="app.dashboards_sitrep.SitRep">SitRep</md-tab>
+      </md-tabs>
+      <md-content ui-view="tabContent" flex class="card md-whiteframe-4dp"></md-content>
+    </div>
+
+    <!--<div class="content">-->
+
+    <!--<md-tabs md-dynamic-height>-->
+
+    <!--<md-tab label="Home">-->
+    <!--&lt;!&ndash; WIDGET GROUP &ndash;&gt;-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/main-notification.html'" class="widget-group" layout="row" flex="100" layout-wrap></div>-->
+
+    <!--</md-tab>-->
+
+
+    <!--<md-tab label="FFS Health">-->
+
+    <!--&lt;!&ndash; WIDGET GROUP &ndash;&gt;-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/health.html'" class="widget-group" layout="row" flex="100" layout-wrap>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash; / WIDGET GROUP &ndash;&gt;-->
+
+    <!--</md-tab>-->
+
+
+    <!--<md-tab label="FFS Cash 4 Work">-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/cash.html'"-->
+    <!--class="widget-group" layout="row" flex="100" layout-wrap>-->
+    <!--</div>-->
+    <!--</md-tab>-->
+
+
+    <!--<md-tab label="FFS Education">-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/education.html'"-->
+    <!--class="widget-group" layout="row" flex="100" layout-wrap>-->
+    <!--</div>-->
+    <!--</md-tab>-->
+
+
+    <!--<md-tab label="FFS Electricity">-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/electricity.html'"-->
+    <!--class="widget-group" layout="row" flex="100" layout-wrap>-->
+    <!--</div>-->
+    <!--</md-tab>-->
+
+    <!--<md-tab label="FFS Municipality">-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/municipality.html'"-->
+    <!--class="widget-group" layout="row" flex="100" layout-wrap>-->
+    <!--</div>-->
+    <!--</md-tab>-->
+
+    <!--<md-tab label="FFS Water">-->
+    <!--<div ng-include="'app/main/apps/dashboards/project/water.html'"-->
+    <!--class="widget-group" layout="row" flex="100" layout-wrap>-->
+    <!--</div>-->
+    <!--</md-tab>-->
+
+
+    <!--</md-tabs>-->
+
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;/ CONTENT &ndash;&gt;-->
+
+    <!--</div>-->
+
+
+  </div>
+</div>

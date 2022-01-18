@@ -1,0 +1,175 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Electricity Facility Staff (Part 2)</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>17. What percentage of renovations have been completed?</label>
+      <md-select ng-model="vm.electricityForm.KIIPercentageOfRenovations" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIPercentageIf100Complete"
+             placeholder="17.1.	If 100% complete, how long did the renovations take? (If 100% complete, skip to question 17)" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIPercentageOfRenovationsRemainToBeDon"
+             placeholder="17.2. If less than 100% complete, what remains to be done on the original scope of the renovations?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIPercentageOfRenovationsWhatEntity"
+             placeholder="17.2.1. If less than 100% complete, what entity is responsible for completing the work?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17.2.2. If less than 100% complete, how long do you estimate the remaining renovations will take?</label>
+      <md-select ng-model="vm.electricityForm.KIIPercentageOfRenovationsEstimate" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIPercentageOfRenovationsObstacles"
+             placeholder="17.2.3 What obstacles are you facing to finish the work?" required>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17. Are there additional renovations necessary beyond this initiative for the electricity facility to function properly?
+      </label>
+      <md-select ng-model="vm.electricityForm.KIIAreThereAdditionalRenovationsNecessary" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIAreThereAdditionalRenovationsNecessaryIfYes"
+             placeholder="17.1. If yes, please describe?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>18. What is your level of satisfaction with the work?</label>
+      <md-select ng-model="vm.electricityForm.KIIWhatIsYourLevelOfSatisfactionWithTheWork" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIIfDissatisfiedOrVeryDissatisfiedInclude"
+             placeholder="18.1.	If Dissatisfied or Very Dissatisfied include please explain why?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>18. Was there any contribution from the local authorities or responsible General Directorate to the project?
+      </label>
+      <md-select ng-model="vm.electricityForm.KIIWasThereAnyContributionFromTheLocalAuthorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIWasThereAnyContributionFromTheLocalAuthoritiesIfYes"
+             placeholder="18.1. If yes, please describe?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIWhatEntityIsResponsibleForMaintenance"
+             placeholder="19. What entity is responsible for maintenance or any future repairs?" required>
+    </md-input-container>
+
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIWhatIsTheProcessForRequestingSuchMaintenance"
+             placeholder="19.1 What is the process for requesting such maintenance or repairs?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIListOfVillages"
+             placeholder="20. Please list the villages/towns/cities that are benefiting from or will benefit from these renovations once completed." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIEstimatedNumberOfBeneficiaries"
+             placeholder="20.1. What is the estimated number of beneficiaries that are being served by or will be served by this electricity facility once renovations are completed?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIWhatWereTheAchievementSuccessesYouObservedIn"
+             placeholder="21. What were the achievement/successes you observed in this project?" required>
+    </md-input-container>
+  </div>
+
+
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIWhatAreTheMostSignificantChallenges"
+             placeholder="22.	What are the most significant challenges that the project has encountered and what has been done to address such issues?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIDoYouHaveAnySuggestionsOnHowToImprove"
+             placeholder="23.	Do you have any suggestions on how to improve the project impact on the targeted beneficiaries? " required>
+    </md-input-container>
+
+  </div>
+
+
+</div>
+

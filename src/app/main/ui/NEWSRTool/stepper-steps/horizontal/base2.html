@@ -1,0 +1,70 @@
+<div class="md-inline-form" ng-if="vm.isModuleIsActive(itemR)">
+
+  <div  ng-repeat="fieldItemSection in itemR['Components']">
+
+    <p ng-if="fieldItemSection['Section']" class="md-accent-bg" style="padding: 10px;border-radius: 5px">{{fieldItemSection["Section"]}}</p>
+
+    <div layout="column" layout-gt-xs="row" flex ng-repeat="fieldItem in fieldItemSection['Fields']">
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'SelectOne'">
+        <md-input-container flex="100" ng-if="vm.showTheField(fieldItem, fieldItemSection['Fields'])">
+          <label>{{fieldItem.Title}}</label>
+          <md-select ng-model="fieldItem.Value" required ng-disabled="!vm.editAllow">
+            <md-option ng-repeat="option in fieldItem.OptionItems" value="{{option}}">{{option}}</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'SelectMulti'">
+        <md-input-container flex="100" ng-if="vm.showTheField(fieldItem, fieldItemSection['Fields'])">
+          <label>{{fieldItem.Title}}</label>
+          <md-select ng-model="fieldItem.ValueMulti" required ng-disabled="!vm.editAllow" multiple>
+            <md-option ng-repeat="option in fieldItem.OptionItems" value="{{option}}">{{option}}</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'TextArea' || fieldItem.Type === 'Text'">
+        <md-input-container flex="100" flex-gt-xs="100"
+                            ng-if="vm.showTheField(fieldItem, fieldItemSection['Fields'])">
+        <textarea ng-model="fieldItem.Value" ng-disabled="!vm.editAllow" placeholder="{{fieldItem.Title}}"
+                  required></textarea>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'Location'">
+        <md-input-container flex="100" flex-gt-xs="100"
+                            ng-if="vm.showTheField(fieldItem, fieldItemSection['Fields'])">
+          <input type="text" ng-model="vm.formAll.gps" ng-disabled="true" placeholder="{{fieldItem.Title}}"
+                 required>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'Number'">
+        <md-input-container flex="100" flex-gt-xs="100"
+                            ng-if="vm.showTheField(fieldItem, fieldItemSection['Fields'])">
+          <input type="text" ng-model="fieldItem.Value" ng-disabled="!vm.editAllow" placeholder="{{fieldItem.Title}}"
+                 required>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'IntNumber'">
+        <md-input-container flex="100" flex-gt-xs="100"
+                            ng-if="vm.showTheField(fieldItem, fieldItemSection['Fields'])">
+          <input type="text" ng-model="fieldItem.Value" ng-disabled="!vm.editAllow" placeholder="{{fieldItem.Title}}"
+                 required>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row" flex ng-if="fieldItem.Type === 'Date'">
+        <md-input-container flex="100" flex-gt-xs="100">
+          <label>{{fieldItem.Title}}</label>
+          <input type="text" ng-model="fieldItem.Value" ng-disabled="!vm.editAllow" placeholder="{{fieldItem.Title}}"
+                 required>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

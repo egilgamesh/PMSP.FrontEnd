@@ -1,0 +1,104 @@
+<div id="simple-table" class="page-layout simple fullwidth doc-page element-doc-page">
+
+    <!-- HEADER -->
+    <div class="header md-accent-bg" layout="row" layout-align="space-between">
+        <div layout="column" layout-align="center start">
+            <div class="breadcrumb" layout="row" layout-align="start center">
+                <md-icon md-font-icon="icon-home" class="s16"></md-icon>
+                <md-icon md-font-icon="icon-chevron-right" class="s16 separator"></md-icon>
+                <span class="parent">Management</span>
+            </div>
+            <div class="title">Situation Report Form Management
+              <md-button class="add-event-button md-fab md-info" href="{{vm.baseLocation}}ExportSitRepData" target="_blank"
+                         aria-label="Print" translate translate-attr-aria-label="CALENDAR.ADD_EVENT">
+                <md-icon md-font-icon="icon-printer"></md-icon>
+              </md-button>
+            </div>
+
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+    <!--<div class="content">-->
+  <div  class="page-layout simple fullwidth doc-page fixedByAli" layout="column" flex="100">
+        <div class="simple-table-container md-whiteframe-4dp">
+           <div>
+              <md-toolbar class="md-table-toolbar md-default" ng-hide="vm.selected.length || vm.filter.show">
+                <div class="md-toolbar-tools">
+                  <h2 class="md-title">Situation Report</h2>
+                  <div flex></div>
+                  <md-button class="md-icon-button" ng-click="vm.filter.show = true">
+                    <md-icon>filter_list</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" ng-click="vm.addItem($event)">
+                    <md-icon>local_dining</md-icon>
+                  </md-button>
+                </div>
+              </md-toolbar>
+
+              <md-toolbar class="md-table-toolbar md-default" ng-show="vm.filter.show && !vm.selected.length">
+                <div class="md-toolbar-tools">
+                  <md-icon>search</md-icon>
+                  <form flex name="vm.filter.form">
+                    <input type="text" ng-model="vm.query.filter" ng-model-options="vm.filter.options" placeholder="search">
+                  </form>
+                  <md-button class="md-icon-button" ng-click="vm.removeFilter()">
+                    <md-icon>close</md-icon>
+                  </md-button>
+                </div>
+              </md-toolbar>
+
+
+
+              <div class="md-table-toolbar md-default" ng-show="vm.selected.length">
+                <div class="md-toolbar-tools">
+                  <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'items' : 'item'}} selected</div>
+                  <md-button ng-show="vm.selected.length == 1 " class="md-icon-button" ng-click="vm.addItem($event)">
+                    <md-icon>edit</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" ng-click="vm.delete($event)">
+                    <md-icon>delete</md-icon>
+                  </md-button>
+
+                </div>
+              </div>
+
+              <md-table-container>
+                <table md-table md-row-select multiple ng-model="vm.selected" md-progress="vm.promise">
+                  <thead md-head md-order="vm.query.order" md-on-reorder="vm.getItems">
+                  <tr md-row>
+                    <th md-column md-order-by="id"><span>ID</span></th>
+                    <th md-column md-order-by="user_id"><span>IFM Name</span></th>
+                    <th md-column md-order-by="PI_Location"><span>Location</span></th>
+                    <th md-column md-order-by="PI_TitleOfInterviewee"><span>Title of Interviewee</span></th>
+                    <th md-column md-order-by="created_at"><span>Created At</span></th>
+                    <th md-column md-order-by="updated_at"><span>Updated At</span></th>
+                    <th md-column md-order-by="updated_at"><span>Upload At (Human)</span></th>
+                  </tr>
+                  </thead>
+                  <tbody md-body>
+
+                  <tr md-row md-select="item" md-select-id="id" md-auto-select ng-repeat="item in vm.items.data">
+
+                    <td md-cell><a ui-sref="app.ui_forms-situation.details({id:{{item.id}}})">{{item.id}}</a>  </td>
+                    <td md-cell>{{item.user.name}}</td>
+                    <td md-cell>{{item.PI_Location}}</td>
+                    <td md-cell>{{item.PI_TitleOfInterviewee}}</td>
+                    <td md-cell>{{item.created_at}}</td>
+                    <td md-cell>{{item.updated_at}}</td>
+                    <td md-cell><span am-time-ago="item.created_at | amParse:'YYYY.MM.DD HH:mm:ss'"></span></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </md-table-container>
+
+              <md-table-pagination md-limit="vm.query.limit" md-limit-options="[5, 10, 15, 50, 100]" md-page="vm.query.page" md-total="{{vm.items.count}}" md-on-paginate="vm.getItems" md-page-select></md-table-pagination>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- / CONTENT -->
+
+</div>

@@ -1,0 +1,58 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Electricity Facility Staff</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIIName"
+             placeholder="1. Name of Interviewee:" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.KIITitle"
+             placeholder="2. Title of Interviewee:" required>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>3. Gender (observe):</label>
+      <md-select ng-model="vm.electricityForm.KIIGender" required>
+        <md-option value="Male">Male</md-option>
+        <md-option value="Female">Female</md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container flex="50">
+      <label>4. Education (ask, don’t read out options):</label>
+      <md-select ng-model="vm.electricityForm.KIIEducation" required>
+        <md-option ng-repeat="item in vm.selectEducation" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>5. Age of Interviewee (ask, don’t read out options)</label>
+      <md-select ng-model="vm.electricityForm.KIIAge" required>
+        <md-option ng-repeat="item in vm.selectAge" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container flex="50">
+      <label>6. Mode of Interview</label>
+      <md-select ng-model="vm.electricityForm.KIIMode" required>
+        <md-option value="In Person">In Person</md-option>
+        <md-option value="Telephone">Telephone</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+</div>
+

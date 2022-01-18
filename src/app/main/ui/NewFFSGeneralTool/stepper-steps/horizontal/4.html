@@ -1,0 +1,88 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'4.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+
+
+  <md-checkbox ng-model="vm.form.m4_active" ng-disabled="!vm.editAllow" aria-label="None">Respondent: Contractor POC, for renovation/infrastructure
+    activities only
+  </md-checkbox>
+
+  <div ng-if="vm.form.m4_active">
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m4_1"
+                ng-disabled="!vm.editAllow"
+                placeholder="4.1 Name of the Activity Contractor" required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m4_2"
+                ng-disabled="!vm.editAllow"
+                placeholder="4.2 Name of Contractor Point of Contact (POC)" required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m4_3"
+                ng-disabled="!vm.editAllow"
+                placeholder="4.3 Activity POC role/title" required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label>4.4 Gender of Activity POC</label>
+        <md-select ng-model="vm.form.m4_4" required ng-disabled="!vm.editAllow">
+          <md-option value="Male">Male</md-option>
+          <md-option value="Female">Female</md-option>
+        </md-select>
+      </md-input-container>
+
+
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-model="vm.form.m4_5"
+               ng-disabled="!vm.editAllow"
+               placeholder="4.5 Respondent's age" required/>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label>4.6 Respondent's attained education level</label>
+        <md-select ng-model="vm.form.m4_6" required ng-disabled="!vm.editAllow">
+          <md-option value="None">None</md-option>
+          <md-option value="Primary">Primary</md-option>
+          <md-option value="Secondary">Secondary</md-option>
+          <md-option value="Higher">Higher</md-option>
+        </md-select>
+      </md-input-container>
+
+
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m4_comments"
+                placeholder="IFM Comments" ng-disabled="!vm.editAllow"></textarea>
+      </md-input-container>
+    </div>
+
+
+  </div>
+
+</div>

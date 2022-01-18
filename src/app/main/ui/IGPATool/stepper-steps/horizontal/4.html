@@ -1,0 +1,270 @@
+<div class="md-inline-form">
+
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_active" aria-label="None">Module 2C:   TECHNICAL ASSISTANCE ACTIVITIES-TRAINING/WORKSHOP (PARTICIPANTS)
+  </md-checkbox>
+
+  <div ng-if="vm.form.m_2c_active">
+
+
+    <p>The IFM will interview both male and female</p>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_p_participant"
+                placeholder="Participant Name"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_p_sex"
+                placeholder="Participant Sex"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_p_title"
+                placeholder="Participant Title"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_p_employer"
+                placeholder="Participant Employer"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.1 Was the training/workshop content useful?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_1" required>
+
+          <md-option value="[5] Very useful">[5] Very useful</md-option>
+          <md-option value="[4] Somewhat useful">[4] Somewhat useful</md-option>
+          <md-option value="[3] Neutral">[3] Neutral</md-option>
+          <md-option value="[2] Somewhat not useful">[2] Somewhat not useful</md-option>
+          <md-option value="[1] Not useful at all">[1] Not useful at all</md-option>
+
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_2"
+                placeholder="2C.2 Kindly explain your answer."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.3. Do you think you will apply what you learned in your job? </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_3" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_4"
+                placeholder="2C.4 If yes, how?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_5"
+                placeholder="2C.5 How will you utilize the skills learned for your own professional development?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.6 Did you refer to the materials during class?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_6" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.7 Will you refer to the materials in the future?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_7" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.8 Did the training/workshop met your needs and expectations?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_8" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m_2c_8 === 'No'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_9"
+                placeholder="2C.9 Kindy explain your answer."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.10 Were the materials in your preferred language?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_10" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.11 In your opinion, were the topics covered during the training/workshop applicable to all present?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_11" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.12 Were women participants encouraged to participate?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_12" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.13 Was the training/workshop long enough?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_13" required>
+          <!--<md-option value="Yes">Yes</md-option>-->
+          <!--<md-option value="No">No</md-option>-->
+          <!--<md-option value="None">None</md-option>-->
+          <md-option value="a)	Too long">a) Too long</md-option>
+          <md-option value="b)	Too short">b) Too short</md-option>
+          <md-option value="c)	Right amount of time">c)	Right amount of time</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_14"
+                placeholder=" 2C.14 If not, what would be the ideal duration?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2C.15 Did you complete an evaluation or have an opportunity to provide feedback to the instructor and/or the IP? </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2c_15" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+
+    <table class="simple" ms-responsive-table ng-if="vm.id">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Participant</th>
+        <th>Sex</th>
+        <th>Title</th>
+        <th>Employer</th>
+        <th>Created At</th>
+      </tr>
+      </thead>
+
+      <tfoot>
+      <tr>
+        <td></td>
+      </tr>
+      </tfoot>
+
+      <tbody>
+      <tr ng-repeat="bs in vm.form.c2" ng-if="vm.form.c2.length">
+        <td class="name">{{bs.id}}</td>
+        <td class="title">{{bs.m_2c_p_participant}}</td>
+        <td class="title">{{bs.m_2c_p_sex}}</td>
+        <td class="title">{{bs.m_2c_p_title}}</td>
+        <td class="title">{{bs.m_2c_p_employer}}</td>
+        <td class="position">{{bs.created_at}}</td>
+        <td>
+          <md-button ng-if="bs.id" class="md-raised"
+                     ui-sref="app.ui_forms-IGPATool.c2({formId:{{bs.id}}, id:{{vm.id}}, type: 'edit'})">
+            View
+          </md-button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+
+    <md-button ng-if="vm.id" class="md-raised md-accent"
+               ui-sref="app.ui_forms-IGPATool.c2({id:{{vm.id}}, type: 'add'})">
+      Add New PARTICIPANTS
+    </md-button>
+
+  </div>
+
+</div>
+
+
+

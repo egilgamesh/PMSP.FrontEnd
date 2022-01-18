@@ -1,0 +1,161 @@
+<div class="md-inline-form">
+
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_active" aria-label="None">2B: TECHNICAL ASSISTANCE ACTIVITIES -TRAINING/WORKSHOP (IP MANAGER))
+  </md-checkbox>
+
+  <div ng-if="vm.form.m_2b_active">
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2B.1 Would you say the training/workshop met its objectives?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_1" required>
+
+          <md-option value="Yes, fully met">[5] Yes, fully met</md-option>
+          <md-option value="Largely met but there were minor gaps">[4] Largely met but there were minor gaps</md-option>
+          <md-option value="Neutral">[3] Neutral</md-option>
+          <md-option value="Not all objectives were met">[2] Not all objectives were met [ALERT]</md-option>
+          <md-option value="No, it failed">[1] No, it failed [ALERT]</md-option>
+
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m_2b_1 !== 'Yes, fully met'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_2"
+                placeholder="2B.2 IP manager explanation if Q2B.1 if the answer was a [4] [3] [2] [1]"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_3"
+                placeholder="2B.3 What accounted for the under representation of a specific sex?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2B.4. Was there a difference in participants between what was planned (according to the calendar) and actual? </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_4" required>
+          <md-option value="Yes">Yes [ALERT]</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m_2b_4 === 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_5"
+                placeholder="2B.5 If yes, please explain the difference. "
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2B.6 Were there invited organizations/entities that did not send a participant? </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_6" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m_2b_6 === 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_7"
+                placeholder="2B.7 If yes, which organizations/entities?  "
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_8"
+                placeholder="2A.8 Why do you believe they did not participate?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>2B.9 Was there a difference between what was planned and what was executed in terms of the length of the work shop or training?    </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_9" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m_2b_9 === 'Yes'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_10"
+                placeholder="2B.10 Is there an explanation for this difference?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_11_a"
+                placeholder="2B.11a Was a specific product expected from this workshop?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_11"
+                placeholder="2B.11b For workshops, what product was produced from the workshop?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_11_other"
+                placeholder="2B.11 if Other"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_11"
+                placeholder="2B.11 For workshops, what product was produced from the workshop?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_2b_12"
+                placeholder="12. For training: How will this training be used? For workshops:  How will the outcomes/products be utilized by the participants?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+
+
+  </div>
+
+</div>

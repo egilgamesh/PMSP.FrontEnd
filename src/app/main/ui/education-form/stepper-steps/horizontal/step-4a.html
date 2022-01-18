@@ -1,0 +1,240 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Education Facility Staff (Part 2)</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>17. What percentage of renovations have been completed?</label>
+      <md-select ng-model="vm.educationForm.KIIPercentageOfRenovations" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIPercentageOfRenovationsRemainToBeDon"
+             placeholder="17.1. If less than 100% complete, what remains to be done on the original scope of the renovations?" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIPercentageOfRenovationsWhatEntity"
+             placeholder="17.2. If less than 100% complete, what entity is responsible for completing the work?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17.3. If less than 100% complete, how long do you estimate the remaining renovations will take?</label>
+      <md-select ng-model="vm.educationForm.KIIPercentageOfRenovationsEstimate" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17.4. If less than 100% complete and all equipment has not yet arrived, how long do you estimate it will take for all the remaining equipment to arrive?</label>
+      <md-select ng-model="vm.educationForm.KIIPercentageOfRenovationsEstimateEquipment" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17.5. If less than 100% complete and all equipment has not yet been installed, how long do you estimate it will take for all the equipment to be installed?</label>
+      <md-select ng-model="vm.educationForm.KIIPercentageOfRenovationsEstimateEquipmentInstall" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>18. What is your level of satisfaction with the work?</label>
+      <md-select ng-model="vm.educationForm.KIIWhatIsYourLevelOfSatisfactionWithTheWork" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIIfDissatisfiedOrVeryDissatisfiedInclude"
+             placeholder="18.1.	If Dissatisfied or Very Dissatisfied include please explain why?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>19. Was there any contribution from the local authorities or responsible General Directorate to the project?
+      </label>
+      <md-select ng-model="vm.educationForm.KIIWasThereAnyContributionFromTheLocalAuthorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIWasThereAnyContributionFromTheLocalAuthoritiesIfYes"
+             placeholder="19.1. If yes, please describe?" required>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>20. Are there additional renovations necessary beyond this initiative for the education facility to function properly?
+      </label>
+      <md-select ng-model="vm.educationForm.KIIAreThereAdditionalRenovationsNecessary" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIAreThereAdditionalRenovationsNecessaryIfYes"
+             placeholder="20.1. If yes, please describe?" required>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIWhatEntityIsResponsibleForMaintenance"
+             placeholder="21. What entity is responsible for maintenance or any future repairs?" required>
+    </md-input-container>
+
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIWhatIsTheProcessForRequestingSuchMaintenance"
+             placeholder="22 What is the process for requesting such maintenance or repairs?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIListOfVillages"
+             placeholder="23. Please list the villages/towns/cities that are benefiting from or will benefit from these renovations once completed." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIEstimatedNumberOfBeneficiaries"
+             placeholder="24. What is the estimated number of beneficiaries that are being served by or will be served by this education facility once renovations are completed?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>25. Does this project activity serve IDPs?</label>
+      <md-select ng-model="vm.educationForm.KIIServeIDPs" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIServeIDPsIfNo"
+             placeholder="25.1 If no, please describe why not." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>26. Does this project activity serve any ethnic minorities?</label>
+      <md-select ng-model="vm.educationForm.KIIServeEthnic" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIServeEthnicIfYes"
+             placeholder="26.1 If yes, please describe such beneficiaries." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>27. Does this project activity serve religious minorities?</label>
+      <md-select ng-model="vm.educationForm.KIIServeReligiousMinorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIServeReligiousMinoritiesIfYes"
+             placeholder="27.1 If yes, please describe such beneficiaries." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIWhatWereTheAchievementSuccessesYouObservedIn"
+             placeholder="28. What were the achievement/successes you observed in this project?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIWhatAreTheMostSignificantChallenges"
+             placeholder="29.	What are the most significant challenges that the project has encountered and what has been done to address such issues?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.educationForm.KIIDoYouHaveAnySuggestionsOnHowToImprove"
+             placeholder="30.	Do you have any suggestions on how to improve the project impact on the targeted beneficiaries? " required>
+    </md-input-container>
+
+
+  </div>
+
+
+</div>
+

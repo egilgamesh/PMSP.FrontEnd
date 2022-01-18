@@ -1,0 +1,78 @@
+
+<md-dialog add-item-dialog class="event-form-dialog">
+  <md-dialog-content class="md-dialog-content">
+
+    <h2 class="md-title">Add User</h2>
+
+    <p ng-if="item.form.$submitted && item.form.$invalid" class="md-warn" layout="row" layout-align="start center">
+      <i class="material-icons">error_outline</i>
+      <span>&nbsp;All fields are required.</span>
+    </p>
+
+    <p ng-if="error" class="md-warn" layout="row" layout-align="start center">
+      <i class="material-icons">error_outline</i>
+      <span style="font-weight: bold; color: red;">&nbsp; {{error}}</span>
+    </p>
+
+    <p ng-if="objectItem.approval_comments" class="md-warn" layout="row" layout-align="start center">
+      <i class="material-icons">error_outline</i>
+      <span style="font-weight: bold; color: red;">&nbsp; {{objectItem.approval_comments}}</span>
+    </p>
+
+
+    <form name="item.form" ng-submit="ctrl.addItem()">
+
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>Name</label>
+          <textarea ng-model="objectItem.title" md-maxlength="190" required></textarea>
+        </md-input-container>
+      </div>
+
+      <div layout="row" class="input-row">
+        <md-input-container flex>
+          <label>IFM</label>
+          <textarea ng-model="objectItem.ifm" md-maxlength="190" required></textarea>
+        </md-input-container>
+      </div>
+
+      <div layout="row" class="date-row">
+        <md-datepicker ng-model="objectItem.start_date" md-placeholder="Start Date" ng-model-options="{ timezone: 'Asia/Baghdad' }"></md-datepicker>
+      </div>
+
+
+      <div layout="column" layout-gt-xs="row">
+        <md-input-container flex>
+          <md-select class="title" ng-model="objectItem.location" placeholder="Select Province" required>
+            <md-option ng-repeat="state in states" value="{{state}}">
+              {{state}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <div layout="column" layout-gt-xs="row">
+
+        <md-input-container flex class="md-block textarea-container">
+          <label>Project</label>
+          <textarea ng-model="objectItem.project_type" md-maxlength="250" max-rows="4" required></textarea>
+        </md-input-container>
+
+      </div>
+
+      <md-input-container flex class="md-block textarea-container">
+        <label>Notes</label>
+        <textarea ng-model="objectItem.note" md-maxlength="250" max-rows="4" required></textarea>
+      </md-input-container>
+
+    </form>
+
+  </md-dialog-content>
+
+  <div class="md-dialog-actions">
+    <md-button ng-show="objectItem.id" class="md-primary" ng-click="ctrl.addItem()">Update Item</md-button>
+    <md-button ng-show="!objectItem.id" class="md-primary" ng-click="ctrl.addItem()" ng-disabled="item.form.$invalid">Add Item</md-button>
+    <md-button class="md-primary" ng-click="ctrl.cancel()">Cancel</md-button>
+  </div>
+
+</md-dialog>

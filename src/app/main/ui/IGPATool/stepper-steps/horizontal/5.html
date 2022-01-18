@@ -1,0 +1,119 @@
+<div class="md-inline-form">
+
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_active" aria-label="None">3A: MODULE 3A: TECHNICAL ASSISTANCE ACTIVITIES -MEETINGS (IFM OBSERVATION)
+  </md-checkbox>
+
+  <div ng-if="vm.form.m_3a_active">
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>3A.1 Was an agenda or short briefing on the purpose of the meeting provided?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_1" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No [Alert]</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label>3A.2 Was the facilitation of the meeting inclusive?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_2" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+        </md-select>
+      </md-input-container>
+
+
+    </div>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+
+      <md-input-container flex="100">
+        <label>3A.3 Was the facility comfortable?</label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_3" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+
+
+    </div>
+
+
+
+
+    <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m_3a_3 === 'No'">
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_4"
+                placeholder="3A.4. If not, why not?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <label>3A.5 Did the meeting keep to the agenda?  </label>
+        <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_5" required>
+          <md-option value="Yes">Yes</md-option>
+          <md-option value="No">No</md-option>
+          <md-option value="None">None</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_6"
+                placeholder="3A.6 If not, why not?"
+                required></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-sm="row">
+      <md-input-container flex>
+        <label>If online training, what platform was used?</label>
+        <textarea name="Notes" ng-disabled="!vm.editAllow" ng-model="vm.form.n1_5"
+                  placeholder="If online training, what platform was used?"></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-sm="row">
+      <md-input-container flex>
+        <label>If online training, how well did the platform work?</label>
+        <textarea name="Notes" ng-disabled="!vm.editAllow" ng-model="vm.form.n1_6"
+                  placeholder="If online training, how well did the platform work?"></textarea>
+      </md-input-container>
+    </div>
+    <div layout="column" layout-gt-sm="row">
+      <md-input-container flex>
+        <label>Explain if it did not work well, what were the issues?</label>
+        <textarea name="Notes" ng-disabled="!vm.editAllow" ng-model="vm.form.n1_7"
+                  placeholder="Explain if it did not work well, what were the issues?"></textarea>
+      </md-input-container>
+    </div>
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m_3a_7"
+                placeholder="3A.7 Provide any additional information on the meeting that you believe is important to share with USAID "
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <p>Photos of the meeting and meeting minutes - Please do not forget to uploads the photos on the last module</p>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,101 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'7.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+
+
+  <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_active" aria-label="None">Respondent: Contractor POC, for renovation/infrastructure
+    activities only
+  </md-checkbox>
+
+  <div ng-if="vm.form.m7_active">
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100">
+        <p>7.1 From where does this renovation activity draw its renovation workforces?</p>
+
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_1_OwnPermanentWorkforce" aria-label="Own permanent workforce">Own permanent
+          workforce
+        </md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_1_SubContractedLabor" aria-label="Subcontracted labor">Subcontracted labor
+        </md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_1_GovernmentProvidedLabor" aria-label="Government provided labor">Government
+          provided labor
+        </md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_1_DirectHireOfLocalLabor" aria-label="Direct hire of local labor">Direct hire
+          of local labor
+        </md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_1_OtherFreeText " aria-label="Other (free text)">Other (free text)
+        </md-checkbox>
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_1_DoNotKnow " aria-label="Don't Know">Don't Know</md-checkbox>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <p>7.2 What are the estimated workforce proportions employed on this activity?</p>
+    </div>
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m7_2_Female" placeholder="Female" required/>
+      </md-input-container>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m7_2_Youth" placeholder="Youth <18 y/o" required/>
+      </md-input-container>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m7_2_IDP" placeholder="IDP" required/>
+      </md-input-container>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m7_2_Disabled" placeholder="Disabled" required/>
+      </md-input-container>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m7_2_Minority" placeholder="Minority" required/>
+      </md-input-container>
+      <md-input-container flex="100" flex-gt-xs="100">
+        <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m7_2_DoNotKnow " aria-label="Don't Know">Don't Know</md-checkbox>
+      </md-input-container>
+
+
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m7_3"
+                placeholder="7.3 Briefly describe the most significant positive outcomes resulting from this renovation."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m7_4"
+                placeholder="7.4 Briefly describe any negative outcomes resulting from this renovation."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m7_5"
+                placeholder="7.5 riefly describe any significant features, functions or elements that could be added to this renovation activity to improve its value and usefulness."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+    <div layout="column" layout-gt-xs="row" flex>
+      <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m7_6"
+                placeholder="7.6 Please share any additional thoughts or concerns about your experiences with this renovation activity."
+                required></textarea>
+      </md-input-container>
+    </div>
+
+
+  </div>
+
+</div>

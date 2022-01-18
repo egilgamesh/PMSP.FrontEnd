@@ -1,0 +1,239 @@
+<div class="md-inline-form">
+
+
+  <p>A. Preliminary Information</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex-gt-md="30">
+      <label>Date(s) of site visit</label>
+      <md-datepicker ng-model="vm.sr.PI_DateOfInterview" md-placeholder="Date(s) of site visit"
+                     md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+    </md-input-container>
+
+    <md-input-container flex-gt-md="30">
+      <label>Duration of the site visit: From</label>
+
+      <md-select ng-model="vm.sr.PI_ReportingPeriodStart" required>
+        <md-option value="00:00:00">12.00 AM</md-option>
+        <md-option value="00:30:00">12.30 AM</md-option>
+        <md-option value="01:00:00">01.00 AM</md-option>
+        <md-option value="01:30:00">01.30 AM</md-option>
+        <md-option value="02:00:00">02.00 AM</md-option>
+        <md-option value="02:30:00">02.30 AM</md-option>
+        <md-option value="03:00:00">03.00 AM</md-option>
+        <md-option value="03:30:00">03.30 AM</md-option>
+        <md-option value="04:00:00">04.00 AM</md-option>
+        <md-option value="04:30:00">04.30 AM</md-option>
+        <md-option value="05:00:00">05.00 AM</md-option>
+        <md-option value="05:30:00">05.30 AM</md-option>
+        <md-option value="06:00:00">06.00 AM</md-option>
+        <md-option value="06:30:00">06.30 AM</md-option>
+        <md-option value="07:00:00">07.00 AM</md-option>
+        <md-option value="07:30:00">07.30 AM</md-option>
+        <md-option value="08:00:00">08.00 AM</md-option>
+        <md-option value="08:30:00">08.30 AM</md-option>
+        <md-option value="09:00:00">09.00 AM</md-option>
+        <md-option value="09:30:00">09.30 AM</md-option>
+        <md-option value="10:00:00">10.00 AM</md-option>
+        <md-option value="10:30:00">10.30 AM</md-option>
+        <md-option value="11:00:00">11.00 AM</md-option>
+        <md-option value="11:30:00">11.30 AM</md-option>
+        <md-option value="12:00:00">12.00 PM</md-option>
+        <md-option value="12:30:00">12.30 PM</md-option>
+        <md-option value="13:00:00">01.00 PM</md-option>
+        <md-option value="13:30:00">01.30 PM</md-option>
+        <md-option value="14:00:00">02.00 PM</md-option>
+        <md-option value="14:30:00">02.30 PM</md-option>
+        <md-option value="15:00:00">03.00 PM</md-option>
+        <md-option value="15:30:00">03.30 PM</md-option>
+        <md-option value="16:00:00">04.00 PM</md-option>
+        <md-option value="16:30:00">04.30 PM</md-option>
+        <md-option value="17:00:00">05.00 PM</md-option>
+        <md-option value="17:30:00">05.30 PM</md-option>
+        <md-option value="18:00:00">06.00 PM</md-option>
+        <md-option value="18:30:00">06.30 PM</md-option>
+        <md-option value="19:00:00">07.00 PM</md-option>
+        <md-option value="19:30:00">07.30 PM</md-option>
+        <md-option value="20:00:00">08.00 PM</md-option>
+        <md-option value="20:30:00">08.30 PM</md-option>
+        <md-option value="21:00:00">09.00 PM</md-option>
+        <md-option value="21:30:00">09.30 PM</md-option>
+        <md-option value="22:00:00">10.00 PM</md-option>
+        <md-option value="22:30:00">10.30 PM</md-option>
+        <md-option value="23:00:00">11.00 PM</md-option>
+        <md-option value="23:30:00">11.30 PM</md-option>
+      </md-select>
+
+    </md-input-container>
+
+    <md-input-container flex-gt-md="30">
+      <label>Duration of the site visit: To</label>
+      <md-select ng-model="vm.sr.PI_ReportingPeriodEnd" required>
+        <md-option value="00:00:00">12.00 AM</md-option>
+        <md-option value="00:30:00">12.30 AM</md-option>
+        <md-option value="01:00:00">01.00 AM</md-option>
+        <md-option value="01:30:00">01.30 AM</md-option>
+        <md-option value="02:00:00">02.00 AM</md-option>
+        <md-option value="02:30:00">02.30 AM</md-option>
+        <md-option value="03:00:00">03.00 AM</md-option>
+        <md-option value="03:30:00">03.30 AM</md-option>
+        <md-option value="04:00:00">04.00 AM</md-option>
+        <md-option value="04:30:00">04.30 AM</md-option>
+        <md-option value="05:00:00">05.00 AM</md-option>
+        <md-option value="05:30:00">05.30 AM</md-option>
+        <md-option value="06:00:00">06.00 AM</md-option>
+        <md-option value="06:30:00">06.30 AM</md-option>
+        <md-option value="07:00:00">07.00 AM</md-option>
+        <md-option value="07:30:00">07.30 AM</md-option>
+        <md-option value="08:00:00">08.00 AM</md-option>
+        <md-option value="08:30:00">08.30 AM</md-option>
+        <md-option value="09:00:00">09.00 AM</md-option>
+        <md-option value="09:30:00">09.30 AM</md-option>
+        <md-option value="10:00:00">10.00 AM</md-option>
+        <md-option value="10:30:00">10.30 AM</md-option>
+        <md-option value="11:00:00">11.00 AM</md-option>
+        <md-option value="11:30:00">11.30 AM</md-option>
+        <md-option value="12:00:00">12.00 PM</md-option>
+        <md-option value="12:30:00">12.30 PM</md-option>
+        <md-option value="13:00:00">01.00 PM</md-option>
+        <md-option value="13:30:00">01.30 PM</md-option>
+        <md-option value="14:00:00">02.00 PM</md-option>
+        <md-option value="14:30:00">02.30 PM</md-option>
+        <md-option value="15:00:00">03.00 PM</md-option>
+        <md-option value="15:30:00">03.30 PM</md-option>
+        <md-option value="16:00:00">04.00 PM</md-option>
+        <md-option value="16:30:00">04.30 PM</md-option>
+        <md-option value="17:00:00">05.00 PM</md-option>
+        <md-option value="17:30:00">05.30 PM</md-option>
+        <md-option value="18:00:00">06.00 PM</md-option>
+        <md-option value="18:30:00">06.30 PM</md-option>
+        <md-option value="19:00:00">07.00 PM</md-option>
+        <md-option value="19:30:00">07.30 PM</md-option>
+        <md-option value="20:00:00">08.00 PM</md-option>
+        <md-option value="20:30:00">08.30 PM</md-option>
+        <md-option value="21:00:00">09.00 PM</md-option>
+        <md-option value="21:30:00">09.30 PM</md-option>
+        <md-option value="22:00:00">10.00 PM</md-option>
+        <md-option value="22:30:00">10.30 PM</md-option>
+        <md-option value="23:00:00">11.00 PM</md-option>
+        <md-option value="23:30:00">11.30 PM</md-option>
+      </md-select>
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.sr.PI_Location"
+             placeholder="SitRep Location (Governorate):" required>
+      <div ng-messages="healthForm.siteVisitLocation.$error"
+           ng-show="healthForm.siteVisitLocation.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.sr.PI_NameOfInterviewee"
+             placeholder="Name of Interviewee:" required>
+      <div ng-messages="healthForm.siteVisitLocation.$error"
+           ng-show="healthForm.siteVisitLocation.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.sr.PI_TitleOfInterviewee"
+             placeholder="Title of Interviewee:" required>
+      <div ng-messages="healthForm.GPSCoordinates.$error"
+           ng-show="healthForm.GPSCoordinates.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+    <md-input-container flex="50">
+      <label>Gender (observe):</label>
+      <md-select ng-model="vm.sr.PI_Gender" required>
+        <md-option value="Male">Male</md-option>
+        <md-option value="Female">Female</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>Education (ask, don’t read out options):</label>
+      <md-select ng-model="vm.sr.PI_Education" required>
+        <md-option value="Illiterate: can read & write but no formal education">Illiterate: can read & write but no formal education</md-option>
+        <md-option value="primary level completion">primary level completion</md-option>
+        <md-option value="intermediate level completion">intermediate level completion</md-option>
+        <md-option value="secondary graduate">secondary graduate</md-option>
+        <md-option value="vocational training">vocational training</md-option>
+        <md-option value="diploma">diploma</md-option>
+        <md-option value="Bachelor’s degree">Bachelor’s degree</md-option>
+        <md-option value="Master’s degree">Master’s degree</md-option>
+        <md-option value="Ph.D">Ph.D</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="50">
+      <label>Age of Interviewee (ask, don’t read out options)</label>
+      <md-select ng-model="vm.sr.PI_AgeOfInterviewee" required>
+        <md-option value="15-19 years">15-19 years</md-option>
+        <md-option value="20-24 years">20-24 years</md-option>
+        <md-option value="25-29 years">25-29 years</md-option>
+        <md-option value="30-49 years">30-49 years</md-option>
+        <md-option value="50-65 years">50-65 years</md-option>
+        <md-option value="66+ years">66+ years</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="50">
+      <label>Mode of Interview:</label>
+      <md-select ng-model="vm.sr.PI_ModeOfInterview" required>
+        <md-option value="In Person">In Person</md-option>
+        <md-option value="Via Telephone">Via Telephone</md-option>
+        <md-option value="Via Email">Via Email</md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.sr.PI_GPS"
+             placeholder="GPS Coordinates (if in person):" required>
+      <div ng-messages="healthForm.GPSCoordinates.$error"
+           ng-show="healthForm.GPSCoordinates.$touched"
+           role="alert">
+        <div ng-message="required">
+          <span>Field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+
+
+
+
+
+</div>
+</div>

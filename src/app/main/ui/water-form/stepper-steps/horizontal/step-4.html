@@ -1,0 +1,130 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Water Facility Staff (Part 2)</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>7.	What year was this water facility established? (Mark an X in the box below the correct response and write in the precise date)</label>
+      <md-select ng-model="vm.waterForm.KIIWhatYearWasThisWaterFacilityEstablished" required>
+        <md-option ng-repeat="item in vm.selectDateNewDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIWhatYearWasThisWaterFacilityEstablishedAnswer"
+             placeholder="Record Answer" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>8. When did the facility stop providing water to beneficiaries?</label>
+      <md-select ng-model="vm.waterForm.KIIFacilityStopProvidingWater" required>
+        <md-option ng-repeat="item in vm.selectDateAfterDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIWKIIFacilityStopProvidingWaterAnswer"
+             placeholder="Record Answer" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="50">
+      <label>9. If the facility is currently providing water to beneficiaries, when did the provision of water resume?</label>
+      <md-select ng-model="vm.waterForm.KIIIfItIsCurrentlyFunctioningWhenDidServices" required>
+        <md-option ng-repeat="item in vm.selectDateJanJunDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIIfItIsCurrentlyFunctioningWhenDidServicesAnswer"
+             placeholder="Record Answer" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>10. Was the water facility used prior to the renovation?</label>
+      <md-select ng-model="vm.waterForm.KIIWasTheWaterFacilityUsedPriorToTheRenovation" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIHowWasThisWaterFacilitySelectedForRenovations"
+             placeholder="11. How was this water facility selected for renovations?" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>12. Did the Water Directorate provide any consultation prior to the renovations/procurement of supplies?
+      </label>
+      <md-select ng-model="vm.waterForm.KIIDidTheResponsibleGeneralDirectorateConsultWithYou" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>13. Did the Water Directorate approve the scope of work prior to the start of the renovations/procurement of supplies?</label>
+      <md-select ng-model="vm.waterForm.KIIDidTheResponsibleGeneralDirectorateApprove" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIWhatIsTheNameOfTheCompanyThatDidTheWork"
+             placeholder="14. What is the name of the company that did the work/procured the equipment?" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIHowWasTheCompanySelected"
+             placeholder="15.  How was the company that did the work/procured the equipment selected?" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.waterForm.KIIWhatIsTheMajorScopeOfTheRenovations"
+             placeholder="16. What is the major scope of the work?" required>
+    </md-input-container>
+  </div>
+
+
+</div>
+

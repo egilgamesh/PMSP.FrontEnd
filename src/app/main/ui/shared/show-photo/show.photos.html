@@ -1,0 +1,84 @@
+<ng-image-gallery
+  images="photosPage"
+  methods="methods"
+  thumbnails="true"
+  thumb-size="100"
+  inline="false"
+  bubbles="true"
+  bubble-size="20"
+  img-bubbles="false"
+  bg-close="false"
+  piracy="false"
+  img-anim="fadeup"
+  conf="conf"
+  on-open="openGallery();"
+  on-close="closed();"
+  on-delete="delete(img, cb)"
+></ng-image-gallery>
+
+<!--<div ng-cloak>-->
+
+  <!--<ms-form-wizard flex>-->
+
+    <!--<div layout="row" layout-sm="column" layout-align="space-around"  ng-if="isLoading">-->
+      <!--<md-progress-circular  class="md-accent md-hue-1" md-diameter="40"></md-progress-circular>-->
+    <!--</div>-->
+    <!--<div layout="row" layout-sm="column" layout-align="space-around"  ng-if="isLoading">-->
+      <!--Loading Photos...-->
+    <!--</div>-->
+
+    <!--<md-tabs md-dynamic-height md-selected="msWizard.selectedIndex" md-center-tabs="true">-->
+
+      <!--<md-tab ng-repeat="photo in photosPage">-->
+        <!--<md-tab-label>-->
+                            <!--<span class="ms-form-wizard-step-label">-->
+                                <!--<span class="ms-form-wizard-step-number md-accent-bg">{{$index + 1}}</span>-->
+                                <!--<span class="ms-form-wizard-step-text">{{photo.section}}</span>-->
+
+                            <!--</span>-->
+        <!--</md-tab-label>-->
+        <!--<md-tab-body>-->
+          <!--<div class="row">-->
+            <!--<p>-->
+          <!--<span style="font-size: 16px" class="ml-16 text-boxed green-bg white-fg">{{photo.section}}-->
+        <!--</span>-->
+              <!--: {{photo.file_name}}</p>-->
+            <!--<md-button class="md-raised md-accent" ng-click="showTabDialog($event, photo)" ng-if="photo.exif.longitude">-->
+              <!--View GEOTag-->
+            <!--</md-button>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+            <!--<img wip-image-zoom ng-src="{{url}}PreviewFile/{{photo.id}}" style="height: 320px" id="img{{$index}}" class="CssImage"/>-->
+
+            <!--<a href=""><span  class="icon icon-rotate-right s40" id="rotateIcon" data-ng-init="rd=1;" ng-click="RotateImage('img'+ $index,rd);rd=rd+1;rd==4?rd=0:''"></span></a>-->
+
+          <!--</div>-->
+        <!--</md-tab-body>-->
+      <!--</md-tab>-->
+
+    <!--</md-tabs>-->
+
+    <!--<div ng-if="!isLoading && photosPage" class="navigation" flex layout="row" layout-align="center center">-->
+      <!--<md-button class="md-raised md-accent" ng-click="msWizard.previousStep()"-->
+                 <!--ng-disabled="msWizard.isFirstStep()">-->
+        <!--Previous Photo-->
+      <!--</md-button>-->
+      <!--<div class="steps">-->
+                        <!--<span ng-repeat="form in msWizard.forms"-->
+                              <!--ng-class="{'selected md-accent-bg':msWizard.selectedIndex === $index}"></span>-->
+      <!--</div>-->
+      <!--<md-button class="md-raised md-accent" ng-click="msWizard.nextStep()"-->
+                 <!--ng-hide="msWizard.isLastStep()"-->
+                 <!--ng-disabled="msWizard.currentStepInvalid()">-->
+        <!--Next Photo-->
+      <!--</md-button>-->
+
+      <!--<md-progress-circular ng-disabled="!vm.isLoading" class="md-hue-2" md-diameter="20px"></md-progress-circular>-->
+
+      <!--<md-button ng-disabled="!vm.editAllow" class="md-raised md-warn" ng-click="vm.sendForm()"-->
+                 <!--ng-show="msWizard.isLastStep() && !vm.isLoading"-->
+                 <!--ng-disabled="msWizard.formsIncomplete()">-->
+        <!--{{vm.sendName}}-->
+      <!--</md-button>-->
+    <!--</div>-->
+<!--</div>-->

@@ -1,0 +1,125 @@
+<div class="md-inline-form">
+  <p>IV.		Interview: Project Contractor 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7. Can you provide a copy of the bill of quantities and/or the contract between UNDP and yourself</label>
+      <md-select ng-model="vm.healthForm.PCCanYouProvideACopyOfTheBillOfQuantities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCCanYouProvideACopyOfTheBillOfQuantitiesIfNo"
+                placeholder="7.1. If no, please explain why not?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCHowDidYouFindOutAboutTheBidForThisWork"
+                placeholder="8. How did you find out about the bid for this work?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCWhatIsTheScopeOfTheMajorRenovations"
+                placeholder="9. What is the scope of the major renovations?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCWhenDidYouStartTheRenovations"
+                placeholder="10.	When did you start the renovations? (Insert the date only.)" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11. What percentage of renovations have been completed?</label>
+      <md-select ng-model="vm.healthForm.PCWhatPercentageOfRenovationsHaveBeenCompleted" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11.1. If 100%, how long did the renovations take?</label>
+      <md-select ng-model="vm.healthForm.PCIf100HowLongDidTheRenovationsTake" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCIfLessThan100CompleteWhatRemainsToBeDone"
+                placeholder="11.2.	If less than 100% complete, what remains to be done?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11.2.1.  When do you estimate that you will finish the remaining work?</label>
+      <md-select ng-model="vm.healthForm.PCWhenDoYouEstimateThatYouWillFinishTheRemainingWork" required>
+        <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCWhatObstaclesAreYouFacingToFinishTheWork"
+                placeholder="11.2.2. What obstacles are you facing to finish the work?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12. Was there any contribution from the local authorities or responsible General Directorate to the project?</label>
+      <md-select ng-model="vm.healthForm.PCWasThereAnyContributionFromTheLocalAuthorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCWasThereAnyContributionFromTheLocalAuthoritiesIfYes"
+                placeholder="12.1. If yes, please describe?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCWhatWereTheAchievementSuccessesYouObservedInThisProject"
+                placeholder="13. What were the achievement/successes you observed in this project?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCWhatAreTheMostSignificantChallenges"
+                placeholder="14. What are the most significant challenges that the project has encountered and what has been done to address such issues?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.PCDoYouHaveAnySuggestionsOnHow"
+                placeholder="15. Do you have any suggestions on how to improve the project impact on the targeted beneficiaries?" required></textarea>
+    </md-input-container>
+  </div>
+
+</div>
+

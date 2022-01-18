@@ -1,0 +1,151 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="'12.'"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+  <p>To be completed by the IFM following the site visit</p>
+
+  <md-checkbox ng-model="vm.form.m12_active" aria-label="None">IFM Summary
+  </md-checkbox>
+
+  <div ng-if="vm.form.m12_active">
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.1 Did the Contractor POC cooperate with your requests for access or information?</label>
+      <md-select ng-model="vm.form.m12_1" required ng-disabled="!vm.editAllow">
+        <md-option value="Yes">Yes (go to 12.3)</md-option>
+        <md-option value="No">No</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m12_1 != 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.form.m12_2"
+                ng-disabled="!vm.editAllow"
+                placeholder="12.2 Please describe how the Contractor POC did not cooperate with your requests for access or information"
+                required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.3 Did the Directorate POC cooperate with your requests for access or information?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m12_3" required>
+        <md-option value="Yes">Yes (go to 12.5)</md-option>
+        <md-option value="No">No</md-option>
+        <md-option value="NA">NA</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m12_3 != 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m12_4"
+                placeholder="12.4 Please describe how the Directorate POC did not cooperate with your requests for access or information"
+                required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m12_5"
+             placeholder="12.5 Number of requests for beneficiary interviews"
+             required/>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m12_6"
+             placeholder="12.6 Number of refusals for beneficiary interviews"
+             required/>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m12_7"
+                placeholder="12.7 Please describe how beneficiaries were selected for interviews, including sampling strategy (e.g. transect walk, etc.) and what groups were intended to be represented in selection (e.g. equal number of men/women)"
+                required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.8 Did you encounter any problems during this visit (e.g. security, threats, travel, mobility,
+        communications, coordination, etc.)?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m12_8" required>
+        <md-option value="Yes">Yes</md-option>
+        <md-option value="Yes[ALERT]">Yes [Encountered significant challenges, particularly related to security or threats]</md-option>
+        <md-option value="No">No (go to 12.9)</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m12_8 != 'No'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m12_9"
+                placeholder="12.9 Please describe any security, threats, travel, mobility, communications or coordination problems encountered"
+                required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label ng-style="vm.form.m12_10 === 'Yes' && {'color':'red', 'font-weight':'bold'}">12.10 Did you observe any issues related to inappropriate employment or maltreatment of females, the
+        disabled, IDPs, minorities or others?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m12_10" required>
+        <md-option value="Yes">Yes (ALERT)</md-option>
+        <md-option value="No">No (go to 12.11)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m12_11 === 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m12_11"
+                placeholder="12.11 Please describe any issues you observed related inappropriate employment or maltreatment of females, the disabled, IDPs, minorities or others."
+                required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex >
+    <md-input-container flex="100">
+      <label>12.12 Please rate your overall impression of the success of this activity (factors to consider include
+        scheduling, employed labor, safety/security, equipment, supplies, management, or outsider influence).</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m12_12" required>
+        <md-option value="No issues">No issues</md-option>
+        <md-option value="Minor issues">Minor issues</md-option>
+        <md-option value="Moderate issues">Moderate issues</md-option>
+        <md-option value="Significant issues">Significant issues</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m12_13"
+                placeholder="12.13 Briefly describe your impressions of moderate or severe issues related to this activity."
+                required></textarea>
+    </md-input-container>
+  </div>
+
+  </div>
+
+</div>
+

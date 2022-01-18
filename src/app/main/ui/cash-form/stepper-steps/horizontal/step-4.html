@@ -1,0 +1,268 @@
+<div class="md-inline-form">
+  <p>III.		Contractor/NGO Managing the Cash for Work Activity 2</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7.	Can you provide a copy of the agreement/subcontract between UNDP and yourself? (If provided please take a photo and include below or attach a copy with this report. If not provided by the interviewee seek to get it from someone else in the project.)</label>
+      <md-select ng-model="vm.cashForm.KIICanYouProvideAgreement" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIICanYouProvideAgreementIfNot"
+             placeholder="7.1. If no, please explain why not?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIHowDidYouFindOpportunity"
+             placeholder="8.	How did you find out about the opportunity to manage this work?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIWhenDidYourCompanyBegin"
+             placeholder="9. When did your company/NGO begin managing this cash for work project? (Insert the date)" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIPleaseDescribeTheTypeOfWork"
+             placeholder="10.  Please describe the type of work that temporary workers are carrying out in this cash for work initiative?" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIPleaseDescribeTheWorkProject"
+             placeholder="11.  Please describe how the work project was selected for this cash for work initiative?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11.1. Are you aware of any consultation with community leaders on priorities in selecting the type of work to be done by the beneficiaries?</label>
+      <md-select ng-model="vm.cashForm.KIIAreYouOfAnyConsultationWithCommunityLeader" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIAreYouOfAnyConsultationWithCommunityLeaderIfYes"
+             placeholder="11.2.	If yes, please explain your answer" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIHowManyPeopleEmployedMale"
+             placeholder="12.A.  How many people are/were temporarily employed on the project? Male" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIHowManyPeopleEmployedFemale"
+             placeholder="12.B.  How many people are/were temporarily employed on the project? Female" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIHowManyPeopleEmployedTotal"
+             placeholder="12.1. How many total days were the temporary workers employed?" required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.2. If you do not know the exact number, can you please estimate?</label>
+      <md-select ng-model="vm.cashForm.KIIHowManyPeopleEmployedTotalDoNotKnow" required>
+        <md-option ng-repeat="item in vm.selectWeeks" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIWhatTheDailyAmount"
+             placeholder="13.  What was the daily amount (in dollars) paid in cash to each work beneficiary? (Ask to see and then photograph the documentation for beneficiary payment receipt.)" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyHowManyPeople"
+             placeholder="14.  Approximately how many people in the community benefited from the completed project?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.1. If you do not know the exact number, can you please estimate? </label>
+      <md-select ng-model="vm.cashForm.KIIApproximatelyHowManyPeopleDoNotKnow" required>
+        <md-option ng-repeat="item in vm.selectBigNumbers" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <!--<div layout="column" layout-gt-xs="row" flex>-->
+    <!--<md-input-container flex="100" flex-gt-xs="100">-->
+      <!--<input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyHowManyPeopleDoNotKnowNumber"-->
+             <!--placeholder="14.1. If you do not know the exact number, can you please estimate? ( Record precise answer below )" required>-->
+    <!--</md-input-container>-->
+  <!--</div>-->
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>15.	Did you apply any special criteria to select beneficiaries?</label>
+      <md-select ng-model="vm.cashForm.KIIDidYouApplyForSpecial" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIDidYouApplyForSpecialExplain"
+             placeholder="15.1.	Please explain your answer?" required>
+    </md-input-container>
+  </div>
+
+
+  <p>15.2. Approximately what percentage of the beneficiaries/workers you have hired are in the following categories:</p>
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="20">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyPercentageEthnicReligiousMinority"
+             placeholder="1. Ethnic or Religious Minority" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="20">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyPercentageDisabledElderly"
+             placeholder="2. Disabled/Elderly" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="20">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyPercentageIDPs"
+             placeholder="3. IDPs" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="20">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyPercentageYouth"
+             placeholder="4. Youth (15-29)" required>
+    </md-input-container>
+
+    <md-input-container flex="100" flex-gt-xs="20">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIApproximatelyPercentageWomen"
+             placeholder="5. Women" required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>15.3. Approximately what percentage of the beneficiaries/workers who you have hired are from the area?</label>
+      <md-select ng-model="vm.cashForm.KIIApproximatelyBeneficiariesHiredFromThisArea" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <p>16. Who supervises the work onsite? (Check all that apply, but if there is more than one, explain below)</p>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteCommunityCommittee " aria-label="Community committee appointee?">Community committee appointee</md-checkbox>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteCommunityLeader" aria-label="Community leader">Community leader</md-checkbox>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteLocalOfficial" aria-label="Local official">Local official</md-checkbox>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteBeneficiary" aria-label="Beneficiary (worker) team leader">Beneficiary (worker) team leader</md-checkbox>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteNGOStaff" aria-label="NGO Staff">NGO Staff</md-checkbox>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteUNDPFFSStaff" aria-label="UNDP FFS staff">UNDP FFS staff</md-checkbox>
+      <md-checkbox ng-model="vm.cashForm.KIIOnSiteDoNotKnow" aria-label="Don’t know">Don’t know</md-checkbox>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIOnSiteOther"
+             placeholder="Other (please describe):" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIMoreThanOneCategory"
+             placeholder="16.1.	If more than one category of supervisor was checked, please explain." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>17.  Please rate the level of influence that you feel this cash for work activity has had on the community?</label>
+      <md-select ng-model="vm.cashForm.KIIRateLevelOfInfluence" required>
+        <md-option ng-repeat="item in vm.selectLevelsAffected" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIRateLevelOfInfluenceIfEither"
+             placeholder="17.1. If either Somewhat Negatively or Very Negatively Affected, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIAchievementsProjectActivity"
+             placeholder="18.  What were the achievements/successes you have observed in this project activity?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIMostSignificantChallenges"
+             placeholder="19.	What are the most significant challenges the project activity has encountered and what has been done to address such issues?  (If multiple challenges are shared record and clearly record each response)" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.KIIHaveAnySuggestions"
+             placeholder="20.	Do you have any suggestions on how to improve the project activity impact on beneficiaries? (Clarify that this is not asking if all basic needs of beneficiaries were met, but if there are ways that the project activity could be improved)" required>
+    </md-input-container>
+  </div>
+
+
+</div>
+

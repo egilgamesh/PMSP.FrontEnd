@@ -1,0 +1,27 @@
+<div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 50px" ng-if="vm.pageInitLoading">
+  <md-progress-circular  class="md-accent md-hue-1" md-diameter="40"></md-progress-circular>
+</div>
+
+<div id="dashboard-project" class="page-layout simple right-sidenav" layout="row" ng-show="!vm.pageInitLoading">
+
+  <!-- CENTER -->
+  <div class="center" flex ms-scroll>
+
+    <!-- HEADER -->
+    <div ng-include="'app/main/apps/dashboards/mena/header.html'" class="header md-accent-bg" layout="column"
+         layout-align="space-between"></div>
+
+    <!-- / HEADER -->
+
+    <!-- CONTENT -->
+
+    <div class="content">
+      <md-tabs md-dynamic-height md-selected-nav-item="vm.selectedNavItem" nav-bar-aria-label="Maps" md-selected='0'>
+        <md-tab ui-sref="app.dashboards_MENA.MENA">USAID/MENA</md-tab>
+      </md-tabs>
+      <md-content ui-view="tabContent" flex class="card md-whiteframe-4dp"></md-content>
+    </div>
+
+
+  </div>
+</div>

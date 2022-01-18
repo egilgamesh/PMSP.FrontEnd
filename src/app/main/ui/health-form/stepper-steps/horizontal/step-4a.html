@@ -1,0 +1,289 @@
+<div class="md-inline-form">
+  <p>III. Key Informant Interview: Health Facility Staff (Part 2)</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100">
+      <label>17. What percentage of renovations have been completed?</label>
+      <md-select ng-model="vm.healthForm.KIIWhatPercentageOfRenovationsHaveBeenCompleted" required>
+        <md-option ng-repeat="item in vm.selectPercentageDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIIfLessThan100CompleteWhatRemainsToBeDone"
+                placeholder="17.1.  If less than 100% complete, what remains to be done?" required></textarea>
+    </md-input-container>
+
+  </div>
+
+
+  <md-input-container flex="100">
+    <label>17.2 If less than 100%, how long do you estimate the remaining work will take?</label>
+    <md-select ng-model="vm.healthForm.KIIHowLongDoYouEstimateTheRemainingWorkWillTake" required>
+      <md-option ng-repeat="item in vm.selectEstimateMonth" value="{{item.value}}">{{item.name}}</md-option>
+    </md-select>
+  </md-input-container>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+
+    <md-input-container flex="100">
+      <label>18. What is your level of satisfaction with the work?</label>
+      <md-select ng-model="vm.healthForm.KIIWhatIsYourLevelOfSatisfactionWithTheWork" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIIfDissatisfiedOrVeryDissatisfiedInclude"
+                placeholder="18.1.	If Dissatisfied or Very Dissatisfied include please explain why?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>19. Was there any contribution from the local authorities or responsible General Directorate to the project?
+      </label>
+      <md-select ng-model="vm.healthForm.KIIWasThereAnyContributionFromTheLocalAuthorities" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWasThereAnyContributionFromTheLocalAuthoritiesIfYes"
+                placeholder="19.1. If yes, please describe?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>20. Are there additional renovations necessary beyond this initiative for the health facility to function properly?
+      </label>
+      <md-select ng-model="vm.healthForm.KIIAreThereAdditionalRenovationsNecessary" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIAreThereAdditionalRenovationsNecessaryIfYes"
+             placeholder="20.1. If yes, please describe?" required>
+    </md-input-container></div>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatEntityIsResponsibleForMaintenance"
+             placeholder="21. What entity is responsible for maintenance or any future repairs?" required>
+    </md-input-container></div>
+
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatIsTheProcessForRequestingSuchMaintenance"
+                placeholder="21.1. What is the process for requesting such maintenance or repairs?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>22. How many staff work in the health facility now?
+      </label>
+      <md-select ng-model="vm.healthForm.KIIHowManyStaffWorkInTheHealthFacilityNow" required>
+        <md-option ng-repeat="item in vm.selectLessDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>23. Before the conflict approximately how many patients came seeking health care at this facility each day?</label>
+      <md-select ng-model="vm.healthForm.KIIbBeforeTheConflictApproximatelyHowManyPatients" required>
+        <md-option ng-repeat="item in vm.selectLessDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>23.1. Since the renovations, approximately how many patients came seeking health care at this facility each day?
+      </label>
+      <md-select ng-model="vm.healthForm.KIISinceTheRenovationsApproximatelyHowManyPatients" required>
+        <md-option ng-repeat="item in vm.selectLessDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>24.A.	Approximately what percentage of patients using this health facility are in: Women</label>
+      <md-select ng-model="vm.healthForm.KIIApproximatelyWhatPercentageOfPatientsUsingWomen" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>24.B.	Approximately what percentage of patients using this health facility are in: Youth (15-29)</label>
+      <md-select ng-model="vm.healthForm.KIIApproximatelyWhatPercentageOfPatientsUsingYouth" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>24.C.	Approximately what percentage of patients using this health facility are in: (IDPs)</label>
+      <md-select ng-model="vm.healthForm.KIIApproximatelyWhatPercentageOfPatientsUsingIDPs" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>24.D.	Approximately what percentage of patients using this health facility are in: (Disabled/Elderly)</label>
+      <md-select ng-model="vm.healthForm.KIIApproximatelyWhatPercentageOfPatientsUsingDisabled" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>24.E.	Approximately what percentage of patients using this health facility are in: (Religious or Ethnic Minority)</label>
+      <md-select ng-model="vm.healthForm.KIIApproximatelyWhatPercentageOfPatientsUsingReligiousEthnic" required>
+        <md-option ng-repeat="item in vm.selectPatients" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>25. How would you rate the impact on patients of the renovations?
+      </label>
+      <md-select ng-model="vm.healthForm.KIIHowWouldYouRateTheImpactOnPatientsOfTheRenovations" required>
+        <md-option ng-repeat="item in vm.selectImpact" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>26. How would you rate the impact the community of the renovations?</label>
+      <md-select ng-model="vm.healthForm.KIIHowWouldYouRateTheImpactTheCommunityOfTheRenovations" required>
+        <md-option ng-repeat="item in vm.selectImpact" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatDoYouFeelCouldHaveBeenDoneToImproveTheInitiative"
+                placeholder="27.	 What do you feel could have been done to improve the initiative?" required></textarea>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatIsTheEstimatedNumberOfTargetedBeneficiaries"
+                placeholder="28.	 What is the estimated number of targeted beneficiaries for this project?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIPleaseListTheNeighborhoodsVillagesThatWillBenefit"
+             placeholder="28.1. Please list the neighborhoods/villages that will benefit from this project?" required>
+    </md-input-container></div>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatWereTheAchievementSuccessesYouObservedIn"
+             placeholder="29. What were the achievement/successes you observed in this project?" required>
+    </md-input-container></div>
+
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIWhatAreTheMostSignificantChallenges"
+                placeholder="30.	What are the most significant challenges that the project has encountered and what has been done to address such issues?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-model="vm.healthForm.KIIDoYouHaveAnySuggestionsOnHowToImprove"
+                placeholder="31.	Do you have any suggestions on how to improve the project impact on the targeted beneficiaries?" required></textarea>
+    </md-input-container>
+
+
+  </div>
+
+
+</div>
+

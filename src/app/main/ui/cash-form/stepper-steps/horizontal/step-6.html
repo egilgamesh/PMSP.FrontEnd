@@ -1,0 +1,178 @@
+<div class="md-inline-form">
+  <p>IV. Interview: Community Stakeholder (Sheikh, Community Leader, etc.) 2</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>7.	How well do you think the beneficiary selection process was managed?</label>
+      <md-select ng-model="vm.cashForm.CSBeneficiarySelection" required>
+        <md-option ng-repeat="item in vm.selectWellLevels" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSBeneficiarySelectionIfBad"
+             placeholder="7.1.	If Somewhat Badly or Very Badly, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8.	Does this cash for work activity involve a private contractor/NGO in the work?</label>
+      <md-select ng-model="vm.cashForm.CSInvolvePrivateContractor" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8.1.	 If yes, do you know how the contractor/NGO was selected?</label>
+      <md-select ng-model="vm.cashForm.CSInvolvePrivateContractorIfYesHowSelected" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNotKnow" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>8.2. If yes, how well do you think the contractor selection process was managed?</label>
+      <md-select ng-model="vm.cashForm.CSInvolvePrivateContractorIfYesHowSelectedIfYes" required>
+        <md-option ng-repeat="item in vm.selectWellLevels" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSInvolvePrivateContractorIfYesHowSelectedIfBad"
+             placeholder="8.2.1.	If Somewhat Badly or Very Badly, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>9.  How well do you think the process of selecting the type of cash for work activity was managed?</label>
+      <md-select ng-model="vm.cashForm.CSProcessOfSelectingManaged" required>
+        <md-option ng-repeat="item in vm.selectWellLevels" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSProcessOfSelectingManagedIfBad"
+             placeholder="9.1.	If Somewhat Badly or Very Badly, please explain your answer?<" required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>10. Do you feel that this cash for work activity contributed to community tensions?</label>
+      <md-select ng-model="vm.cashForm.CSContributedToCommunityTensions" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSContributedToCommunityTensionsIfYes"
+             placeholder="10.1.1.	If yes, please explain your answer and the type of challenge." required>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>11.	Do you feel that this cash for work activity had any negative effect on girls or women?</label>
+      <md-select ng-model="vm.cashForm.CSNegativeEffectOnGirls" required>
+        <md-option ng-repeat="item in vm.selectYesNoDoNo" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSNegativeEffectOnGirlsIfYes"
+             placeholder="11.1.	If yes, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>12.  What is your overall level of satisfaction with this cash for work activity?</label>
+      <md-select ng-model="vm.cashForm.CSOverallLevelOfSatisfaction" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSOverallLevelOfSatisfactionIfSomeWhat"
+             placeholder="12.1. If Somewhat Dissatisfied or Very Dissatisfied please explain why." required>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>13.  Please rate the level of influence that this cash for work activity has had on the community?</label>
+      <md-select ng-model="vm.cashForm.CSRateTheLevelOfInfluence" required>
+        <md-option ng-repeat="item in vm.selectSatisfactions" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSRateTheLevelOfInfluenceIfSomeWhat"
+             placeholder="13.1. If Somewhat Negatively or Very Negatively impacted, please explain your answer." required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSAchievements"
+             placeholder="14.  What were the achievements/successes you have observed in this project activity?" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSSignificantChallenges"
+             placeholder="15.	What are the most significant challenges that the project activity has encountered and what has been done to address such issues?  (If multiple challenges are shared record and clearly record each response)" required>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <input type="text" name="lastname" ng-model="vm.cashForm.CSHaveAnySuggestions"
+             placeholder="16.	Do you have any suggestions on how to improve the project activity impact on beneficiaries? (Clarify that this is not asking if all basic needs of beneficiaries were met, but if there are ways that the project activity could be improved)" required>
+    </md-input-container>
+  </div>
+
+
+
+</div>
+

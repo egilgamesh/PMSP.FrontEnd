@@ -1,0 +1,32 @@
+.gridListdemoBasicUsage md-grid-list {
+  margin: 8px; }
+.gridListdemoBasicUsage .gray {
+  background: #fbfbfb; }
+.gridListdemoBasicUsage .green {
+  background: #fbfbfb; }
+.gridListdemoBasicUsage .yellow {
+  background: #fbfbfb; }
+.gridListdemoBasicUsage .blue {
+  background: #fbfbfb; }
+.gridListdemoBasicUsage .purple {
+  background: #fbfbfb; }
+.gridListdemoBasicUsage .red {
+  background: #fbfbfb; }
+.gridListdemoBasicUsage md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
+.scaling-svg-container {
+
+  height: 0;
+  width: 100%;
+  padding: 0;
+  margin-left: 20px;
+  padding-bottom: 100%;
+  /* override this inline for aspect ratio other than square */
+}
+.scaling-svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}

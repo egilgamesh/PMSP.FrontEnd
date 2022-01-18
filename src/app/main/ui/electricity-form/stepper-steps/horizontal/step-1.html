@@ -1,0 +1,71 @@
+<div ng-show="vm.isEdit">
+  <ali-show-photos filter-by="''"></ali-show-photos>
+</div>
+
+<div class="md-inline-form">
+
+
+  <p>Preliminary Site Visit Information</p>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100">
+      <label>2. Implementing Partner - Project</label>
+      <md-select ng-model="vm.electricityForm.implementingPartnerProject" required>
+        <md-option value="NDP - Funding Facility for Stabilization">
+          UNDP - Funding Facility for Stabilization
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.siteVisitLocation"
+             placeholder="3. Site Visit Location: (neighborhood, village/town/city, district, governorate)" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.GPSCoordinates"
+             placeholder="3.a. GPS Coordinates" required>
+    </md-input-container>
+
+
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="lastname" ng-model="vm.electricityForm.briefDescriptionOfActivity"
+             placeholder="4. Brief Description of activity" required>
+    </md-input-container>
+
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+
+
+    <md-input-container flex-gt-md="30">
+      <label>4. Date(s) of site visit</label>
+      <md-datepicker ng-model="vm.electricityForm.DateOfSiteVisit" md-placeholder="Date(s) of site visit"
+                     md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+    </md-input-container>
+
+    <md-input-container flex-gt-md="30">
+      <label>5. Duration of the site visit: From</label>
+
+      <md-select ng-model="vm.electricityForm.durationOfTheSiteVisitStart" required>
+        <md-option ng-repeat="item in vm.selectTime" value="{{item.value}}">{{item.name}}</md-option>
+      </md-select>
+
+    </md-input-container>
+
+    <md-input-container flex-gt-md="30">
+      <label>5. Duration of the site visit: To</label>
+    <md-select ng-model="vm.electricityForm.durationOfTheSiteVisitEnd" required>
+      <md-option ng-repeat="item in vm.selectTime" value="{{item.value}}">{{item.name}}</md-option>
+    </md-select>
+  </div>
+
+
+</div>

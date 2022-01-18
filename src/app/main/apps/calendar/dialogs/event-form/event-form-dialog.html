@@ -1,0 +1,94 @@
+<md-dialog class="event-form-dialog" aria-label="New Message">
+    <form name="eventForm" class="md-inline-form" novalidate>
+        <md-toolbar class="md-accent md-hue-2">
+            <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+                <span class="title">{{vm.dialogTitle}}</span>
+                <md-button class="md-icon-button" ng-click="vm.closeDialog()" aria-label="Close dialog" translate
+                           translate-attr-aria-label="CALENDAR.CLOSE_DIALOG">
+                    <md-icon md-font-icon="icon-close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content ms-scroll>
+            <md-input-container class="md-block">
+                <label translate="CALENDAR.TITLE">Title</label>
+                <input name="title" ng-model="vm.calendarEvent.title" required md-autofocus>
+                <div ng-messages="eventForm.title.$error" ng-show="eventForm.title.$touched" role="alert">
+                    <div ng-message="required">
+                        <span translate="CALENDAR.ERRORS.TITLE_REQUIRED">Title field is required</span>
+                    </div>
+                </div>
+            </md-input-container>
+
+
+            <div layout="column" layout-gt-xs="row">
+              <md-input-container flex>
+                <md-select class="title" ng-model="vm.calendarEvent.location" placeholder="Select Province" required>
+                  <md-option ng-repeat="state in vm.states" value="{{state}}">
+                    {{state}}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+
+              <md-input-container flex>
+                <md-select ng-model="vm.calendarEvent.projectType" placeholder="Select Project" required>
+                  <md-option ng-repeat="project in vm.projects" value="{{project.value}}">{{project.name}}</md-option>
+                </md-select>
+              </md-input-container>
+
+            </div>
+
+
+          <div layout="row" class="date-row">
+                <md-datepicker ng-model="vm.calendarEvent.start" md-placeholder="Start Date" ng-model-options="{ timezone: 'UTC' }"></md-datepicker>
+            </div>
+
+            <!--<div layout="row" class="date-row">-->
+                <!--<md-datepicker ng-model="vm.calendarEvent.end" md-placeholder="End Date" ng-model-options="{ timezone: 'UTC' }"></md-datepicker>-->
+
+            <!--</div>-->
+
+
+            <md-input-container flex class="md-block textarea-container">
+                <label translate="CALENDAR.NOTES" required>Notes</label>
+                <textarea ng-model="vm.calendarEvent.note" md-maxlength="250" max-rows="4"></textarea>
+            </md-input-container>
+
+          <div layout="column" layout-gt-xs="row">
+          <md-input-container flex>
+            <md-select ng-model="vm.calendarEvent.reportIFMStatus" placeholder="Select Report Status" required>
+              <md-option ng-repeat="status in vm.statuses" value="{{status.value}}">{{status.name}}</md-option>
+            </md-select>
+          </md-input-container>
+          </div>
+
+
+          <md-input-container class="md-block" ng-if="vm.calendarEvent.reportIFMStatus == 'canceled'">
+            <label>Cancel Reason</label>
+            <input name="Cancel Reason" ng-model="vm.calendarEvent.cancelReason" required md-autofocus>
+            <div ng-messages="eventForm.cancelReason.$error" ng-show="eventForm.cancelReason.$touched" role="alert">
+              <div ng-message="required">
+                <span>Cancel Reason field is required</span>
+              </div>
+            </div>
+          </md-input-container>
+
+
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row" layout-align="space-between center">
+            <md-button ng-click="vm.saveEvent()" class="save-button md-accent md-raised" aria-label="SAVE"
+                       ng-disabled="eventForm.$invalid || eventForm.$pristine"
+                       translate="CALENDAR.SAVE"
+                       translate-attr-aria-label="CALENDAR.SAVE">
+                SAVE
+            </md-button>
+
+            <md-button class="md-icon-button" ng-click="vm.removeEvent()" aria-label="Delete" translate translate-attr-aria-label="CALENDAR.DELETE">
+                <md-icon md-font-icon="icon-delete"></md-icon>
+                <md-tooltip><span translate="CALENDAR.DELETE">Delete</span></md-tooltip>
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

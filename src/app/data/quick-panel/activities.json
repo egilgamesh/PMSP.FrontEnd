@@ -1,0 +1,43 @@
+{
+    "data": {
+        "friends": [
+            {
+                "name": "Ali Mohammed",
+                "avatar": "assets/images/avatars/alice.jpg",
+                "message": "Update the home page",
+                "status": "online",
+                "time": "13 mins. ago"
+            }
+        ],
+        "servers": [
+            {
+                "location": "US East Zone",
+                "status": "normal",
+                "detail": "Load: Normal, CPU: 32%, Memory: 52%"
+            }
+        ],
+        "stats": [
+            {
+                "title": "Storage",
+                "current": "2010",
+                "total": "4096",
+                "percent": "49",
+                "status": "warn"
+            },
+            {
+                "title": "Cloud",
+                "current": "3770",
+                "total": "4096",
+                "percent": "92",
+                "status": "alert"
+            },
+            {
+                "title": "Projects",
+                "current": "5",
+                "total": "20",
+                "percent": "25",
+                "status": "normal"
+            }
+        ]
+    }
+}

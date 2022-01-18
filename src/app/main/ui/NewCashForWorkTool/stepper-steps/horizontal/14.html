@@ -1,0 +1,324 @@
+<div class="md-inline-form">
+  <p>Respondent: C4W Laborer</p>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.1 Duration of the respondent's relationship to the C4W activity (in months)</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_1" required>
+        <md-option value="greater than 1">greater than 1</md-option>
+        <md-option value="1-6">1-6</md-option>
+        <md-option value="6-12">6-12</md-option>
+        <md-option value="less than 12">less than 12</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.2 Gender of the respondent</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_2" required>
+        <md-option value="Male">Male</md-option>
+        <md-option value="Female">Female</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m14_3"
+                placeholder="14.3 Respondent's age" required />
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.4 Respondent's attained education level</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_4" required>
+        <md-option value="None">None</md-option>
+        <md-option value="Primary">Primary</md-option>
+        <md-option value="Secondary">Secondary</md-option>
+        <md-option value="Higher">Higher</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.5 What is your primary role on this C4W activity?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_5" required>
+        <md-option value="Technical Expert">Technical Expert</md-option>
+        <md-option value="Manager">Manager</md-option>
+        <md-option value="Supervisor">Supervisor</md-option>
+        <md-option value="Foreman">Foreman</md-option>
+        <md-option value="Machine Operator">Machine Operator</md-option>
+        <md-option value="General Labor">General Labor</md-option>
+        <md-option value="Security">Security</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_5_other"
+                placeholder="14.5 Other (free text)" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <p>14.6 How were you selected to participate in this C4W activity?</p>
+
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_6_IDP" aria-label="IDP">IDP</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_Widow" aria-label="Widow">Widow</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_Disabled" aria-label="Disabled">Disabled</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_FemaleHeadOfHousehold" aria-label="Female Head of Household">Female Head of Household</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_Unemployed" aria-label="Unemployed ">Unemployed</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_Minority" aria-label="Minority">Minority</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_Female" aria-label="Female">Female</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m114_6_Resident" aria-label="Resident">Resident</md-checkbox>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_6_Other"
+                placeholder="14.6 Other (free text)" required></textarea>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_7"
+                placeholder="14.7 Briefly describe the most significant positive outcomes resulting from this C4W activity" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_8"
+                placeholder="14.8 Briefly describe any negative outcomes resulting from this C4W activity." required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_9"
+                placeholder="14.9 Briefly describe any significant features, functions or elements that could be added to this C4W activity to improve its value or usefulness." required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.10 Did conflict in Iraq force you (or your family) to evacuate or relocate from this area?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_10" required>
+        <md-option value="Yes">Yes</md-option>
+        <md-option value="No (go to 14.13)">No (go to 14.13)</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_10 === 'Yes'">
+    <md-input-container flex="100">
+      <label>14.11 Did this this C4W activity affect your (or your family’s) decision to return to this area?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_11" required>
+        <md-option value="Yes">Yes (ALERT)</md-option>
+        <md-option value="No">No (go to 14.13)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_10 === 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_12"
+                placeholder="14.12 Briefly describe how this C4W activity affected your (or your family’s) decision to return to this area." required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <input type="number" ng-disabled="!vm.editAllow" ng-model="vm.form.m14_13_number"
+             placeholder="14.13 What is your current daily wage on this C4W activity?" required />
+    </md-input-container>
+  </div>
+
+  <md-input-container flex="100" flex-gt-xs="100">
+    <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_13_do_not_know " aria-label="Don't Know">Don't Know</md-checkbox>
+  </md-input-container>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.14 Have you (or persons you are aware of) had any difficulties receiving wage payments?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_14" required>
+        <md-option value="Yes">Yes (ALERT)</md-option>
+        <md-option value="No (go to 14.13)">No (go to 14.16)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_14 === 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_15"
+                placeholder="14.15 Briefly describe the difficulties that you (or persons you are aware of) had receiving wage payments." required></textarea>
+    </md-input-container>
+  </div>
+
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.16 Have you (or persons you are aware of) ever been asked to pay a suspicious fee or provide certain favors in order to gain employment on this C4W activity?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_16" required>
+        <md-option value="Yes">Yes (ALERT)</md-option>
+        <md-option value="No">No (go to 14.18)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_16 === 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_17"
+                placeholder="14.17 Briefly describe the circumstances in which a suspicious fee or favor was demanded in order to gain employment on this C4W activity" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.18 Are you aware of any methods or systems to share your feedback, complaints, suggestions or recommendations concerning this C4W activity</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_18" required>
+        <md-option value="Yes">Yes</md-option>
+        <md-option value="No">No (go to 14.20) </md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_18 === 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_19"
+                placeholder="14.19 If you haions or recommendations concerning this C4W activity, what was the result?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.20 Do you feel that the hiring criteria used to select people to participate (be employed) on this C4W activity were applied in a fair, clear and transparent way?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_20" required>
+        <md-option value="Yes">Yes (go to 14.22)</md-option>
+        <md-option value="No">No (ALERT)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_20 == 'No'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_21"
+                placeholder="14.21 Briefly describe why you feel that the hiring criteria used to select people to participate (be employed) in this C4W activity were not applied in a fair, clear and transparent way?" required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.22 id you know of anyone who was denied participation in this C4W activity?</label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_22" required>
+        <md-option value="Yes">Yes (ALERT)</md-option>
+        <md-option value="No">No (go to 14.24)</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex ng-if="vm.form.m14_22 === 'Yes'">
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_23"
+                placeholder="14.23 Briefly describe why that person was denied participation in this C4W activity." required></textarea>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <label>14.24 Do you know of any instances when a person received wage payment, but did not fully participate in this C4W activity? </label>
+      <md-select ng-disabled="!vm.editAllow" ng-model="vm.form.m14_24" required>
+        <md-option value="Yes">Yes (ALERT)</md-option>
+        <md-option value="No">No</md-option>
+        <md-option value="N/A">N/A</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100">
+      <p>14.25 What are the top 3 priority uses for your wage payments?</p>
+
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_RentOrHousing" aria-label="Rent or housing">Rent or housing</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_Utilities" aria-label="Utilities (water electricity, etc.)">Utilities (water electricity, etc.)</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_Food" aria-label="Food">Food</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_OtherHouseholdEssentials" aria-label="Other household essentials">Other household essentials</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_EducationExpenses" aria-label="Education expenses">Education expenses</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_HealthCareOrMedicine" aria-label="Health care or medicine">Health care or medicine</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_Clothing" aria-label="Clothing">Clothing</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_PayOffDebts" aria-label="Pay off debts">Pay off debts</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_SavingsHoldOnToTheCash" aria-label="Savings/hold on to the cash">Savings/hold on to the cash</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_SeedsOrFarmingNeeds" aria-label="Seeds or farming needs ">Seeds or farming needs </md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_Livestock" aria-label="Livestock">Livestock</md-checkbox>
+      <md-checkbox ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_BusinessOrInvestment" aria-label="Business or investment">Business or investment</md-checkbox>
+
+
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_25_other"
+                placeholder="14.25 Other (free text)" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_26"
+                placeholder="14.26 How did you earn a wage before your participation in this C4W project?" required></textarea>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="100">
+      <textarea ng-disabled="!vm.editAllow" ng-model="vm.form.m14_27"
+                placeholder="14.27 Please share any final thoughts or concerns about your experiences on this C4W activity (if any)." required></textarea>
+    </md-input-container>
+  </div>
+
+</div>
+
